@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileFitness.App.Views.LoginPage">
+    <ContentPage.Content>
+
+        <StackLayout x:Name="MasterLayout">
+
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Source="LoginIcon.png" Margin="0,80,0,0" />
+            </StackLayout>
+
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <ActivityIndicator x:Name="ActivitySpinner" Color="White" IsRunning="True" />
+
+                <Label x:Name="EmailLbl" Text="Email" />
+                <Entry x:Name="EmailEntry" Placeholder="Email" />
+                <Label x:Name="PasswordLbl" Text="Password" />
+                <Entry x:Name="PasswordEntry" Placeholder="Password" />
+                <Button x:Name="SignInButton" Text="Sing in" Clicked="SignInButtonClicked"/>
+            </StackLayout>
+
+            <StackLayout x:Name="ButtonsStack" VerticalOptions="EndAndExpand">
+                <Button x:Name="CreateAccountButton" Text="Create new account" Clicked="CreateAccountButtonClicked"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

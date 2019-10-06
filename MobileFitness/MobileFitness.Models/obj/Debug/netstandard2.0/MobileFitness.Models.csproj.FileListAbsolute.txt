@@ -1,0 +1,9 @@
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.deps.json
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.csprojAssemblyReference.cache
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.AssemblyInfoInputs.cache
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.AssemblyInfo.cs
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\XamlC.stamp

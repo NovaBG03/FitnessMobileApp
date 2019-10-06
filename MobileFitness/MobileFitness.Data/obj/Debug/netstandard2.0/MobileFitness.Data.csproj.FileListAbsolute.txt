@@ -1,0 +1,12 @@
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Data.deps.json
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Data.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.AssemblyInfoInputs.cache
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.AssemblyInfo.cs
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.csprojAssemblyReference.cache
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Data.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Models.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Models.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.csproj.CopyComplete
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\XamlC.stamp
