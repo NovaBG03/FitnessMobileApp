@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using MobileFitness.Data;
+using MobileFitness.Models.Enums;
 using System;
 
 namespace MobileFitness.Data.Migrations
@@ -101,6 +102,11 @@ namespace MobileFitness.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .IsUnicode(false);
+
+                    b.Property<int>("Gender");
+
+                    b.Property<float>("HeightInMeters")
+                        .HasColumnType("decimal(7,3)");
 
                     b.Property<int>("MacronutrientId");
 

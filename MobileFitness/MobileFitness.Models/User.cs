@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
 
+    using MobileFitness.Models.Enums;
+
     public class User
     {
         public User()
@@ -20,6 +22,10 @@
         public string Password { get; set; }
 
         public string Salt { get; set; }
+
+        public Gender Gender { get; set; }
+
+        public float HeightInMeters { get; set; }
 
         public int MacronutrientId { get; set; }
 

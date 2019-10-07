@@ -44,6 +44,10 @@
                 .HasOne(u => u.Macronutrient)
                 .WithMany(m => m.Users)
                 .HasForeignKey(u => u.MacronutrientId);
+
+            builder
+                .Property(u => u.HeightInMeters)
+                .HasColumnType("decimal(7,3)");
         }
     }
 }
