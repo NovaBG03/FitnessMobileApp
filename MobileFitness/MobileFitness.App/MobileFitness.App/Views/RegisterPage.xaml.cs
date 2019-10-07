@@ -23,17 +23,21 @@
 
         private void Init()
         {
-            this.BackgroundColor = Constants.BackgroundColor;
+            this.BackgroundColor = Constants.BarBackgroundColor;
 
             this.UsernameLbl.TextColor = Constants.MainTextColor;
             this.EmailLbl.TextColor = Constants.MainTextColor;
             this.PasswordLbl.TextColor = Constants.MainTextColor;
 
-            this.ActivitySpinner.IsVisible = false;
+            this.UsernameEntry.BackgroundColor = Constants.EntryBackgroundColor;
+            this.EmailEntry.BackgroundColor = Constants.EntryBackgroundColor;
+            this.PasswordEntry.BackgroundColor = Constants.EntryBackgroundColor;
 
             this.UsernameEntry.Completed += (s, e) => this.EmailEntry.Focus();
             this.EmailEntry.Completed += (s, e) => this.PasswordEntry.Focus();
             this.PasswordEntry.Completed += (s, e) => this.RegisterButtonClicked(s, e);
+
+            this.ActivitySpinner.IsVisible = false;
         }
 
         private async void RegisterButtonClicked(object sender, EventArgs e)

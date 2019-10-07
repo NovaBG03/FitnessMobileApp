@@ -17,12 +17,12 @@
 
             <ActivityIndicator x:Name="ActivitySpinner" Color="White" IsRunning="True" />
 
-            <Label x:Name="UsernameLbl" Text="Username" />
-            <Entry x:Name="UsernameEntry" Placeholder="Username" />
-            <Label x:Name="EmailLbl" Text="Email" />
-            <Entry x:Name="EmailEntry" Placeholder="Email" />
-            <Label x:Name="PasswordLbl" Text="Password" />
-            <Entry x:Name="PasswordEntry" Placeholder="Password" />
+            <Label x:Name="UsernameLbl" Text="Username"/>
+            <Entry x:Name="UsernameEntry" Placeholder="Username" MaxLength="50"/>
+            <Label x:Name="EmailLbl" Text="Email"/>
+            <Entry x:Name="EmailEntry" Placeholder="Email" MaxLength="100"/>
+            <Label x:Name="PasswordLbl" Text="Password"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" MaxLength="250"/>
             <Button x:Name="RegisterButton" Text="Register" Clicked="RegisterButtonClicked"/>
         </StackLayout>
         

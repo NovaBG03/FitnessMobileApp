@@ -4,7 +4,6 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\bin\Debug\netstandard2.0\MobileFitness.App.pdb
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.csprojAssemblyReference.cache
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.AssemblyInfoInputs.cache
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.AssemblyInfo.cs
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.dll
@@ -19,3 +18,6 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\AccountPage.xaml.g.cs
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\FoodPage.xaml.g.cs
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\WeightPage.xaml.g.cs

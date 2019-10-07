@@ -30,17 +30,20 @@
 
         private void Init()
         {
-            this.BackgroundColor = Constants.BackgroundColor;
+            this.BackgroundColor = Constants.BarBackgroundColor;
 
             this.EmailLbl.TextColor = Constants.MainTextColor;
             this.PasswordLbl.TextColor = Constants.MainTextColor;
 
-            this.ActivitySpinner.IsVisible = false;
+            this.EmailEntry.BackgroundColor = Constants.EntryBackgroundColor;
+            this.PasswordEntry.BackgroundColor = Constants.EntryBackgroundColor;
 
             this.LoginIcon.HeightRequest = Constants.LoginIconHeight;
 
             this.EmailEntry.Completed += (s, e) => this.PasswordEntry.Focus();
             this.PasswordEntry.Completed += (s, e) => this.SignInButtonClicked(s, e);
+
+            this.ActivitySpinner.IsVisible = false;
         }
 
         private async void SignInButtonClicked(object sender, EventArgs e)
@@ -57,7 +60,8 @@
             {
                 var user = JsonConvert.DeserializeObject<UserDto>(message);
 
-                await this.Navigation.PushAsync(new MainPage(user));
+                Navigation.InsertPageBefore(new MainPage(user), this);
+                await Navigation.PopAsync();
             }
             catch (Exception)
             {

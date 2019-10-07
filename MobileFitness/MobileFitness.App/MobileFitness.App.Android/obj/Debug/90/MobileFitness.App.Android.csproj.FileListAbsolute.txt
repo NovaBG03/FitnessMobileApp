@@ -588,3 +588,7 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Threading.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\loginicon.png
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\accounticon.png
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\bumbellicon.png
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\weighticon.png
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\foodicon.png
