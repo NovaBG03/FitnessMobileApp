@@ -24,6 +24,16 @@ namespace MobileFitness.Data
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Food> Foods { get; set; }
+
+        public DbSet<Macronutrient> Macronutrients { get; set; }
+
+        public DbSet<Meal> Meals { get; set; }
+
+        public DbSet<MealFood> MealFoods { get; set; }
+
+        public DbSet<Weight> Weights { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -38,6 +48,16 @@ namespace MobileFitness.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfig());
+
+            modelBuilder.ApplyConfiguration(new FoodConfig());
+
+            modelBuilder.ApplyConfiguration(new MacronutrientConfig());
+
+            modelBuilder.ApplyConfiguration(new MealConfig());
+
+            modelBuilder.ApplyConfiguration(new WeightConfg());
+
+            modelBuilder.ApplyConfiguration(new MealFoodConfig());
 
             base.OnModelCreating(modelBuilder);
         }

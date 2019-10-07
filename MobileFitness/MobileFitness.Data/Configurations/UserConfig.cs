@@ -1,9 +1,9 @@
 ﻿namespace MobileFitness.Data.Configurations
 {
-    using System;
-
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using System;
+
     using MobileFitness.Models;
 
     class UserConfig : IEntityTypeConfiguration<User>
@@ -34,10 +34,16 @@
                 .IsUnicode(false)
                 .IsRequired();
 
-            builder.Property(u => u.Email)
+            builder
+                .Property(u => u.Email)
                 .HasMaxLength(100)
                 .IsRequired()
                 .IsUnicode(false);
+
+            builder
+                .HasOne(u => u.Macronutrient)
+                .WithMany(m => m.Users)
+                .HasForeignKey(u => u.MacronutrientId);
         }
     }
 }
