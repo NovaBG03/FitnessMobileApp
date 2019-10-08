@@ -31,11 +31,28 @@
             <Label x:Name="ConfirmPasswordLbl" Text="Confirm Password"/>
             <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" MaxLength="250"/>
 
-            <Label x:Name="BirthdateLbl" Text="Birthdate"/>
-            <DatePicker x:Name="BirthdateDatePicker" MinimumDate="1/1/1900" MaximumDate="{x:Static sys:DateTime.Now}"/>
+            <StackLayout x:Name="HorizontalEntries1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout x:Name="BirthdateStack" Orientation="Vertical">
+                    <Label x:Name="BirthdateLbl" Text="Birthdate"/>
+                    <DatePicker x:Name="BirthdateDatePicker" MinimumDate="1/1/1900" MaximumDate="{x:Static sys:DateTime.Now}"/>
+                </StackLayout>
 
+                <StackLayout x:Name="GoalPickerStack" Orientation="Vertical">
+                    <Label x:Name="GoalLbl" Text="Goal"/>
 
-            <StackLayout x:Name="HorizontalEntries" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Picker x:Name="GoalPicker" Title="-----Select-----">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Maintain</x:String>
+                                <x:String>Lose fat</x:String>
+                                <x:String>Gain muscle</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="HorizontalEntries2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
                 <StackLayout x:Name="GenderPickerStack" Orientation="Vertical">
                     <Label x:Name="GenderLbl" Text="Gender"/>

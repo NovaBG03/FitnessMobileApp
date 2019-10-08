@@ -31,6 +31,7 @@
             this.PasswordLbl.TextColor = Constants.MainTextColor;
             this.ConfirmPasswordLbl.TextColor = Constants.MainTextColor;
             this.BirthdateLbl.TextColor = Constants.MainTextColor;
+            this.GoalLbl.TextColor = Constants.MainTextColor;
             this.GenderLbl.TextColor = Constants.MainTextColor;
             this.WeightLbl.TextColor = Constants.MainTextColor;
             this.HeightLbl.TextColor = Constants.MainTextColor;
@@ -40,6 +41,7 @@
             this.PasswordEntry.BackgroundColor = Constants.EntryBackgroundColor;
             this.ConfirmPasswordEntry.BackgroundColor = Constants.EntryBackgroundColor;
             this.BirthdateDatePicker.BackgroundColor = Constants.EntryBackgroundColor;
+            this.GoalPicker.BackgroundColor = Constants.EntryBackgroundColor;
             this.GenderPicker.BackgroundColor = Constants.EntryBackgroundColor;
             this.WeightEntry.BackgroundColor = Constants.EntryBackgroundColor;
             this.HeightEntry.BackgroundColor = Constants.EntryBackgroundColor;
@@ -61,6 +63,7 @@
                 ConfirmPassword = this.ConfirmPasswordEntry.Text,
                 Birthdate = this.BirthdateDatePicker.Date,
                 Gender = this.GenderPicker.SelectedIndex,
+                Goal = this.GoalPicker.SelectedIndex
             };
 
             if (float.TryParse(this.WeightEntry.Text != null ? 
@@ -68,15 +71,16 @@
                     default(float).ToString(),
                 out float weight))
             {
-                userToRegister.Weight = weight;
+                userToRegister.WeightInKilograms = weight;
             }
 
-
-            //TODO add height in db
-            //TODO do the same for HeightEntry
-
-            await DisplayAlert("Login", JsonConvert.SerializeObject(userToRegister), "Ok");
-            return;
+            if (float.TryParse(this.HeightEntry.Text != null ?
+                    this.HeightEntry.Text.Replace(",", ".") :
+                    default(float).ToString(),
+                out float height))
+            {
+                userToRegister.HeightInMeters = height;
+            }
 
             var message = await this.userController.Register(userToRegister);
 

@@ -23,7 +23,11 @@
 
         public string Salt { get; set; }
 
+        public DateTime Birthdate { get; set; }
+
         public Gender Gender { get; set; }
+
+        public Goal Goal { get; set; }
 
         public float HeightInMeters { get; set; }
 

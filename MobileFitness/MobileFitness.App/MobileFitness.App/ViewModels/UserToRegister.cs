@@ -1,6 +1,5 @@
 ﻿namespace MobileFitness.App.ViewModels
 {
-    using MobileFitness.Models.Enums;
     using System;
 
     public class UserToRegister
@@ -16,11 +15,22 @@
         public DateTime Birthdate { get; set; }
 
         /// <summary>
-        /// Male --> 1
-        /// Female --> 2
+        /// NotSelected = -1
+        /// Male = 0,
+        /// Female = 1
         /// </summary>
         public int Gender { get; set; }
 
-        public float Weight { get; set; }
+        /// <summary>
+        /// NotSelected = -1
+        /// Maintain = 0,
+        /// LoseFat = 1,
+        /// GainMuscle = 2
+        /// </summary>
+        public int Goal { get; set; }
+
+        public float WeightInKilograms { get; set; }
+
+        public float HeightInMeters { get; set; }
     }
 }

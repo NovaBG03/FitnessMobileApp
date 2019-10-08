@@ -98,12 +98,16 @@ namespace MobileFitness.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("Birthdate");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
                         .IsUnicode(false);
 
                     b.Property<int>("Gender");
+
+                    b.Property<int>("Goal");
 
                     b.Property<float>("HeightInMeters")
                         .HasColumnType("decimal(7,3)");
