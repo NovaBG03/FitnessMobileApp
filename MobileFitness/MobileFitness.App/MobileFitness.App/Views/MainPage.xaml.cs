@@ -11,9 +11,9 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : Xamarin.Forms.TabbedPage
     {
-        private UserDto userDto;
+        private UserToRegister userDto;
 
-        public MainPage(UserDto userDto)
+        public MainPage(UserToRegister userDto)
         {
             InitializeComponent();
             Init();

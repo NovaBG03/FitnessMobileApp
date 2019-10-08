@@ -48,7 +48,7 @@
 
         private async void SignInButtonClicked(object sender, EventArgs e)
         {
-            var userDto = new UserDto()
+            var userDto = new UserToRegister()
             {
                 Email = this.EmailEntry.Text,
                 Password = this.PasswordEntry.Text
@@ -58,7 +58,7 @@
 
             try
             {
-                var user = JsonConvert.DeserializeObject<UserDto>(message);
+                var user = JsonConvert.DeserializeObject<UserToRegister>(message);
 
                 Navigation.InsertPageBefore(new MainPage(user), this);
                 await Navigation.PopAsync();

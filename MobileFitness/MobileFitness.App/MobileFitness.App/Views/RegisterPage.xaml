@@ -4,10 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MobileFitness.App.Views.RegisterPage">
+             x:Class="MobileFitness.App.Views.RegisterPage"
+             xmlns:sys="clr-namespace:System;assembly=netstandard">
+
     <ContentPage.Content>
-        
-        <StackLayout x:Name="RegisterEntriesStack" VerticalOptions="CenterAndExpand">
+
+        <StackLayout x:Name="RegisterEntriesStack" VerticalOptions="StartAndExpand">
             <StackLayout.Padding>
                 <OnIdiom x:TypeArguments="Thickness">
                     <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
@@ -19,13 +21,53 @@
 
             <Label x:Name="UsernameLbl" Text="Username"/>
             <Entry x:Name="UsernameEntry" Placeholder="Username" MaxLength="50"/>
+
             <Label x:Name="EmailLbl" Text="Email"/>
-            <Entry x:Name="EmailEntry" Placeholder="Email" MaxLength="100"/>
+            <Entry x:Name="EmailEntry" Placeholder="Email" MaxLength="100" Keyboard="Email"/>
+
             <Label x:Name="PasswordLbl" Text="Password"/>
             <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" MaxLength="250"/>
+
+            <Label x:Name="ConfirmPasswordLbl" Text="Confirm Password"/>
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" MaxLength="250"/>
+
+            <Label x:Name="BirthdateLbl" Text="Birthdate"/>
+            <DatePicker x:Name="BirthdateDatePicker" MinimumDate="1/1/1900" MaximumDate="{x:Static sys:DateTime.Now}"/>
+
+
+            <StackLayout x:Name="HorizontalEntries" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+
+                <StackLayout x:Name="GenderPickerStack" Orientation="Vertical">
+                    <Label x:Name="GenderLbl" Text="Gender"/>
+
+                    <Picker x:Name="GenderPicker" Title="--Select--">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout x:Name="WeightStack" Orientation="Vertical">
+                    <Label x:Name="WeightLbl" Text="Weight in Kilograms"/>
+
+                    <Entry x:Name="WeightEntry" Placeholder="Weight" Keyboard="Numeric" MaxLength="7" />
+                </StackLayout>
+
+                <StackLayout x:Name="HeightStack" Orientation="Vertical">
+                    <Label x:Name="HeightLbl" Text="Height in Meters"/>
+
+                    <Entry x:Name="HeightEntry" Placeholder="Height" Keyboard="Numeric" MaxLength="7" />
+                </StackLayout>
+
+            </StackLayout>
+
             <Button x:Name="RegisterButton" Text="Register" Clicked="RegisterButtonClicked"/>
+
         </StackLayout>
-        
+
     </ContentPage.Content>
-    
+
 </ContentPage>

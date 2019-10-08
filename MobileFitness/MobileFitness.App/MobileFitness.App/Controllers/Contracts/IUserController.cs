@@ -10,7 +10,7 @@
         /// </summary>
         /// <param name="userDto"></param>
         /// <returns>Message</returns>
-        Task<string> Register(UserDto userDto);
+        Task<string> Register(UserToRegister userDto);
 
 
         /// <summary>
@@ -18,6 +18,6 @@
         /// </summary>
         /// <param name="userDto"></param>
         /// <returns>Message</returns>
-        Task<string> Login(UserDto userDto);
+        Task<string> Login(UserToRegister userDto);
     }
 }

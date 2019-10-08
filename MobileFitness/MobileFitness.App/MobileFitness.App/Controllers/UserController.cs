@@ -30,12 +30,12 @@
         /// <summary>
         /// Tries to login user with email and password
         /// </summary>
-        /// <param name="userDto"></param>
+        /// <param name="userToregister"></param>
         /// <returns>Message</returns>
-        public async Task<string> Login(UserDto userDto)
+        public async Task<string> Login(UserToRegister userToregister)
         {
-            var email = userDto.Email;
-            var password = userDto.Password;
+            var email = userToregister.Email;
+            var password = userToregister.Password;
 
             var user = this.context.Users
                     .Where(u => u.Email == email)
@@ -64,7 +64,7 @@
         /// </summary>
         /// <param name="userDto"></param>
         /// <returns>Message</returns>
-        public async Task<string> Register(UserDto userDto)
+        public async Task<string> Register(UserToRegister userDto)
         {
             if (this.context.Users.Any(u => u.Email == userDto.Email))
             {
