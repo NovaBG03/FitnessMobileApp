@@ -12,8 +12,8 @@ using System;
 namespace MobileFitness.Data.Migrations
 {
     [DbContext(typeof(MobileFitnessContext))]
-    [Migration("20191008190316_User Birthdate Added")]
-    partial class UserBirthdateAdded
+    [Migration("20191010061757_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,14 +46,11 @@ namespace MobileFitness.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<float>("Carbohydrate")
-                        .HasColumnType("decimal(7,3)");
+                    b.Property<float>("Carbohydrate");
 
-                    b.Property<float>("Fat")
-                        .HasColumnType("decimal(7,3)");
+                    b.Property<float>("Fat");
 
-                    b.Property<float>("Protein")
-                        .HasColumnType("decimal(7,3)");
+                    b.Property<float>("Protein");
 
                     b.HasKey("Id");
 
@@ -110,8 +107,7 @@ namespace MobileFitness.Data.Migrations
 
                     b.Property<int>("Goal");
 
-                    b.Property<float>("HeightInMeters")
-                        .HasColumnType("decimal(7,3)");
+                    b.Property<float>("HeightInMeters");
 
                     b.Property<int>("MacronutrientId");
 
@@ -144,8 +140,7 @@ namespace MobileFitness.Data.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<float>("Kilograms")
-                        .HasColumnType("decimal(7,3)");
+                    b.Property<float>("Kilograms");
 
                     b.Property<int>("UserId");
 

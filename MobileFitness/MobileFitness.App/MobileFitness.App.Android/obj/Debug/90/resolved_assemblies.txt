@@ -98,8 +98,8 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll
-C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\MobileFitness.Data.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\MobileFitness.Models.dll
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\MobileFitness.Data.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.ObjectModel.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\android\assets\System.Linq.Queryable.dll

@@ -1,6 +1,7 @@
 ﻿namespace MobileFitness.App.Views
 {
     using MobileFitness.App.ViewModels;
+    using MobileFitness.Models;
     using System;
 
     using Xamarin.Forms;
@@ -11,14 +12,14 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : Xamarin.Forms.TabbedPage
     {
-        private UserToRegister userDto;
+        private User user;
 
-        public MainPage(UserToRegister userDto)
+        public MainPage(User user)
         {
             InitializeComponent();
             Init();
 
-            this.userDto = userDto;
+            this.user = user;
         }
 
         private void Init()

@@ -18,6 +18,6 @@
         /// </summary>
         /// <param name="userDto"></param>
         /// <returns>Message</returns>
-        Task<string> Login(UserToRegister userDto);
+        Task<object> Login(UserToRegister userDto);
     }
 }

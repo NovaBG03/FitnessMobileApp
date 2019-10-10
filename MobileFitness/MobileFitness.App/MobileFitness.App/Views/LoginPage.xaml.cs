@@ -54,20 +54,19 @@
                 Password = this.PasswordEntry.Text
             };
 
-            var message = await this.userController.Login(userDto);
+            var result = await this.userController.Login(userDto);
 
-            try
+            if (result is User user)
             {
-                var user = JsonConvert.DeserializeObject<UserToRegister>(message);
-
                 Navigation.InsertPageBefore(new MainPage(user), this);
                 await Navigation.PopAsync();
             }
-            catch (Exception)
+            else
             {
+                var message = (string)result;
                 await DisplayAlert("Login", message, "Ok");
             }
-            
+
         }
 
         private async void CreateAccountButtonClicked(object sender, EventArgs e)

@@ -34,9 +34,9 @@
         /// </summary>
         /// <param name="userToregister"></param>
         /// <returns>Message</returns>
-        public async Task<string> Login(UserToRegister userToregister)
+        public async Task<object> Login(UserToRegister userToregister)
         {
-            var email = userToregister.Email;
+            var email = userToregister.Email?.ToLower();
             var password = userToregister.Password;
 
             var user = this.context.Users
@@ -58,7 +58,7 @@
                 return JsonConvert.SerializeObject("Wrong Email or Password!");
             }
 
-            return JsonConvert.SerializeObject(user);
+            return user;
         }
 
         /// <summary>
@@ -68,19 +68,22 @@
         /// <returns>Message</returns>
         public async Task<string> Register(UserToRegister userToRegister)
         {
-            if (string.IsNullOrEmpty(userToRegister.Username) 
-                || string.IsNullOrWhiteSpace(userToRegister.Username) 
+            if (string.IsNullOrEmpty(userToRegister.Username)
+                || string.IsNullOrWhiteSpace(userToRegister.Username)
                 || userToRegister.Username.Length < 4)
             {
                 return JsonConvert.SerializeObject("Username must be 4 or more symbols!");
             }
 
-            if (string.IsNullOrEmpty(userToRegister.Email))
+            if (string.IsNullOrEmpty(userToRegister.Email)
+                || string.IsNullOrWhiteSpace(userToRegister.Email)
+                || !IsValidMailAddress(userToRegister.Email))
             {
                 return JsonConvert.SerializeObject("Please enter correct Email!");
             }
 
-            if (this.context.Users.Any(u => u.Email == userToRegister.Email))
+            var emailToLower = userToRegister.Email.ToLower();
+            if (this.context.Users.Any(u => u.Email == emailToLower))
             {
                 return JsonConvert.SerializeObject("Account with this Email already exists!");
             }
@@ -129,7 +132,7 @@
             var user = new User()
             {
                 Username = userToRegister.Username,
-                Email = userToRegister.Email.ToLower(),
+                Email = emailToLower,
                 Salt = Convert.ToBase64String(await Common.GetRandomSalt(16)),
                 Birthdate = userToRegister.Birthdate,
                 Gender = (Gender)userToRegister.Gender,
@@ -149,8 +152,6 @@
                     Encoding.ASCII.GetBytes(userToRegister.Password),
                     Convert.FromBase64String(user.Salt)));
 
-            return JsonConvert.SerializeObject(user);
-
             try
             {
                 await this.context.Users.AddAsync(user);
@@ -165,33 +166,82 @@
 
         private void SetMacronutrientGoal(User user)
         {
-            switch (user.Goal)
+            var bmr = CalculateBmr(user);
+            var calories = CalculateCaloriesByGoal(user, bmr * 1.35);
+            var caloriesLeft = calories;
+
+            var protein = GetCurrentWeight(user) * 1.8;
+            var proteinCalories = protein * 4;
+
+            caloriesLeft -= proteinCalories;
+
+            var fat = GetCurrentWeight(user);
+            var fatCalories = fat * 9;
+
+            if (fatCalories / calories > 0.4)
             {
-                case Goal.Maintain:
-                    user.Macronutrient = this.GetMacronutrientGoalToMaintain(user);
-                    break;
-                case Goal.LoseFat:
-                    user.Macronutrient = this.GetMacronutrientGoalToLoseFat(user);
-                    break;
-                case Goal.GainMuscle:
-                    user.Macronutrient = this.GetMacronutrientGoalToGainMuscle(user);
-                    break;
+                fatCalories = calories * 0.4;
+                fat = fatCalories / 9;
             }
+
+            caloriesLeft -= fatCalories;
+
+            var carbohydrate = caloriesLeft / 4;
+
+            user.Macronutrient = new Macronutrient()
+            {
+                Protein = (float)Math.Floor(protein),
+                Fat = (float)Math.Floor(fat),
+                Carbohydrate = (float)Math.Floor(carbohydrate)
+            };
         }
 
-        private Macronutrient GetMacronutrientGoalToGainMuscle(User user)
+        private double CalculateCaloriesByGoal(User user, double calories)
         {
-            throw new NotImplementedException();
+            if (user.Goal == Goal.Maintain)
+            {
+                return calories;
+            }
+
+            double caloricDiff = 0.1 * calories;
+            if (caloricDiff > 250)
+            {
+                caloricDiff = 250;
+            }
+
+            if (user.Goal == Goal.LoseFat)
+            {
+                return calories - caloricDiff;
+
+            }
+
+            //if user.Goal == Goal.Maintain
+            return calories + caloricDiff;
         }
 
-        private Macronutrient GetMacronutrientGoalToLoseFat(User user)
+        private double CalculateBmr(User user)
         {
-            throw new NotImplementedException();
+            double weightInKilograms = GetCurrentWeight(user);
+
+            double heightInCentimetre = user.HeightInMeters * 100;
+
+            var ageInYears = (int)((DateTime.Now - user.Birthdate).Days / 365.2425);
+
+            if (user.Gender == Gender.Male)
+            {
+                return 66.47 + (13.75 * weightInKilograms) + (5.003 * heightInCentimetre) - (6.755 * ageInYears);
+            }
+
+            //if user.Gender == Gender.Female
+            return 655.1 + (9.563 * weightInKilograms) + (1.85 * heightInCentimetre) - (4.676 * ageInYears);
         }
 
-        private Macronutrient GetMacronutrientGoalToMaintain(User user)
+        private static double GetCurrentWeight(User user)
         {
-            throw new NotImplementedException();
+            return user.Weights
+                .OrderByDescending(w => w.Date)
+                .First()
+                .Kilograms;
         }
 
         private static bool IsValidMailAddress(string emailaddress)
@@ -207,5 +257,7 @@
                 return false;
             }
         }
+
+        
     }
 }

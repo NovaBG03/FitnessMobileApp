@@ -17,10 +17,6 @@
                 .HasKey(w => w.Id);
 
             builder
-                .Property(w => w.Kilograms)
-                .HasColumnType("decimal(7,3)");
-
-            builder
                 .HasOne(w => w.User)
                 .WithMany(u => u.Weights)
                 .HasForeignKey(w => w.UserId);
