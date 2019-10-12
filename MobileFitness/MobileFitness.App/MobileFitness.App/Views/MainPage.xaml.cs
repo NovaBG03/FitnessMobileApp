@@ -12,14 +12,10 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : Xamarin.Forms.TabbedPage
     {
-        private User user;
-
-        public MainPage(User user)
+        public MainPage()
         {
             InitializeComponent();
             Init();
-
-            this.user = user;
         }
 
         private void Init()
@@ -38,10 +34,10 @@
 
         private void SetDefaultPage()
         {
-            var pages = Children.GetEnumerator();
+            var pages = this.Children.GetEnumerator();
             pages.MoveNext();
             pages.MoveNext();
-            CurrentPage = pages.Current;
+            this.CurrentPage = pages.Current;
         }
     }
 }

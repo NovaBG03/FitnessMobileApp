@@ -3,7 +3,6 @@
     using System;
     using System.Threading.Tasks;
 
-    using MobileFitness.App.Controllers.Contracts;
     using MobileFitness.App.ViewModels;
     using Newtonsoft.Json;
     using Xamarin.Forms;
@@ -12,18 +11,18 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        private IUserController userController;
-
         public RegisterPage()
         {
             InitializeComponent();
             Init();
-
-            this.userController = App.UserController;
         }
 
         private void Init()
         {
+            var vm = new RegisterViewModel();
+            this.BindingContext = vm;
+            vm.DisplayInvalidPrompt += (string message) => DisplayAlert("Login", message, "Ok");
+
             this.BackgroundColor = Constants.BarBackgroundColor;
 
             this.UsernameLbl.TextColor = Constants.MainTextColor;
@@ -53,38 +52,5 @@
             this.ActivitySpinner.IsVisible = false;
         }
 
-        private async void RegisterButtonClicked(object sender, EventArgs e)
-        {
-            var userToRegister = new UserToRegister()
-            {
-                Username = this.UsernameEntry.Text,
-                Email = this.EmailEntry.Text,
-                Password = this.PasswordEntry.Text,
-                ConfirmPassword = this.ConfirmPasswordEntry.Text,
-                Birthdate = this.BirthdateDatePicker.Date,
-                Gender = this.GenderPicker.SelectedIndex,
-                Goal = this.GoalPicker.SelectedIndex
-            };
-
-            if (float.TryParse(this.WeightEntry.Text != null ? 
-                    this.WeightEntry.Text.Replace(",", ".") : 
-                    default(float).ToString(),
-                out float weight))
-            {
-                userToRegister.WeightInKilograms = weight;
-            }
-
-            if (float.TryParse(this.HeightEntry.Text != null ?
-                    this.HeightEntry.Text.Replace(",", ".") :
-                    default(float).ToString(),
-                out float height))
-            {
-                userToRegister.HeightInMeters = height;
-            }
-
-            var message = await this.userController.Register(userToRegister);
-
-            await DisplayAlert("Login", message, "Ok");
-        }
     }
 }

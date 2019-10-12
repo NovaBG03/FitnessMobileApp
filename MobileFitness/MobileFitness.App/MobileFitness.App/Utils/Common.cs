@@ -11,7 +11,7 @@
         /// </summary>
         /// <param name="length"></param>
         /// <returns>salt</returns>
-        public static async Task<byte[]> GetRandomSalt(int length)
+        public static byte[] GetRandomSalt(int length)
         {
             using (var random = new RNGCryptoServiceProvider())
             {
@@ -28,7 +28,7 @@
         /// <param name="password"></param>
         /// <param name="salt"></param>
         /// <returns>cripted password</returns>
-        public static async Task<byte[]> SaltHashPassword(byte[] password, byte[] salt)
+        public static byte[] SaltHashPassword(byte[] password, byte[] salt)
         {
             using (HashAlgorithm algorithm = new SHA256Managed())
             {
@@ -47,5 +47,9 @@
                 return algorithm.ComputeHash(plainTextWithSaltBytes);
             }
         }
+
+        public static int GetAgeDiff(DateTime firstDate, DateTime secondDate)
+            => Math.Abs((int)((firstDate - secondDate).Days / 365.2425));
+        
     }
 }

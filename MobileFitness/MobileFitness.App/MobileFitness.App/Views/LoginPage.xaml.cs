@@ -12,25 +12,25 @@
     using Xamarin.Forms.Xaml;
 
     using MobileFitness.App.ViewModels;
-    using MobileFitness.App.Controllers.Contracts;
-    using MobileFitness.Models;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
-    {
-        private readonly IUserController userController;
-
+    { 
         public LoginPage()
         {
             InitializeComponent();
             Init();
-
-            this.userController = App.UserController;
         }
 
         private void Init()
         {
+            var vm = new LoginViewModel();
+            this.BindingContext = vm;
+            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Login", "Wrong Email or Password!", "Ok");
+
             this.BackgroundColor = Constants.BarBackgroundColor;
+
+            this.LoginIcon.HeightRequest = Constants.LoginIconHeight;
 
             this.EmailLbl.TextColor = Constants.MainTextColor;
             this.PasswordLbl.TextColor = Constants.MainTextColor;
@@ -38,40 +38,10 @@
             this.EmailEntry.BackgroundColor = Constants.EntryBackgroundColor;
             this.PasswordEntry.BackgroundColor = Constants.EntryBackgroundColor;
 
-            this.LoginIcon.HeightRequest = Constants.LoginIconHeight;
-
             this.EmailEntry.Completed += (s, e) => this.PasswordEntry.Focus();
-            this.PasswordEntry.Completed += (s, e) => this.SignInButtonClicked(s, e);
+            this.PasswordEntry.Completed += (s, e) => this.SignInButton.Command.Execute(null);
 
             this.ActivitySpinner.IsVisible = false;
-        }
-
-        private async void SignInButtonClicked(object sender, EventArgs e)
-        {
-            var userDto = new UserToRegister()
-            {
-                Email = this.EmailEntry.Text,
-                Password = this.PasswordEntry.Text
-            };
-
-            var result = await this.userController.Login(userDto);
-
-            if (result is User user)
-            {
-                Navigation.InsertPageBefore(new MainPage(user), this);
-                await Navigation.PopAsync();
-            }
-            else
-            {
-                var message = (string)result;
-                await DisplayAlert("Login", message, "Ok");
-            }
-
-        }
-
-        private async void CreateAccountButtonClicked(object sender, EventArgs e)
-        {
-            await this.Navigation.PushAsync(new RegisterPage());
         }
     }
 }

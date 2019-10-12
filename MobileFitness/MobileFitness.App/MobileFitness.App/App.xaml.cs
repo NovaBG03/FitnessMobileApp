@@ -1,5 +1,4 @@
-﻿using MobileFitness.App.Controllers;
-using MobileFitness.App.Controllers.Contracts;
+﻿using MobileFitness.App.ViewModels;
 using MobileFitness.App.Views;
 using MobileFitness.Data;
 using System;
@@ -10,17 +9,11 @@ namespace MobileFitness.App
 {
     public partial class App : Application
     {
-        private static IUserController userController;
-
-        public static IUserController UserController 
-            => userController ?? new UserController(); 
-
-
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            this.MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

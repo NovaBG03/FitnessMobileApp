@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MobileFitness.App.ViewModels"
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.LoginPage">
+
+    <ContentPage.BindingContext>
+        <local:LoginViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
 
         <StackLayout x:Name="MasterLayout">
@@ -24,15 +30,15 @@
                 <ActivityIndicator x:Name="ActivitySpinner" Color="White" IsRunning="True" />
 
                 <Label x:Name="EmailLbl" Text="Email"/>
-                <Entry x:Name="EmailEntry" Placeholder="Email" MaxLength="100"/>
+                <Entry x:Name="EmailEntry" Text="{Binding Email}" Placeholder="Email" MaxLength="100"/>
                 <Label x:Name="PasswordLbl" Text="Password" />
-                <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" MaxLength="250"/>
-            
-                <Button x:Name="SignInButton" Text="Sing in" Clicked="SignInButtonClicked"/>
+                <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True" MaxLength="250"/>
+
+                <Button x:Name="SignInButton" Text="Sing in" Command="{Binding SingInCommand}"/>
             </StackLayout>
 
-            <StackLayout x:Name="ButtonsStack" VerticalOptions="EndAndExpand">
-                <Button x:Name="CreateAccountButton" Text="Create new account" Clicked="CreateAccountButtonClicked"/>
+            <StackLayout x:Name="CreateaAccountStack" VerticalOptions="EndAndExpand">
+                <Button x:Name="CreateAccountButton" Text="Create new account" Command="{Binding CreateAccountCommand}"/>
             </StackLayout>
 
         </StackLayout>
