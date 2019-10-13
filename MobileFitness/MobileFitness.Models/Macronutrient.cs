@@ -8,7 +8,7 @@
         public Macronutrient()
         {
             this.Foods = new HashSet<Food>();
-            this.Users = new HashSet<User>();
+            this.UsersMacronutrients = new HashSet<UserMacronutrient>();
         }
 
         public int Id { get; set; }
@@ -21,7 +21,7 @@
 
         public ICollection<Food> Foods { get; set; }
 
-        public ICollection<User> Users { get; set; }
+        public ICollection<UserMacronutrient> UsersMacronutrients { get; set; }
     }
 }
 

@@ -21,7 +21,7 @@
         {
             var vm = new RegisterViewModel();
             this.BindingContext = vm;
-            vm.DisplayInvalidPrompt += (string message) => DisplayAlert("Login", message, "Ok");
+            vm.DisplayInvalidPrompt += (string message) => DisplayAlert("Register", message, "Ok");
 
             this.BackgroundColor = Constants.BarBackgroundColor;
 

@@ -15,11 +15,11 @@
 
         <StackLayout x:Name="MasterLayout">
 
-            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="LogoLayout" VerticalOptions="FillAndExpand">
                 <Image x:Name="LoginIcon" Source="LoginIcon.png" Margin="0,80,0,0" />
             </StackLayout>
 
-            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+            <StackLayout x:Name="LoginEntriesLayout" VerticalOptions="StartAndExpand">
                 <StackLayout.Padding>
                     <OnIdiom x:TypeArguments="Thickness">
                         <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
@@ -37,7 +37,7 @@
                 <Button x:Name="SignInButton" Text="Sing in" Command="{Binding SingInCommand}"/>
             </StackLayout>
 
-            <StackLayout x:Name="CreateaAccountStack" VerticalOptions="EndAndExpand">
+            <StackLayout x:Name="CreateaAccountLayout" VerticalOptions="EndAndExpand">
                 <Button x:Name="CreateAccountButton" Text="Create new account" Command="{Binding CreateAccountCommand}"/>
             </StackLayout>
 

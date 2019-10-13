@@ -15,11 +15,8 @@
     using MobileFitness.Models.Enums;
     using Xamarin.Forms;
 
-    public class RegisterViewModel : INotifyPropertyChanged
+    public class RegisterViewModel : BaseViewModel
     {
-        public Action<string> DisplayInvalidPrompt;
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private readonly MobileFitnessContext context;
 
         private string username;
@@ -35,7 +32,7 @@
         public RegisterViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
-            this.RegisterCommand = new Command(OnRegister);
+            this.RegisterCommand = new Command(this.OnRegister);
 
             this.Genders = new ObservableCollection<Gender>(Enum.GetValues(typeof(Gender))
                 .OfType<Gender>()
@@ -54,7 +51,7 @@
             set
             {
                 username = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Username)));
+                this.OnPropertyChanged(nameof(this.Username));
             }
         }
 
@@ -64,7 +61,7 @@
             set
             {
                 email = value?.ToLower();
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Email)));
+                this.OnPropertyChanged(nameof(this.Email));
             }
         }
 
@@ -74,7 +71,7 @@
             set
             {
                 password = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Password)));
+                this.OnPropertyChanged(nameof(this.Password));
             }
         }
 
@@ -84,7 +81,7 @@
             set
             {
                 confirmPassword = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.ConfirmPassword)));
+                this.OnPropertyChanged(nameof(this.ConfirmPassword));
             }
         }
 
@@ -94,7 +91,7 @@
             set
             {
                 birthdate = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Birthdate)));
+                this.OnPropertyChanged(nameof(this.Birthdate));
             }
         }
 
@@ -104,7 +101,7 @@
             set
             {
                 genderIndex = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.GenderIndex)));
+                this.OnPropertyChanged(nameof(this.GenderIndex));
             }
         }
 
@@ -114,7 +111,7 @@
             set
             {
                 goalIndex = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.GoalIndex)));
+                this.OnPropertyChanged(nameof(this.GoalIndex));
             }
         }
 
@@ -124,7 +121,7 @@
             set
             {
                 weightInKilograms = (float)Math.Round(value, 2);
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.WeightInKilograms)));
+                this.OnPropertyChanged(nameof(this.WeightInKilograms));
             }
         }
 
@@ -134,7 +131,7 @@
             set
             {
                 heightInMeters = (float)Math.Round(value, 2);
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.HeightInMeters)));
+                this.OnPropertyChanged(nameof(this.HeightInMeters));
             }
         }
 
@@ -224,7 +221,7 @@
             };
             user.Weights.Add(new Weight()
             {
-                Date = DateTime.Now,
+                Date = DateTime.Today,
                 Kilograms = this.WeightInKilograms
             });
 

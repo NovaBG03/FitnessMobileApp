@@ -14,7 +14,7 @@
 
     <ContentPage.Content>
 
-        <StackLayout x:Name="RegisterEntriesStack" VerticalOptions="StartAndExpand">
+        <StackLayout x:Name="RegisterEntriesLayout" VerticalOptions="StartAndExpand">
             <StackLayout.Padding>
                 <OnIdiom x:TypeArguments="Thickness">
                     <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
@@ -36,34 +36,34 @@
             <Label x:Name="ConfirmPasswordLbl" Text="Confirm Password"/>
             <Entry x:Name="ConfirmPasswordEntry" Text="{Binding ConfirmPassword}" Placeholder="Confirm Password" IsPassword="True" MaxLength="250"/>
 
-            <StackLayout x:Name="HorizontalEntries1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout x:Name="HorizontalEntriesLayout1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 <StackLayout x:Name="BirthdateStack" Orientation="Vertical">
                     <Label x:Name="BirthdateLbl" Text="Birthdate"/>
                     <DatePicker x:Name="BirthdateDatePicker" Date="{Binding Birthdate}" MinimumDate="1/1/1900" MaximumDate="{x:Static sys:DateTime.Today}"/>
                 </StackLayout>
 
-                <StackLayout x:Name="GoalPickerStack" Orientation="Vertical">
+                <StackLayout x:Name="GoalPickerLayout" Orientation="Vertical">
                     <Label x:Name="GoalLbl" Text="Goal"/>
 
                     <Picker x:Name="GoalPicker" SelectedIndex="{Binding GoalIndex}" ItemsSource="{Binding Goals}" ItemDisplayBinding="{Binding .}" Title="-----Select-----" />
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout x:Name="HorizontalEntries2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout x:Name="HorizontalEntriesLayout2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
-                <StackLayout x:Name="GenderPickerStack" Orientation="Vertical">
+                <StackLayout x:Name="GenderPickerLayout" Orientation="Vertical">
                     <Label x:Name="GenderLbl" Text="Gender"/>
 
                     <Picker x:Name="GenderPicker" SelectedIndex="{Binding GenderIndex}" ItemsSource="{Binding Genders}" ItemDisplayBinding="{Binding .}" Title="--Select--" />
                 </StackLayout>
 
-                <StackLayout x:Name="WeightStack" Orientation="Vertical">
+                <StackLayout x:Name="WeightLayout" Orientation="Vertical">
                     <Label x:Name="WeightLbl" Text="Weight in Kilograms"/>
 
                     <Entry x:Name="WeightEntry" Text="{Binding WeightInKilograms}" Placeholder="Weight" Keyboard="Numeric" MaxLength="7" />
                 </StackLayout>
 
-                <StackLayout x:Name="HeightStack" Orientation="Vertical">
+                <StackLayout x:Name="HeightLayout" Orientation="Vertical">
                     <Label x:Name="HeightLbl" Text="Height in Meters"/>
 
                     <Entry x:Name="HeightEntry" Text="{Binding HeightInMeters}" Placeholder="Height" Keyboard="Numeric" MaxLength="7" />

@@ -34,6 +34,8 @@ namespace MobileFitness.Data
 
         public DbSet<Weight> Weights { get; set; }
 
+        public DbSet<UserMacronutrient> UsersMacronutrients { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -58,6 +60,8 @@ namespace MobileFitness.Data
             modelBuilder.ApplyConfiguration(new WeightConfg());
 
             modelBuilder.ApplyConfiguration(new MealFoodConfig());
+
+            modelBuilder.ApplyConfiguration(new UserMacronutrientConfig());
 
             base.OnModelCreating(modelBuilder);
         }

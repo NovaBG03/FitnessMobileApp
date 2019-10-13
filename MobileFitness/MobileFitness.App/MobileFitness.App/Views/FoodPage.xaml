@@ -7,9 +7,41 @@
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.FoodPage">
 
+    <ContentPage.BindingContext>
+        <local:FoodViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Label Text="Wellcome"/>
+        <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
+            
+            <StackLayout x:Name="DateNavigationLayout" Orientation="Horizontal">
+                <Button x:Name="PrevDateButton" ImageSource="baseline_arrow_left_white_18dp.png" Command="{Binding DisplayPrevDate}"/>
+                <DatePicker x:Name="DispalyDatePicker" Date="{Binding DisplayDate}" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}"/>
+                <Button x:Name="NextDateButton" ImageSource="baseline_arrow_right_white_18dp.png" Command="{Binding DisplayNextDate}"/>
+            </StackLayout>
+
+            <StackLayout x:Name="MacronutrientLayout" Orientation="Horizontal">
+                <StackLayout x:Name="CarbohydrateLayout">
+                    <Label Text="Carbohydrate" />
+                    <Label Text="{Binding CarbohydrateLeft}" />
+                </StackLayout>
+
+                <StackLayout x:Name="FatLayout">
+                    <Label Text="Fat" />
+                    <Label Text="{Binding FatLeft}" />
+                </StackLayout>
+
+                <StackLayout x:Name="ProteinLayout">
+                    <Label Text="Protein" />
+                    <Label Text="{Binding ProteinLeft}" />
+                </StackLayout>
+
+                <StackLayout x:Name="CaloriesLayout">
+                    <Label Text="Calories" />
+                    <Label Text="{Binding CaloriesLeft}" />
+                </StackLayout>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

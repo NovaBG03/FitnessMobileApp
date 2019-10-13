@@ -11,6 +11,7 @@
         {
             this.Meals = new HashSet<Meal>();
             this.Weights = new HashSet<Weight>();
+            this.UsersMacronutrients = new HashSet<UserMacronutrient>();
         }
 
         public int Id { get; set; }
@@ -31,12 +32,10 @@
 
         public float HeightInMeters { get; set; }
 
-        public int MacronutrientId { get; set; }
-
-        public Macronutrient Macronutrient { get; set; }
-
         public ICollection<Meal> Meals { get; set; }
 
         public ICollection<Weight> Weights { get; set; }
+
+        public ICollection<UserMacronutrient> UsersMacronutrients { get; set; }
     }
 }

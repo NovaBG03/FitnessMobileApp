@@ -149,4 +149,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\FoodIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_arrow_left_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_arrow_right_white_18dp.png" />
+  </ItemGroup>
 </Project>

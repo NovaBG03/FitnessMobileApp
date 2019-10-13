@@ -33,12 +33,16 @@
 
             var carbohydrate = caloriesLeft / 4;
 
-            user.Macronutrient = new Macronutrient()
+            user.UsersMacronutrients.Add(new UserMacronutrient()
             {
-                Protein = (float)Math.Floor(protein),
-                Fat = (float)Math.Floor(fat),
-                Carbohydrate = (float)Math.Floor(carbohydrate)
-            };
+                Macronutrient = new Macronutrient()
+                {
+                    Protein = (float)Math.Floor(protein),
+                    Fat = (float)Math.Floor(fat),
+                    Carbohydrate = (float)Math.Floor(carbohydrate)
+                },
+                Date = DateTime.Today
+            });
         }
 
         private static double CalculateCaloriesByGoal(User user, double calories)
@@ -70,7 +74,7 @@
 
             double heightInCentimetre = user.HeightInMeters * 100;
 
-            var ageInYears = Common.GetAgeDiff(DateTime.Now, user.Birthdate);
+            var ageInYears = Common.GetAgeDiff(DateTime.Today, user.Birthdate);
 
             if (user.Gender == Gender.Male)
             {

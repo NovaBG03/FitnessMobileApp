@@ -12,7 +12,7 @@ using System;
 namespace MobileFitness.Data.Migrations
 {
     [DbContext(typeof(MobileFitnessContext))]
-    [Migration("20191010061757_InitialCreate")]
+    [Migration("20191013083601_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -109,8 +109,6 @@ namespace MobileFitness.Data.Migrations
 
                     b.Property<float>("HeightInMeters");
 
-                    b.Property<int>("MacronutrientId");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -128,9 +126,22 @@ namespace MobileFitness.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("MobileFitness.Models.UserMacronutrient", b =>
+                {
+                    b.Property<int>("UserId");
+
+                    b.Property<int>("MacronutrientId");
+
+                    b.Property<DateTime>("Date");
+
+                    b.HasKey("UserId", "MacronutrientId");
+
                     b.HasIndex("MacronutrientId");
 
-                    b.ToTable("Users");
+                    b.ToTable("UsersMacronutrients");
                 });
 
             modelBuilder.Entity("MobileFitness.Models.Weight", b =>
@@ -180,11 +191,16 @@ namespace MobileFitness.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("MobileFitness.Models.User", b =>
+            modelBuilder.Entity("MobileFitness.Models.UserMacronutrient", b =>
                 {
                     b.HasOne("MobileFitness.Models.Macronutrient", "Macronutrient")
-                        .WithMany("Users")
+                        .WithMany("UsersMacronutrients")
                         .HasForeignKey("MacronutrientId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MobileFitness.Models.User", "User")
+                        .WithMany("UsersMacronutrients")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

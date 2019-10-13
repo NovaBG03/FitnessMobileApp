@@ -39,11 +39,6 @@
                 .HasMaxLength(100)
                 .IsRequired()
                 .IsUnicode(false);
-
-            builder
-                .HasOne(u => u.Macronutrient)
-                .WithMany(m => m.Users)
-                .HasForeignKey(u => u.MacronutrientId);
         }
     }
 }

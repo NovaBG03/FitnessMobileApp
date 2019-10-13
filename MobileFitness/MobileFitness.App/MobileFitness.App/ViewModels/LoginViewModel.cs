@@ -11,11 +11,8 @@
     using MobileFitness.Data;
     using Xamarin.Forms;
 
-    public class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : BaseViewModel
     {
-        public Action DisplayInvalidLoginPrompt;
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private readonly MobileFitnessContext context;
 
         private string email;
@@ -35,7 +32,7 @@
             set
             {
                 email = value?.ToLower();
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Email)));
+                this.OnPropertyChanged(nameof(this.Email));
             }
         }
 
@@ -45,7 +42,7 @@
             set
             {
                 password = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Password)));
+                this.OnPropertyChanged(nameof(this.Password));
             }
         }
 
@@ -56,7 +53,6 @@
         private void OnSingIn()
         {
             var user = this.context.Users
-                .Include(u => u.Macronutrient)
                 .Where(u => u.Email == this.Email)
                 .FirstOrDefault();
 
@@ -85,6 +81,11 @@
         private void OnCreateAccount()
         {
             App.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+        }
+
+        private void DisplayInvalidLoginPrompt()
+        {
+            this.DisplayInvalidPrompt("Wrong Email or Password!");
         }
     }
 }

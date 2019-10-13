@@ -26,7 +26,7 @@
         {
             var vm = new LoginViewModel();
             this.BindingContext = vm;
-            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Login", "Wrong Email or Password!", "Ok");
+            vm.DisplayInvalidPrompt += (message) => DisplayAlert("Login", message, "Ok");
 
             this.BackgroundColor = Constants.BarBackgroundColor;
 

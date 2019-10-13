@@ -25,6 +25,26 @@ namespace MobileFitness.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Birthdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
+                    Gender = table.Column<int>(type: "int", nullable: false),
+                    Goal = table.Column<int>(type: "int", nullable: false),
+                    HeightInMeters = table.Column<float>(type: "real", nullable: false),
+                    Password = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: false),
+                    Salt = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Foods",
                 columns: table => new
                 {
@@ -38,33 +58,6 @@ namespace MobileFitness.Data.Migrations
                     table.PrimaryKey("PK_Foods", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Foods_Macronutrients_MacronutrientId",
-                        column: x => x.MacronutrientId,
-                        principalTable: "Macronutrients",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Birthdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
-                    Gender = table.Column<int>(type: "int", nullable: false),
-                    Goal = table.Column<int>(type: "int", nullable: false),
-                    HeightInMeters = table.Column<float>(type: "real", nullable: false),
-                    MacronutrientId = table.Column<int>(type: "int", nullable: false),
-                    Password = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: false),
-                    Salt = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Users_Macronutrients_MacronutrientId",
                         column: x => x.MacronutrientId,
                         principalTable: "Macronutrients",
                         principalColumn: "Id",
@@ -86,6 +79,31 @@ namespace MobileFitness.Data.Migrations
                     table.PrimaryKey("PK_Meals", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Meals_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UsersMacronutrients",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    MacronutrientId = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UsersMacronutrients", x => new { x.UserId, x.MacronutrientId });
+                    table.ForeignKey(
+                        name: "FK_UsersMacronutrients_Macronutrients_MacronutrientId",
+                        column: x => x.MacronutrientId,
+                        principalTable: "Macronutrients",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UsersMacronutrients_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -134,7 +152,7 @@ namespace MobileFitness.Data.Migrations
                         column: x => x.MealId,
                         principalTable: "Meals",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -153,8 +171,8 @@ namespace MobileFitness.Data.Migrations
                 column: "FoodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_MacronutrientId",
-                table: "Users",
+                name: "IX_UsersMacronutrients_MacronutrientId",
+                table: "UsersMacronutrients",
                 column: "MacronutrientId");
 
             migrationBuilder.CreateIndex(
@@ -169,6 +187,9 @@ namespace MobileFitness.Data.Migrations
                 name: "MealsFoods");
 
             migrationBuilder.DropTable(
+                name: "UsersMacronutrients");
+
+            migrationBuilder.DropTable(
                 name: "Weights");
 
             migrationBuilder.DropTable(
@@ -178,10 +199,10 @@ namespace MobileFitness.Data.Migrations
                 name: "Meals");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Macronutrients");
 
             migrationBuilder.DropTable(
-                name: "Macronutrients");
+                name: "Users");
         }
     }
 }
