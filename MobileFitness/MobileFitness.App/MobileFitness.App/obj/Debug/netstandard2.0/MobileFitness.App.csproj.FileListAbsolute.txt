@@ -21,3 +21,4 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\ref\MobileFitness.App.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\MobileFitness.App.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\AddFoodPage.xaml.g.cs

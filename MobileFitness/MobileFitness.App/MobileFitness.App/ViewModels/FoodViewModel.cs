@@ -24,6 +24,7 @@
         private float carbohydrateGoal;
         private float fatGoal;
         private float proteinGoal;
+        private Meal selectedMeal;
 
         public FoodViewModel()
         {
@@ -33,6 +34,10 @@
 
             this.DisplayNextDate = new Command(this.OnDisplayNextDate);
             this.DisplayPrevDate = new Command(this.OnDisplayPrevDate);
+            this.AddMeal = new Command(this.OnAddMeal);
+            this.AddFood = new Command(this.OnAddFood);
+
+            this.Meals = new ObservableCollection<Meal>();
         }
 
         public DateTime DisplayDate
@@ -41,8 +46,19 @@
             set
             {
                 displayDate = value;
-                this.OnPropertyChanged(nameof(this.DisplayDate)); 
-                this.UpdateDisplayedInfo();
+                this.OnPropertyChanged(nameof(this.DisplayDate));
+                this.UpdateDisplayedMacronutrients();
+                this.UpdateDisplayedMeals();
+            }
+        }
+
+        public Meal SelectedMeal
+        {
+            get => selectedMeal;
+            set
+            {
+                selectedMeal = value;
+                this.OnPropertyChanged(nameof(this.SelectedMeal));
             }
         }
 
@@ -110,13 +126,20 @@
 
         public ICommand DisplayPrevDate { get; private set; }
 
+        public ICommand AddMeal { get; private set; }
+
+        public ICommand AddFood { get; private set; }
+
+        public ObservableCollection<Meal> Meals { get; private set; }
+
         public void SetNewUser(User user)
         {
             this.user = user;
-            this.UpdateDisplayedInfo();
+            this.UpdateDisplayedMacronutrients();
+            this.UpdateDisplayedMeals();
         }
 
-        private void UpdateDisplayedInfo()
+        private void UpdateDisplayedMacronutrients()
         {
             if (this.user == null)
             {
@@ -126,8 +149,8 @@
             var currentGoal = this.context
                 .UsersMacronutrients
                 .Where(um => um.UserId == this.user.Id
-                    && um.Date >= this.DisplayDate)
-                .OrderBy(um => um.Date)
+                    && um.Date <= this.DisplayDate)
+                .OrderByDescending(um => um.Date)
                 .Select(um => new
                 {
                     um.Macronutrient.Carbohydrate,
@@ -141,7 +164,7 @@
                 currentGoal = this.context
                 .UsersMacronutrients
                 .Where(um => um.UserId == this.user.Id)
-                .OrderByDescending(um => um.Date)
+                .OrderBy(um => um.Date)
                 .Select(um => new
                 {
                     um.Macronutrient.Carbohydrate,
@@ -156,6 +179,26 @@
             this.ProteinGoal = currentGoal.Protein;
         }
 
+        private void UpdateDisplayedMeals()
+        {
+            if (this.Meals == null)
+            {
+                return;
+            }
+
+            var meals = this.context
+                .Meals
+                .Where(m => m.Date == this.DisplayDate)
+                .ToList();
+
+            this.Meals.Clear();
+
+            foreach (var meal in meals)
+            {
+                this.Meals.Add(meal);
+            }
+        }
+
         private void OnDisplayPrevDate()
         {
             this.DisplayDate = this.DisplayDate.AddDays(-1);
@@ -164,6 +207,24 @@
         private void OnDisplayNextDate()
         {
             this.DisplayDate = this.DisplayDate.AddDays(1);
+        }
+
+        private void OnAddMeal()
+        {
+            var meal = new Meal()
+            {
+                Name = $"Meal {this.Meals.Count + 1}",
+                Date = this.DisplayDate,
+                User = this.user
+            };
+
+            this.Meals.Add(meal);
+            //TODO add this.context.SaveChanges();
+        }
+
+        private void OnAddFood()
+        {
+            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
         }
     }
 }
