@@ -76,6 +76,7 @@
             }
 
             App.Current.MainPage = new NavigationPage(new MainPage());
+            MessagingCenter.Send(this, "ReloadUserInfo", user);
         }
 
         private void OnCreateAccount()

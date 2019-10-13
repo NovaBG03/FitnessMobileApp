@@ -6,6 +6,7 @@ namespace MobileFitness.App.Views
     using System.Text;
     using System.Threading.Tasks;
     using MobileFitness.App.ViewModels;
+    using MobileFitness.Models;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
@@ -24,6 +25,7 @@ namespace MobileFitness.App.Views
             var vm = new FoodViewModel();
             this.BindingContext = vm;
             vm.DisplayInvalidPrompt += (message) => DisplayAlert("Warning", message, "Ok");
+            MessagingCenter.Subscribe<LoginViewModel, User>(vm, "ReloadUserInfo", (s, u) => vm.SetNewUser(u));
         }
     }
 }

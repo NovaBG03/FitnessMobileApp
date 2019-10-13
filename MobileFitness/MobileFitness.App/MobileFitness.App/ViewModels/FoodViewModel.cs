@@ -17,6 +17,9 @@
 
     public class FoodViewModel : BaseViewModel
     {
+        private readonly MobileFitnessContext context;
+
+        private User user;
         private DateTime displayDate;
         private float carbohydrateGoal;
         private float fatGoal;
@@ -24,6 +27,8 @@
 
         public FoodViewModel()
         {
+            this.context = DependencyService.Get<MobileFitnessContext>();
+
             this.DisplayDate = DateTime.Today;
 
             this.DisplayNextDate = new Command(this.OnDisplayNextDate);
@@ -36,7 +41,8 @@
             set
             {
                 displayDate = value;
-                this.OnPropertyChanged(nameof(this.DisplayDate));
+                this.OnPropertyChanged(nameof(this.DisplayDate)); 
+                this.UpdateDisplayedInfo();
             }
         }
 
@@ -47,6 +53,9 @@
             {
                 carbohydrateGoal = value;
                 this.OnPropertyChanged(nameof(this.CarbohydrateGoal));
+                this.OnPropertyChanged(nameof(this.CarbohydrateLeft));
+                this.OnPropertyChanged(nameof(this.CaloriesGoal));
+                this.OnPropertyChanged(nameof(this.CaloriesLeft));
             }
         }
 
@@ -57,6 +66,9 @@
             {
                 fatGoal = value;
                 this.OnPropertyChanged(nameof(this.FatGoal));
+                this.OnPropertyChanged(nameof(this.FatLeft));
+                this.OnPropertyChanged(nameof(this.CaloriesGoal));
+                this.OnPropertyChanged(nameof(this.CaloriesLeft));
             }
         }
 
@@ -67,6 +79,9 @@
             {
                 proteinGoal = value;
                 this.OnPropertyChanged(nameof(this.ProteinGoal));
+                this.OnPropertyChanged(nameof(this.ProteinLeft));
+                this.OnPropertyChanged(nameof(this.CaloriesGoal));
+                this.OnPropertyChanged(nameof(this.CaloriesLeft));
             }
         }
 
@@ -95,6 +110,51 @@
 
         public ICommand DisplayPrevDate { get; private set; }
 
+        public void SetNewUser(User user)
+        {
+            this.user = user;
+            this.UpdateDisplayedInfo();
+        }
+
+        private void UpdateDisplayedInfo()
+        {
+            if (this.user == null)
+            {
+                return;
+            }
+
+            var currentGoal = this.context
+                .UsersMacronutrients
+                .Where(um => um.UserId == this.user.Id
+                    && um.Date >= this.DisplayDate)
+                .OrderBy(um => um.Date)
+                .Select(um => new
+                {
+                    um.Macronutrient.Carbohydrate,
+                    um.Macronutrient.Fat,
+                    um.Macronutrient.Protein
+                })
+                .FirstOrDefault();
+
+            if (currentGoal == null)
+            {
+                currentGoal = this.context
+                .UsersMacronutrients
+                .Where(um => um.UserId == this.user.Id)
+                .OrderByDescending(um => um.Date)
+                .Select(um => new
+                {
+                    um.Macronutrient.Carbohydrate,
+                    um.Macronutrient.Fat,
+                    um.Macronutrient.Protein
+                })
+                .FirstOrDefault();
+            }
+
+            this.CarbohydrateGoal = currentGoal.Carbohydrate;
+            this.FatGoal = currentGoal.Fat;
+            this.ProteinGoal = currentGoal.Protein;
+        }
 
         private void OnDisplayPrevDate()
         {
