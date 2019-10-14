@@ -36,5 +36,13 @@ namespace MobileFitness.App.Views
             var vm = (FoodViewModel)this.BindingContext;
             vm.AddFood.Execute(mealName);
         }
+
+        private void RemoveMealCommandClicked(object sender, EventArgs e)
+        {
+            var mealName = ((Button)sender).Text.Replace("Remove ", "");
+
+            var vm = (FoodViewModel)this.BindingContext;
+            vm.RemoveMeal.Execute(mealName);
+        }
     }
 }

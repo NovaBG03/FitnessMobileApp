@@ -54,6 +54,9 @@
                                     <Button x:Name="AddFoodCommand" 
                                             Text="{Binding Source={x:Reference MealNameLbl}, Path=Text, StringFormat='Add Food to {0}'}"
                                             Clicked="AddFoodCommandClicked"/>
+                                    <Button x:Name="RemoveMealCommand" 
+                                            Text="{Binding Source={x:Reference MealNameLbl}, Path=Text, StringFormat='Remove {0}'}"
+                                            Clicked="RemoveMealCommandClicked"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
