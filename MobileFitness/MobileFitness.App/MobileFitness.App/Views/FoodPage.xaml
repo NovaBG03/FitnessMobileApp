@@ -51,17 +51,9 @@
                             <ViewCell>
                                 <StackLayout x:Name="MealInfoLayout" Orientation="Horizontal">
                                     <Label x:Name="MealNameLbl" Text="{Binding MealName}" />
-
-                                    <StackLayout>
-                                        <StackLayout.BindingContext>
-                                            <local:FoodViewModel/>
-                                        </StackLayout.BindingContext>
-                                        <Button x:Name="AddFoodCommand" 
-                                            Text="Add Food"
-                                            Command="{Binding AddFood}"
-                                        />
-                                    </StackLayout>
-
+                                    <Button x:Name="AddFoodCommand" 
+                                            Text="{Binding Source={x:Reference MealNameLbl}, Path=Text, StringFormat='Add Food to {0}'}"
+                                            Clicked="AddFoodCommandClicked"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
@@ -70,7 +62,14 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
+                                <StackLayout>
+                                    <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Macronutrient.Carbohydrate}" />
+                                        <Label Text="{Binding Macronutrient.Fat}" />
+                                        <Label Text="{Binding Macronutrient.Protein}" />
+                                    </StackLayout>
+                                </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

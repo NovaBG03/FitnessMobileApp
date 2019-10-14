@@ -225,23 +225,36 @@
             {
                 MealName = meal.Name,
             });
-
-            this.MealGroups.First(mg => mg.MealName == meal.Name)
-                .Add(new Food()
-                {
-                    Name = "Food",
-                    Macronutrient = new Macronutrient()
-                    {
-                        Carbohydrate = 25,
-                        Fat = 1,
-                        Protein = 10
-                    }
-                });
         }
 
-        private void OnAddFood(string param)
+        private void OnAddFood(string mealName)
         {
-            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
+            var food = new Food()
+            {
+                Name = "Food",
+                Macronutrient = new Macronutrient()
+                {
+                    Carbohydrate = 25,
+                    Fat = 1,
+                    Protein = 10
+                }
+            };
+
+            var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
+            mealGroup.Add(food);
+
+
+            //TODO uncomment
+            //this.context.Meals
+            //    .Where(m => m.Date == this.DisplayDate
+            //        && m.Name == mealName)
+            //    .FirstOrDefault()
+            //    .MealsFoods
+            //    .Add(new MealFood()
+            //    {
+            //        Food = food
+            //    });
+            //App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
         }
     }
 }

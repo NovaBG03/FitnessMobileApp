@@ -5,6 +5,7 @@ namespace MobileFitness.App.Views
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using MobileFitness.App.Utils;
     using MobileFitness.App.ViewModels;
     using MobileFitness.Models;
     using Xamarin.Forms;
@@ -26,6 +27,14 @@ namespace MobileFitness.App.Views
             this.BindingContext = vm;
             vm.DisplayInvalidPrompt += (message) => DisplayAlert("Warning", message, "Ok");
             MessagingCenter.Subscribe<LoginViewModel, User>(vm, "ReloadUserInfo", (s, u) => vm.SetNewUser(u));
+        }
+
+        private void AddFoodCommandClicked(object sender, EventArgs e)
+        {
+            var mealName = ((Button)sender).Text.Replace("Add Food to ", "");
+
+            var vm = (FoodViewModel)this.BindingContext;
+            vm.AddFood.Execute(mealName);
         }
     }
 }
