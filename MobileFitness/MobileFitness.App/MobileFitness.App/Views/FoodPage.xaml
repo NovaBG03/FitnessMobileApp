@@ -13,7 +13,7 @@
 
     <ContentPage.Content>
         <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
-            
+
             <StackLayout x:Name="DateNavigationLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 <Button x:Name="PrevDateButton" ImageSource="baseline_arrow_left_white_18dp.png" Command="{Binding DisplayPrevDate}"/>
                 <DatePicker x:Name="DispalyDatePicker" Date="{Binding DisplayDate}" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}"/>
@@ -45,32 +45,39 @@
             <StackLayout x:Name="MealLayout" HorizontalOptions="FillAndExpand">
                 <Button x:Name="AddMealButton" Text="Add Meal" Command="{Binding AddMeal}"/>
 
-                <ListView x:Name="MealListView" ItemsSource="{Binding Meals}" SelectedItem="{Binding SelectedMeal}">
+                <ListView x:Name="MealGroupsListView" ItemsSource="{Binding MealGroups}" IsGroupingEnabled="true">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout x:Name="MealInfoLayout" Orientation="Horizontal">
+                                    <Label x:Name="MealNameLbl" Text="{Binding MealName}" />
+
+                                    <StackLayout>
+                                        <StackLayout.BindingContext>
+                                            <local:FoodViewModel/>
+                                        </StackLayout.BindingContext>
+                                        <Button x:Name="AddFoodCommand" 
+                                            Text="Add Food"
+                                            Command="{Binding AddFood}"
+                                        />
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout x:Name="MealWithFoodsLayout">
-
-                                        <StackLayout x:Name="MealNameLayout">
-                                            <Label x:Name="MealName" Text="{Binding Name}"/>
-                                        </StackLayout>
-
-                                        <StackLayout x:Name="MealWithFoodsButtonLayout">
-                                            <StackLayout.BindingContext>
-                                                <local:FoodViewModel/>
-                                            </StackLayout.BindingContext>
-                                            <Button x:Name="AddMealButton" Text="Add Meal" Command="{Binding AddFood}"/>
-                                        </StackLayout>
-                                        
-                                    </StackLayout>
-                                </ViewCell.View>
+                                <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
             </StackLayout>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -24,7 +24,6 @@
         private float carbohydrateGoal;
         private float fatGoal;
         private float proteinGoal;
-        private Meal selectedMeal;
 
         public FoodViewModel()
         {
@@ -35,9 +34,9 @@
             this.DisplayNextDate = new Command(this.OnDisplayNextDate);
             this.DisplayPrevDate = new Command(this.OnDisplayPrevDate);
             this.AddMeal = new Command(this.OnAddMeal);
-            this.AddFood = new Command(this.OnAddFood);
+            this.AddFood = new Command<string>(this.OnAddFood);
 
-            this.Meals = new ObservableCollection<Meal>();
+            this.MealGroups = new ObservableCollection<MealGroup>();
         }
 
         public DateTime DisplayDate
@@ -49,16 +48,6 @@
                 this.OnPropertyChanged(nameof(this.DisplayDate));
                 this.UpdateDisplayedMacronutrients();
                 this.UpdateDisplayedMeals();
-            }
-        }
-
-        public Meal SelectedMeal
-        {
-            get => selectedMeal;
-            set
-            {
-                selectedMeal = value;
-                this.OnPropertyChanged(nameof(this.SelectedMeal));
             }
         }
 
@@ -130,7 +119,7 @@
 
         public ICommand AddFood { get; private set; }
 
-        public ObservableCollection<Meal> Meals { get; private set; }
+        public ObservableCollection<MealGroup> MealGroups { get; set; }
 
         public void SetNewUser(User user)
         {
@@ -181,21 +170,32 @@
 
         private void UpdateDisplayedMeals()
         {
-            if (this.Meals == null)
+            if (this.MealGroups == null)
             {
                 return;
             }
 
             var meals = this.context
                 .Meals
+                .Include(m => m.MealsFoods)
                 .Where(m => m.Date == this.DisplayDate)
                 .ToList();
 
-            this.Meals.Clear();
+            this.MealGroups.Clear();
 
             foreach (var meal in meals)
             {
-                this.Meals.Add(meal);
+                var currentMealGroup = new MealGroup()
+                {
+                    MealName = meal.Name
+                };
+
+                foreach (var food in meal.MealsFoods.Select(mf => mf.Food))
+                {
+                    currentMealGroup.Add(food);
+                }
+
+                this.MealGroups.Add(currentMealGroup);
             }
         }
 
@@ -213,16 +213,33 @@
         {
             var meal = new Meal()
             {
-                Name = $"Meal {this.Meals.Count + 1}",
+                Name = $"Meal {this.MealGroups.Count + 1}",
                 Date = this.DisplayDate,
                 User = this.user
             };
 
-            this.Meals.Add(meal);
+            this.context.Meals.Add(meal);
             //TODO add this.context.SaveChanges();
+
+            this.MealGroups.Add(new MealGroup()
+            {
+                MealName = meal.Name,
+            });
+
+            this.MealGroups.First(mg => mg.MealName == meal.Name)
+                .Add(new Food()
+                {
+                    Name = "Food",
+                    Macronutrient = new Macronutrient()
+                    {
+                        Carbohydrate = 25,
+                        Fat = 1,
+                        Protein = 10
+                    }
+                });
         }
 
-        private void OnAddFood()
+        private void OnAddFood(string param)
         {
             App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
         }
