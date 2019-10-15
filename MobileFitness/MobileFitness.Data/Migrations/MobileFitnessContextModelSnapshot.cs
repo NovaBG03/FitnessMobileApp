@@ -83,6 +83,8 @@ namespace MobileFitness.Data.Migrations
 
                     b.Property<int>("FoodId");
 
+                    b.Property<float>("FoodQuantity");
+
                     b.HasKey("MealId", "FoodId");
 
                     b.HasIndex("FoodId");

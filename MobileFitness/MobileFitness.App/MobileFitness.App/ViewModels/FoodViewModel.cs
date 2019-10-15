@@ -264,9 +264,17 @@
 
         private void UpdateUsedMacronutrients()
         {
-            this.CarbohydrateUsed = this.MealGroups.Sum(mg => mg.Foods.Sum(f => f.Macronutrient.Carbohydrate));
-            this.FatUsed = this.MealGroups.Sum(mg => mg.Foods.Sum(f => f.Macronutrient.Fat));
-            this.ProteinUsed = this.MealGroups.Sum(mg => mg.Foods.Sum(f => f.Macronutrient.Protein));
+            this.CarbohydrateUsed = this.MealGroups
+                .Sum(mg => mg.Foods
+                    .Sum(f => f.Macronutrient.Carbohydrate * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
+
+            this.FatUsed = this.MealGroups
+                .Sum(mg => mg.Foods
+                    .Sum(f => f.Macronutrient.Fat * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
+
+            this.ProteinUsed = this.MealGroups
+                .Sum(mg => mg.Foods
+                    .Sum(f => f.Macronutrient.Protein * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
         }
 
         private void OnDisplayPrevDate()
@@ -347,7 +355,8 @@
                 .MealsFoods
                 .Add(new MealFood()
                 {
-                    Food = food
+                    Food = food,
+                    FoodQuantity = 1F
                 });
             this.context.SaveChanges();
 
