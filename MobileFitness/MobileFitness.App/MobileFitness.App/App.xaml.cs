@@ -13,6 +13,8 @@ namespace MobileFitness.App
         {
             InitializeComponent();
 
+            DependencyService.Get<MobileFitnessContext>();
+
             this.MainPage = new NavigationPage(new LoginPage());
         }
 

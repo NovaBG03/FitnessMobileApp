@@ -3,13 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MobileFitness.App.ViewModels"
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.AddFoodPage">
+
+    <ContentPage.BindingContext>
+        <local:AddFoodViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
+
+            <StackLayout x:Name="SearchBarLayout" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Entry x:Name="SearchBarEntry" Text="{Binding SearchingInput}" Unfocused="SearchBarEntryUnfocused"/>
+
+                <ListView x:Name="FoundedFoodsListView" ItemsSource="{Binding FoundedFoods}" SelectedItem="{Binding SelectedFood, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Macronutrient.Carbohydrate, StringFormat='C:{0}'}" />
+                                        <Label Text="{Binding Macronutrient.Fat, StringFormat='F:{0}'}" />
+                                        <Label Text="{Binding Macronutrient.Protein , StringFormat='P:{0}'}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+
+            <StackLayout x:Name="MacronutrientLayout" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout x:Name="CarbohydrateLayout">
+                    <Label Text="Carbohydrate" FontSize="Medium"/>
+                    <Label Text="{Binding CarbohydrateGoal}" FontSize="Medium"/>
+                </StackLayout>
+
+                <StackLayout x:Name="FatLayout" Orientation="Vertical">
+                    <Label Text="Fat" FontSize="Medium"/>
+                    <Label Text="{Binding FatGoal}" FontSize="Medium"/>
+                </StackLayout>
+
+                <StackLayout x:Name="ProteinLayout" Orientation="Vertical">
+                    <Label Text="Protein" FontSize="Medium"/>
+                    <Label Text="{Binding ProteinGoal}" FontSize="Medium"/>
+                </StackLayout>
+
+                <StackLayout x:Name="CaloriesLayout" Orientation="Vertical">
+                    <Label Text="Calories" FontSize="Medium"/>
+                    <Label Text="{Binding CaloriesGoal}" FontSize="Medium"/>
+                </StackLayout>
+
+                <StackLayout x:Name="QuantityLayout" Orientation="Vertical">
+                    <Label Text="Grams" FontSize="Medium"/>
+                    <Entry Text="{Binding FoodQuantity}" Keyboard="Numeric" FontSize="Medium" MaxLength="5"/>
+                </StackLayout>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

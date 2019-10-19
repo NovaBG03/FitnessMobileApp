@@ -330,9 +330,10 @@
 
         private void OnAddFood(string mealName)
         {
-            //TODO CREATE ADD FOOD PAGE
-            //App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
-            //return;
+            var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
+
+            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage(mealGroup));
+            return;
 
             var food = new Food()
             {
@@ -345,7 +346,6 @@
                 }
             };
 
-            var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
             mealGroup.Add(food);
 
             this.context.Meals
