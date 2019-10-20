@@ -114,5 +114,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\baseline_arrow_right_white_18dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\baseline_check_white_18dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

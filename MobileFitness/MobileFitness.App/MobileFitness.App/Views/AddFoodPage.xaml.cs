@@ -21,16 +21,9 @@ namespace MobileFitness.App.Views
             this.Init();
         }
 
-        public AddFoodPage(MealGroup mealGroup)
-            : this()
-        {
-            this.mealGroup = mealGroup;
-        }
-
-
         private void Init()
         {
-            var vm = new AddFoodViewModel(this.mealGroup);
+            var vm = new AddFoodViewModel();
             this.BindingContext = vm;
             vm.DisplayInvalidPrompt += (message) => DisplayAlert("Warning", message, "Ok");
         }

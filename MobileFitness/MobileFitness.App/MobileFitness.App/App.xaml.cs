@@ -1,7 +1,9 @@
 ﻿using MobileFitness.App.ViewModels;
 using MobileFitness.App.Views;
 using MobileFitness.Data;
+using MobileFitness.Models;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +15,7 @@ namespace MobileFitness.App
         {
             InitializeComponent();
 
-            DependencyService.Get<MobileFitnessContext>();
+            var context = DependencyService.Get<MobileFitnessContext>();
 
             this.MainPage = new NavigationPage(new LoginPage());
         }

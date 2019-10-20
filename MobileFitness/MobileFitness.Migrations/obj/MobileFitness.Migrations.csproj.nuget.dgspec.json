@@ -120,6 +120,9 @@
             "projectReferences": {
               "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj": {
                 "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj"
+              },
+              "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj": {
+                "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj"
               }
             }
           }

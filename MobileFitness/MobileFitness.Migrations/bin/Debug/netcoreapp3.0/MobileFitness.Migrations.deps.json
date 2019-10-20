@@ -9,7 +9,8 @@
       "MobileFitness.Migrations/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "2.0.0",
-          "MobileFitness.Data": "1.0.0"
+          "MobileFitness.Data": "1.0.0",
+          "MobileFitness.Models": "1.0.0"
         },
         "runtime": {
           "MobileFitness.Migrations.dll": {}

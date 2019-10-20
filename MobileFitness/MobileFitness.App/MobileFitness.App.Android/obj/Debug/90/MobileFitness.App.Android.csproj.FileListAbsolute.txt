@@ -594,3 +594,4 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\baseline_arrow_left_white_18dp.png
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\baseline_arrow_right_white_18dp.png
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App.Android\obj\Debug\90\res\drawable\baseline_check_white_18dp.png

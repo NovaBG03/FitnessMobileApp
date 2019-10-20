@@ -27,6 +27,7 @@ namespace MobileFitness.App.Views
             this.BindingContext = vm;
             vm.DisplayInvalidPrompt += (message) => DisplayAlert("Warning", message, "Ok");
             MessagingCenter.Subscribe<LoginViewModel, User>(vm, "ReloadUserInfo", (s, u) => vm.SetNewUser(u));
+            MessagingCenter.Subscribe<AddFoodViewModel, object[]>(vm, "SaveFood", (s, args) => vm.SaveFood(args));
         }
 
         private void AddFoodCommandClicked(object sender, EventArgs e)

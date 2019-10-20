@@ -155,4 +155,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\baseline_arrow_right_white_18dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_check_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_check_white_18dp.png" />
+  </ItemGroup>
 </Project>

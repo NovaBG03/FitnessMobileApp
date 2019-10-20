@@ -11,6 +11,10 @@
         <local:AddFoodViewModel/>
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="baseline_check_white_18dp.png" Command="{Binding SaveFood}"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
 

@@ -24,19 +24,27 @@ namespace MobileFitness.App.ViewModels
 
         public AddFoodViewModel()
         {
-
-        }
-
-        public AddFoodViewModel(MealGroup mealGroup)
-        {
-            this.mealGroup = mealGroup;
-
             this.UpdateFoundedFoods = new Command(this.OnUpdateFoundedFoods);
+            this.SaveFood = new Command(this.OnSaveFood);
 
             this.context = DependencyService.Get<MobileFitnessContext>();
+
+            this.InitiliazeFoundedFoods();
+            this.UpdateSelectedFoodInfo();
+        }
+
+        private void InitiliazeFoundedFoods()
+        {
             this.FoundedFoods = new ObservableCollection<Food>();
 
-            this.UpdateSelectedFoodInfo();
+            var foundedFoods = this.context
+                .Foods
+                .Include(f => f.Macronutrient)
+                .OrderBy(f => f.Name)
+                .Take(50)
+                .ToArray();
+
+            this.SetFoundedFoods(foundedFoods);
         }
 
         public float CarbohydrateGoal
@@ -124,6 +132,8 @@ namespace MobileFitness.App.ViewModels
 
         public ICommand UpdateFoundedFoods { get; set; }
 
+        public ICommand SaveFood { get; set; }
+
         private void OnUpdateFoundedFoods()
         {
             this.FoundedFoods.Clear();
@@ -138,10 +148,32 @@ namespace MobileFitness.App.ViewModels
                 .Take(50)
                 .ToArray();
 
+            this.SetFoundedFoods(foundedFoods);
+        }
+
+        private void SetFoundedFoods(Food[] foundedFoods)
+        {
             foreach (var food in foundedFoods)
             {
                 this.FoundedFoods.Add(food);
             }
+        }
+
+        private void OnSaveFood()
+        {
+            if(this.SelectedFood == null)
+            {
+                App.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
+
+            if (this.FoodQuantity < 1)
+            {
+                this.DisplayInvalidPrompt("Please enter correct Quantity.");
+            }
+
+            MessagingCenter.Send(this, "SaveFood", new object[] { this.SelectedFood, this.FoodQuantity });
+            App.Current.MainPage.Navigation.PopAsync();
         }
 
         private void ReserFoodQuantity()

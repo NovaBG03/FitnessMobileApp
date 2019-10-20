@@ -28,6 +28,8 @@
         private float fatUsed;
         private float proteinUsed;
 
+        private MealGroup selectedMealGroup;
+
         public FoodViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -52,7 +54,7 @@
                 this.OnPropertyChanged(nameof(this.DisplayDate));
 
                 this.UpdateDisplayedMeals();
-                this.UpdateDisplayedMacronutrients();
+                this.UpdateMacronutrientGoals();
                 this.UpdateUsedMacronutrients();
             }
         }
@@ -175,11 +177,50 @@
         {
             this.user = user;
             this.UpdateDisplayedMeals();
-            this.UpdateDisplayedMacronutrients();
+            this.UpdateMacronutrientGoals();
             this.UpdateUsedMacronutrients();
         }
 
-        private void UpdateDisplayedMacronutrients()
+        public void SaveFood(object[] args)
+        {
+            var food = (Food)args[0];
+            var foodQuantity = (float)args[1];
+
+            var mealName = this.selectedMealGroup.MealName;
+
+            if (this.context.MealFoods
+                    .Where(mf => mf.Meal.Name == mealName)
+                    .Any(mf => mf.Food == food))
+            {
+                this.context.Meals
+                .Where(m => m.Date == this.DisplayDate
+                    && m.Name == mealName)
+                .First()
+                .MealsFoods
+                .First(f => f.Food == food)
+                .FoodQuantity += foodQuantity;
+            }
+            else
+            {
+                this.context.Meals
+                .Where(m => m.Date == this.DisplayDate
+                    && m.Name == mealName)
+                .First()
+                .MealsFoods
+                .Add(new MealFood()
+                {
+                    Food = food,
+                    FoodQuantity = foodQuantity
+                });
+            }
+
+            this.context.SaveChanges();
+
+            this.UpdateDisplayedMeals();
+            this.UpdateUsedMacronutrients();
+        }
+
+        private void UpdateMacronutrientGoals()
         {
             if (this.user == null)
             {
@@ -266,15 +307,15 @@
         {
             this.CarbohydrateUsed = this.MealGroups
                 .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Carbohydrate * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
+                    .Sum(f => f.Macronutrient.Carbohydrate * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
 
             this.FatUsed = this.MealGroups
                 .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Fat * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
+                    .Sum(f => f.Macronutrient.Fat * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
 
             this.ProteinUsed = this.MealGroups
                 .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Protein * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity));
+                    .Sum(f => f.Macronutrient.Protein * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
         }
 
         private void OnDisplayPrevDate()
@@ -332,35 +373,9 @@
         {
             var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
 
-            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage(mealGroup));
-            return;
+            this.selectedMealGroup = mealGroup;
 
-            var food = new Food()
-            {
-                Name = "Food",
-                Macronutrient = new Macronutrient()
-                {
-                    Carbohydrate = 25,
-                    Fat = 1,
-                    Protein = 10
-                }
-            };
-
-            mealGroup.Add(food);
-
-            this.context.Meals
-                .Where(m => m.Date == this.DisplayDate
-                    && m.Name == mealName)
-                .FirstOrDefault()
-                .MealsFoods
-                .Add(new MealFood()
-                {
-                    Food = food,
-                    FoodQuantity = 1F
-                });
-            this.context.SaveChanges();
-
-            this.UpdateUsedMacronutrients();
+            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
         }
     }
 }

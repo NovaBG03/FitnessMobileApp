@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MobileFitness.Data\MobileFitness.Data.csproj" />
+    <ProjectReference Include="..\MobileFitness.Models\MobileFitness.Models.csproj" />
   </ItemGroup>
 
 </Project>

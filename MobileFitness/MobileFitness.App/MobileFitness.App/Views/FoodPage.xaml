@@ -68,9 +68,9 @@
                                 <StackLayout>
                                     <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Macronutrient.Carbohydrate}" />
-                                        <Label Text="{Binding Macronutrient.Fat}" />
-                                        <Label Text="{Binding Macronutrient.Protein}" />
+                                        <Label Text="{Binding Macronutrient.Carbohydrate, StringFormat='C:{0}'}" />
+                                        <Label Text="{Binding Macronutrient.Fat, StringFormat='F:{0}'}" />
+                                        <Label Text="{Binding Macronutrient.Protein, StringFormat='P:{0}'}" />
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>
