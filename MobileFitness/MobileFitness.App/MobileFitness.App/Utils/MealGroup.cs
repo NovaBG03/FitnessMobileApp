@@ -9,7 +9,7 @@
 
     public class MealGroup : ObservableCollection<Food>
     {
-        public string MealName { get; set; }
+        public Meal Meal { get; set; }
 
         public ObservableCollection<Food> Foods => this;
     }

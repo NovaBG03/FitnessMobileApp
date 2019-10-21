@@ -3,13 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MobileFitness.App.ViewModels"
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.AccountPage">
+
+    <ContentPage.BindingContext>
+        <local:AccountViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
+            <Label Text="{Binding Username}" FontSize="Large"/>
+            <Label Text="{Binding Email}" FontSize="Small"/>
+            <Label Text="{Binding WeightInKilograms, StringFormat='Current weight: {0}kg'}" FontSize="Medium"/>
+
+            <StackLayout x:Name="GoalPickerLayout" Orientation="Vertical">
+                <Label x:Name="GoalLbl" Text="Goal"/>
+
+                <Picker x:Name="GoalPicker" SelectedIndex="{Binding GoalIndex}" ItemsSource="{Binding Goals}" ItemDisplayBinding="{Binding .}" Title="-----Select-----" />
+            </StackLayout>
+
+            <StackLayout x:Name="GenderPickerLayout" Orientation="Vertical">
+                <Label x:Name="GenderLbl" Text="Gender"/>
+
+                <Picker x:Name="GenderPicker" SelectedIndex="{Binding GenderIndex}" ItemsSource="{Binding Genders}" ItemDisplayBinding="{Binding .}" Title="--Select--" />
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,80 +6,48 @@
              xmlns:local="clr-namespace:MobileFitness.App.ViewModels"
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.FoodPage">
-
     <ContentPage.BindingContext>
         <local:FoodViewModel/>
     </ContentPage.BindingContext>
 
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Icon="baseline_check_white_18dp.png" Command="{Binding SaveFood}" IsEnabled="False"/>
+    </ContentPage.ToolbarItems>-->
+
     <ContentPage.Content>
         <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
+            
+            <Label Text="{Binding FoodName}" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
 
-            <StackLayout x:Name="DateNavigationLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button x:Name="PrevDateButton" ImageSource="baseline_arrow_left_white_18dp.png" Command="{Binding DisplayPrevDate}"/>
-                <DatePicker x:Name="DispalyDatePicker" Date="{Binding DisplayDate}" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}"/>
-                <Button x:Name="NextDateButton" ImageSource="baseline_arrow_right_white_18dp.png" Command="{Binding DisplayNextDate}"/>
-            </StackLayout>
+            <StackLayout x:Name="MacronutrientLayout" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
 
-            <StackLayout x:Name="MacronutrientLayout" Orientation="Horizontal" HorizontalOptions="Center">
                 <StackLayout x:Name="CarbohydrateLayout">
                     <Label Text="Carbohydrate" />
-                    <Label Text="{Binding CarbohydrateLeft}" />
+                    <Label Text="{Binding Carbohydrate}" />
                 </StackLayout>
 
                 <StackLayout x:Name="FatLayout">
                     <Label Text="Fat" />
-                    <Label Text="{Binding FatLeft}" />
+                    <Label Text="{Binding Fat}" />
                 </StackLayout>
 
                 <StackLayout x:Name="ProteinLayout">
                     <Label Text="Protein" />
-                    <Label Text="{Binding ProteinLeft}" />
+                    <Label Text="{Binding Protein}" />
                 </StackLayout>
 
                 <StackLayout x:Name="CaloriesLayout">
                     <Label Text="Calories" />
-                    <Label Text="{Binding CaloriesLeft}" />
+                    <Label Text="{Binding Calories}" />
                 </StackLayout>
+                
             </StackLayout>
 
-            <StackLayout x:Name="MealLayout" HorizontalOptions="FillAndExpand">
-                <Button x:Name="AddMealButton" Text="Add Meal" Command="{Binding AddMeal}"/>
-
-                <ListView x:Name="MealGroupsListView" ItemsSource="{Binding MealGroups}" IsGroupingEnabled="true">
-                    <ListView.GroupHeaderTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout x:Name="MealInfoLayout" Orientation="Horizontal">
-                                    <Label x:Name="MealNameLbl" Text="{Binding MealName}" />
-                                    <Button x:Name="AddFoodCommand" 
-                                            Text="{Binding Source={x:Reference MealNameLbl}, Path=Text, StringFormat='Add Food to {0}'}"
-                                            Clicked="AddFoodCommandClicked"/>
-                                    <Button x:Name="RemoveMealCommand" 
-                                            Text="{Binding Source={x:Reference MealNameLbl}, Path=Text, StringFormat='Remove {0}'}"
-                                            Clicked="RemoveMealCommandClicked"/>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.GroupHeaderTemplate>
-
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout>
-                                    <Label x:Name="FoodNameLbl" Text="{Binding Name}" />
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Macronutrient.Carbohydrate, StringFormat='C:{0}'}" />
-                                        <Label Text="{Binding Macronutrient.Fat, StringFormat='F:{0}'}" />
-                                        <Label Text="{Binding Macronutrient.Protein, StringFormat='P:{0}'}" />
-                                    </StackLayout>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-
+            <StackLayout x:Name="QuantityLayout">
+                <Label Text="Grams" FontSize="Medium"/>
+                <Label Text="{Binding FoodQuantity}" FontSize="Medium" /><!--Keyboard="Numeric" MaxLength="5"-->
             </StackLayout>
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

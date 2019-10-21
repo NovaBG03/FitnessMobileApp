@@ -3,13 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MobileFitness.App.ViewModels"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              mc:Ignorable="d"
              x:Class="MobileFitness.App.Views.WeightPage">
+    <ContentPage.BindingContext>
+        <local:WeightViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
+            <StackLayout.Padding>
+            <OnIdiom x:TypeArguments="Thickness">
+                <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+            </OnIdiom>
+            </StackLayout.Padding>
+
+            <StackLayout x:Name="AddWeightLayout" Orientation="Horizontal">
+
+                <StackLayout x:Name="WeightLayout" Orientation="Vertical">
+                    <Label x:Name="WeightLbl" Text="Weight in Kilograms"/>
+                    <Entry x:Name="WeightEntry" Text="{Binding WeightInKilograms}" Placeholder="Weight" Keyboard="Numeric" MaxLength="7"/>
+                </StackLayout>
+
+                <StackLayout x:Name="BirthdateStack" Orientation="Vertical">
+                    <Label x:Name="DateLbl" Text="Date" HorizontalOptions="CenterAndExpand"/>
+                    <DatePicker x:Name="DatePicker" Date="{Binding Date}" MinimumDate="1/1/1900" MaximumDate="{x:Static sys:DateTime.Today}"/>
+                </StackLayout>
+
+                <Button Text="Add" Command="{Binding AddWeight}"/>
+            </StackLayout>
+
+            <StackLayout x:Name="WeightsLayout" HorizontalOptions="FillAndExpand">
+                <ListView x:Name="WeightsListView" ItemsSource="{Binding Weights}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell IsEnabled="False">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="WeightKilogramsLbl" 
+                                           Text="{Binding Kilograms, StringFormat='{0}kg'}" 
+                                           FontSize="Large"
+                                           HorizontalOptions="StartAndExpand"/>
+
+                                    <Label x:Name="WeightDateLbl" 
+                                           Text="{Binding Date, StringFormat='{0:MM/dd/yyyy}'}" 
+                                           FontSize="Large"
+                                           HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

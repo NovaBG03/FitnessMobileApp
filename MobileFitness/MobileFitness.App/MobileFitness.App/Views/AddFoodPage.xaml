@@ -19,7 +19,7 @@
         <StackLayout x:Name="MasterLayout" VerticalOptions="Start" HorizontalOptions="Center">
 
             <StackLayout x:Name="SearchBarLayout" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
-                <Entry x:Name="SearchBarEntry" Text="{Binding SearchingInput}" Unfocused="SearchBarEntryUnfocused"/>
+                <Entry x:Name="SearchBarEntry" Text="{Binding SearchingInput}" Placeholder="Search for food" Unfocused="SearchBarEntryUnfocused"/>
 
                 <ListView x:Name="FoundedFoodsListView" ItemsSource="{Binding FoundedFoods}" SelectedItem="{Binding SelectedFood, Mode=TwoWay}">
                     <ListView.ItemTemplate>

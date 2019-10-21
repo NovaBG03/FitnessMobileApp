@@ -13,7 +13,6 @@ namespace MobileFitness.App.ViewModels
     public class AddFoodViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
-        private readonly MealGroup mealGroup;
 
         private float carbohydrate;
         private float fat;
@@ -29,14 +28,14 @@ namespace MobileFitness.App.ViewModels
 
             this.context = DependencyService.Get<MobileFitnessContext>();
 
-            this.InitiliazeFoundedFoods();
+            this.FoundedFoods = new ObservableCollection<Food>();
+            this.SetDefaultFoundedFoods();
+
             this.UpdateSelectedFoodInfo();
         }
 
-        private void InitiliazeFoundedFoods()
+        private void SetDefaultFoundedFoods()
         {
-            this.FoundedFoods = new ObservableCollection<Food>();
-
             var foundedFoods = this.context
                 .Foods
                 .Include(f => f.Macronutrient)
@@ -139,6 +138,12 @@ namespace MobileFitness.App.ViewModels
             this.FoundedFoods.Clear();
 
             var inputToLower = this.SearchingInput?.ToLower();
+
+            if (string.IsNullOrEmpty(inputToLower) || string.IsNullOrWhiteSpace(inputToLower))
+            {
+                this.SetDefaultFoundedFoods();
+                return;
+            }
 
             var foundedFoods = this.context
                 .Foods

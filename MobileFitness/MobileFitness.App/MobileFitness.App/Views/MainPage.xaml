@@ -9,7 +9,7 @@
 
     <local:WeightPage Title="Weight" IconImageSource="WeightIcon.png"/>
 
-    <local:FoodPage Title="Food" IconImageSource="FoodIcon.png" />
+    <local:MealPage Title="Food" IconImageSource="FoodIcon.png" />
 
     <local:AccountPage Title="Account" IconImageSource="AccountIcon.png"/>
     

@@ -13,8 +13,6 @@ namespace MobileFitness.App.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddFoodPage : ContentPage
     {
-        private readonly MealGroup mealGroup;
-
         public AddFoodPage()
         {
             InitializeComponent();

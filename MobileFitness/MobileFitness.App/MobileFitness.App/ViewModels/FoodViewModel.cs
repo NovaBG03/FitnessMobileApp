@@ -1,381 +1,117 @@
-﻿namespace MobileFitness.App.ViewModels
-{
-    using System;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Net.Mail;
-    using System.Text;
-    using System.Windows.Input;
-    using Microsoft.EntityFrameworkCore;
-    using MobileFitness.App.Utils;
-    using MobileFitness.App.Views;
-    using MobileFitness.Data;
-    using MobileFitness.Models;
-    using MobileFitness.Models.Enums;
-    using Xamarin.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
+using MobileFitness.App.Views;
+using MobileFitness.Models;
+using Xamarin.Forms;
 
+namespace MobileFitness.App.ViewModels
+{
     public class FoodViewModel : BaseViewModel
     {
-        private readonly MobileFitnessContext context;
-
-        private User user;
-        private DateTime displayDate;
-        private float carbohydrateGoal;
-        private float fatGoal;
-        private float proteinGoal;
-        private float carbohydrateUsed;
-        private float fatUsed;
-        private float proteinUsed;
-
-        private MealGroup selectedMealGroup;
+        private Food food;
+        private string foodName;
+        private float carbohydrate;
+        private float fat;
+        private float protein;
+        private float foodQuantity;
 
         public FoodViewModel()
         {
-            this.context = DependencyService.Get<MobileFitnessContext>();
-
-            this.MealGroups = new ObservableCollection<MealGroup>();
-
-            this.DisplayDate = DateTime.Today;
-
-            this.DisplayNextDate = new Command(this.OnDisplayNextDate);
-            this.DisplayPrevDate = new Command(this.OnDisplayPrevDate);
-            this.AddMeal = new Command(this.OnAddMeal);
-            this.RemoveMeal = new Command<string>(this.OnRemoveMeal);
-            this.AddFood = new Command<string>(this.OnAddFood);
+            //this.SaveFood = new Command(this.OnSaveFood);
         }
 
-        public DateTime DisplayDate
+        public string FoodName
         {
-            get => displayDate;
+            get => foodName;
             set
             {
-                displayDate = value;
-                this.OnPropertyChanged(nameof(this.DisplayDate));
-
-                this.UpdateDisplayedMeals();
-                this.UpdateMacronutrientGoals();
-                this.UpdateUsedMacronutrients();
+                foodName = value;
+                this.OnPropertyChanged(nameof(this.FoodName));
             }
         }
 
-        public float CarbohydrateGoal
+        public float Carbohydrate
         {
-            get => carbohydrateGoal;
+            get => carbohydrate;
             set
             {
-                carbohydrateGoal = value;
-                this.OnPropertyChanged(nameof(this.CarbohydrateGoal));
-                this.OnPropertyChanged(nameof(this.CarbohydrateLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesGoal));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
+                carbohydrate = value;
+                this.OnPropertyChanged(nameof(this.Carbohydrate));
+                this.OnPropertyChanged(nameof(this.Calories));
             }
         }
 
-        public float FatGoal
+        public float Fat
         {
-            get => fatGoal;
+            get => fat;
             set
             {
-                fatGoal = value;
-                this.OnPropertyChanged(nameof(this.FatGoal));
-                this.OnPropertyChanged(nameof(this.FatLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesGoal));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
+                fat = value;
+                this.OnPropertyChanged(nameof(this.Fat));
+                this.OnPropertyChanged(nameof(this.Calories));
             }
         }
 
-        public float ProteinGoal
+        public float Protein
         {
-            get => proteinGoal;
+            get => protein;
             set
             {
-                proteinGoal = value;
-                this.OnPropertyChanged(nameof(this.ProteinGoal));
-                this.OnPropertyChanged(nameof(this.ProteinLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesGoal));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
+                protein = value;
+                this.OnPropertyChanged(nameof(this.Protein));
+                this.OnPropertyChanged(nameof(this.Calories));
             }
         }
 
-        public float CaloriesGoal
-            => (this.ProteinGoal * 4) + (this.CarbohydrateGoal * 4) + (this.FatGoal * 9);
+        public float Calories
+            => (this.Protein * 4) + (this.Carbohydrate * 4) + (this.Fat * 9);
 
-        public float CarbohydrateUsed
+
+        public float FoodQuantity
         {
-            get => carbohydrateUsed;
+            get => foodQuantity;
             set
             {
-                carbohydrateUsed = value;
-                this.OnPropertyChanged(nameof(this.CarbohydrateUsed));
-                this.OnPropertyChanged(nameof(this.CarbohydrateLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesUsed));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
+                foodQuantity = value;
+                this.OnPropertyChanged(nameof(this.FoodQuantity));
+                this.UpdateFoodInfo();
             }
         }
 
-        public float FatUsed
+        //public ICommand SaveFood { get; set; }
+
+        private void UpdateFoodInfo()
         {
-            get => fatUsed;
-            set
-            {
-                fatUsed = value;
-                this.OnPropertyChanged(nameof(this.FatUsed));
-                this.OnPropertyChanged(nameof(this.FatLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesUsed));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
-            }
-        }
-
-        public float CaloriesUsed
-            => (this.ProteinUsed * 4) + (this.CarbohydrateUsed * 4) + (this.FatUsed * 9);
-
-        public float ProteinUsed
-        {
-            get => proteinUsed;
-            set
-            {
-                proteinUsed = value;
-                this.OnPropertyChanged(nameof(this.ProteinUsed));
-                this.OnPropertyChanged(nameof(this.ProteinLeft));
-                this.OnPropertyChanged(nameof(this.CaloriesUsed));
-                this.OnPropertyChanged(nameof(this.CaloriesLeft));
-            }
-        }
-
-        public int CarbohydrateLeft
-            => (int)(this.CarbohydrateGoal - this.CarbohydrateUsed);
-
-        public int FatLeft
-            => (int)(this.FatGoal - this.FatUsed);
-
-        public int ProteinLeft
-            => (int)(this.ProteinGoal - this.ProteinUsed);
-
-        public int CaloriesLeft
-            => (int)(this.CaloriesGoal - this.CaloriesUsed);
-
-        public DateTime MaxDate
-            => DateTime.Today.AddYears(1);
-
-        public DateTime MinDate
-            => new DateTime(2010, 1, 1);
-
-        public ICommand DisplayNextDate { get; private set; }
-
-        public ICommand DisplayPrevDate { get; private set; }
-
-        public ICommand AddMeal { get; private set; }
-
-        public ICommand RemoveMeal { get; private set; }
-
-        public ICommand AddFood { get; private set; }
-
-        public ObservableCollection<MealGroup> MealGroups { get; set; }
-
-        public void SetNewUser(User user)
-        {
-            this.user = user;
-            this.UpdateDisplayedMeals();
-            this.UpdateMacronutrientGoals();
-            this.UpdateUsedMacronutrients();
-        }
-
-        public void SaveFood(object[] args)
-        {
-            var food = (Food)args[0];
-            var foodQuantity = (float)args[1];
-
-            var mealName = this.selectedMealGroup.MealName;
-
-            if (this.context.MealFoods
-                    .Where(mf => mf.Meal.Name == mealName)
-                    .Any(mf => mf.Food == food))
-            {
-                this.context.Meals
-                .Where(m => m.Date == this.DisplayDate
-                    && m.Name == mealName)
-                .First()
-                .MealsFoods
-                .First(f => f.Food == food)
-                .FoodQuantity += foodQuantity;
-            }
-            else
-            {
-                this.context.Meals
-                .Where(m => m.Date == this.DisplayDate
-                    && m.Name == mealName)
-                .First()
-                .MealsFoods
-                .Add(new MealFood()
-                {
-                    Food = food,
-                    FoodQuantity = foodQuantity
-                });
-            }
-
-            this.context.SaveChanges();
-
-            this.UpdateDisplayedMeals();
-            this.UpdateUsedMacronutrients();
-        }
-
-        private void UpdateMacronutrientGoals()
-        {
-            if (this.user == null)
+            if (this.food == null)
             {
                 return;
             }
 
-            var currentGoal = this.context
-                .UsersMacronutrients
-                .Where(um => um.UserId == this.user.Id
-                    && um.Date <= this.DisplayDate)
-                .OrderByDescending(um => um.Date)
-                .Select(um => new
-                {
-                    um.Macronutrient.Carbohydrate,
-                    um.Macronutrient.Fat,
-                    um.Macronutrient.Protein
-                })
-                .FirstOrDefault();
-
-            if (currentGoal == null)
-            {
-                currentGoal = this.context
-                .UsersMacronutrients
-                .Where(um => um.UserId == this.user.Id)
-                .OrderBy(um => um.Date)
-                .Select(um => new
-                {
-                    um.Macronutrient.Carbohydrate,
-                    um.Macronutrient.Fat,
-                    um.Macronutrient.Protein
-                })
-                .FirstOrDefault();
-            }
-
-            this.CarbohydrateGoal = currentGoal.Carbohydrate;
-            this.FatGoal = currentGoal.Fat;
-            this.ProteinGoal = currentGoal.Protein;
+            this.Carbohydrate = this.food.Macronutrient.Carbohydrate * this.FoodQuantity / 100;
+            this.Fat = this.food.Macronutrient.Fat * this.FoodQuantity / 100;
+            this.Protein = this.food.Macronutrient.Protein * this.FoodQuantity / 100;
         }
 
-        private void UpdateDisplayedMeals()
+        public void ShowFoodInfo(object[] args)
         {
-            if (this.user == null)
-            {
-                return;
-            }
+            this.food = (Food)args[0];
+            this.FoodQuantity = (float)args[1];
+            this.FoodName = this.food.Name;
 
-            var meals = this.context
-                .Meals
-                .Include(m => m.MealsFoods)
-                .Include(m => m.User)
-                .OrderBy(m => m.Name)
-                .Where(m => m.Date == this.DisplayDate
-                    && m.User == this.user)
-                .ToList();
-
-            var mealsFoods = this.context
-                .MealFoods
-                .Include(mf => mf.Meal)
-                .Include(mf => mf.Food)
-                .ThenInclude(f => f.Macronutrient)
-                .Where(mf => mf.Meal.Date == this.DisplayDate
-                    && mf.Meal.User == this.user)
-                .ToList();
-
-            this.MealGroups.Clear();
-
-            foreach (var meal in meals)
-            {
-                var currentMealGroup = new MealGroup()
-                {
-                    MealName = meal.Name
-                };
-
-                foreach (var food in meal.MealsFoods.Select(mf => mf.Food))
-                {
-                    currentMealGroup.Add(food);
-                }
-
-                this.MealGroups.Add(currentMealGroup);
-            }
+            this.UpdateFoodInfo();
         }
 
-        private void UpdateUsedMacronutrients()
-        {
-            this.CarbohydrateUsed = this.MealGroups
-                .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Carbohydrate * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
+        //private void OnSaveFood()
+        //{
+        //    if (this.FoodQuantity < 1)
+        //    {
+        //        this.DisplayInvalidPrompt("Please enter correct Quantity.");
+        //    }
 
-            this.FatUsed = this.MealGroups
-                .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Fat * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
-
-            this.ProteinUsed = this.MealGroups
-                .Sum(mg => mg.Foods
-                    .Sum(f => f.Macronutrient.Protein * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
-        }
-
-        private void OnDisplayPrevDate()
-        {
-            this.DisplayDate = this.DisplayDate.AddDays(-1);
-        }
-
-        private void OnDisplayNextDate()
-        {
-            this.DisplayDate = this.DisplayDate.AddDays(1);
-        }
-
-        private void OnAddMeal()
-        {
-            var meal = new Meal()
-            {
-
-                Date = this.DisplayDate,
-                User = this.user
-            };
-
-            int mealNumber = 1;
-            do
-            {
-                meal.Name = $"Meal {mealNumber++}";
-            } while (this.MealGroups.Any(mg => mg.MealName == meal.Name));
-
-            this.context.Meals.Add(meal);
-            this.context.SaveChanges();
-
-            this.MealGroups.Add(new MealGroup()
-            {
-                MealName = meal.Name,
-            });
-        }
-
-        private void OnRemoveMeal(string mealName)
-        {
-            var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
-            this.MealGroups.Remove(mealGroup);
-
-            var meal = this.context.Meals
-                .Where(m => m.Date == this.DisplayDate
-                    && m.Name == mealName)
-                .FirstOrDefault();
-
-            this.context.Meals.Remove(meal);
-
-            this.context.SaveChanges();
-
-            this.UpdateUsedMacronutrients();
-        }
-
-        private void OnAddFood(string mealName)
-        {
-            var mealGroup = this.MealGroups.First(m => m.MealName == mealName);
-
-            this.selectedMealGroup = mealGroup;
-
-            App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
-        }
+        //    MessagingCenter.Send(this, "UpdateFood", new object[] { this.food, this.FoodQuantity });
+        //    App.Current.MainPage.Navigation.PopAsync();
+        //}
     }
 }
