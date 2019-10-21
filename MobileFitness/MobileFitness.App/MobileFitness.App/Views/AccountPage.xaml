@@ -23,11 +23,7 @@
                 <Picker x:Name="GoalPicker" SelectedIndex="{Binding GoalIndex}" ItemsSource="{Binding Goals}" ItemDisplayBinding="{Binding .}" Title="-----Select-----" />
             </StackLayout>
 
-            <StackLayout x:Name="GenderPickerLayout" Orientation="Vertical">
-                <Label x:Name="GenderLbl" Text="Gender"/>
-
-                <Picker x:Name="GenderPicker" SelectedIndex="{Binding GenderIndex}" ItemsSource="{Binding Genders}" ItemDisplayBinding="{Binding .}" Title="--Select--" />
-            </StackLayout>
+            <Button Text="Update Macronutrients" Command="{Binding UpdateMacronutrients}"/>
 
         </StackLayout>
     </ContentPage.Content>

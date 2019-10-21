@@ -224,7 +224,7 @@
             this.UpdateUsedMacronutrients();
         }
 
-        private void UpdateMacronutrientGoals()
+        public void UpdateMacronutrientGoals()
         {
             if (this.user == null)
             {
@@ -236,6 +236,7 @@
                 .Where(um => um.UserId == this.user.Id
                     && um.Date <= this.DisplayDate)
                 .OrderByDescending(um => um.Date)
+                .ThenByDescending(um => um.MacronutrientId)
                 .Select(um => new
                 {
                     um.Macronutrient.Carbohydrate,
@@ -250,6 +251,7 @@
                 .UsersMacronutrients
                 .Where(um => um.UserId == this.user.Id)
                 .OrderBy(um => um.Date)
+                .ThenByDescending(um => um.MacronutrientId)
                 .Select(um => new
                 {
                     um.Macronutrient.Carbohydrate,
