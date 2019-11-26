@@ -10,8 +10,14 @@ using MobileFitness.Models;
 using MobileFitness.Models.Enums;
 using Xamarin.Forms;
 
+/// <summary>
+/// ViewModel-ите на приложението
+/// </summary>
 namespace MobileFitness.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel за профила на потребителя
+    /// </summary>
     public class AccountViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -22,7 +28,10 @@ namespace MobileFitness.App.ViewModels
         private float carbohydrateGoal;
         private float fatGoal;
         private float proteinGoal;
-
+        
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public AccountViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -33,7 +42,10 @@ namespace MobileFitness.App.ViewModels
 
             this.UpdateMacronutrients = new Command(this.OnUpdateMacronutrients);
         }
-
+        
+        /// <summary>
+        /// Теглото в килограми на потребителя
+        /// </summary>
         public float WeightInKilograms
         {
             get => weightInKilograms;
@@ -44,12 +56,21 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Потребителско име на потребителя
+        /// </summary>
         public string Username 
             => this.user?.Username ?? null;
 
+        /// <summary>
+        /// Електронна поща на потребителя
+        /// </summary>
         public string Email 
             => this.user?.Email ?? null;
 
+        /// <summary>
+        /// Индех на целта на потребителя
+        /// </summary>
         public int GoalIndex
         {
             get => goalIndex;
@@ -60,6 +81,10 @@ namespace MobileFitness.App.ViewModels
                 this.UpdateUserGoal();
             }
         }
+
+        /// <summary>
+        /// Цел за въглехидрати на потребителя
+        /// </summary>
         public float CarbohydrateGoal
         {
             get => carbohydrateGoal;
@@ -71,6 +96,10 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+
+        /// <summary>
+        /// Цел за мазнини на потребителя
+        /// </summary>
         public float FatGoal
         {
             get => fatGoal;
@@ -82,6 +111,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Цел за белтъци на потребителя
+        /// </summary>
         public float ProteinGoal
         {
             get => proteinGoal;
@@ -93,13 +125,25 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Калориини цели на потребителя
+        /// </summary>
         public float CaloriesGoal
             => (this.ProteinGoal * 4) + (this.CarbohydrateGoal * 4) + (this.FatGoal * 9);
 
+        /// <summary>
+        /// Възможни цели
+        /// </summary>
         public ObservableCollection<Goal> Goals { get; }
 
+        /// <summary>
+        /// Команда за актуализация на макронутриентите
+        /// </summary>
         public ICommand UpdateMacronutrients { get; set; }
 
+        /// <summary>
+        /// Актуализация на целите на потребителя
+        /// </summary>
         private void UpdateUserGoal()
         {
             if (this.user == null)
@@ -111,6 +155,10 @@ namespace MobileFitness.App.ViewModels
             this.context.SaveChanges();
         }
 
+        /// <summary>
+        /// Задава нов потребител на ViewModel-а
+        /// </summary>
+        /// <param name="user">Потребител</param>
         public void SetNewUser(User user)
         {
             this.user = user;
@@ -122,6 +170,9 @@ namespace MobileFitness.App.ViewModels
             this.GoalIndex = (int)user.Goal;
         }
 
+        /// <summary>
+        /// Актуализация на теглото на потребителя
+        /// </summary>
         public void UpdateUserWeight()
         {
             var weight = this.context
@@ -133,6 +184,9 @@ namespace MobileFitness.App.ViewModels
             this.WeightInKilograms = weight.Kilograms;
         }
 
+        /// <summary>
+        /// Актуализация на макронутриентите
+        /// </summary>
         private void OnUpdateMacronutrients()
         {
             MacronutrientManager.SetNewMacronutrientGoal(user);

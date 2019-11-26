@@ -13,15 +13,24 @@
 
     using MobileFitness.App.ViewModels;
 
+    /// <summary>
+    /// Страница за влизане в профил
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
-    { 
+    {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public LoginPage()
         {
             InitializeComponent();
             Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new LoginViewModel();

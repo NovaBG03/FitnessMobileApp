@@ -10,15 +10,24 @@ using Xamarin.Forms.Xaml;
 
 namespace MobileFitness.App.Views
 {
+    /// <summary>
+    /// Страница за добавяне на храна
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddFoodPage : ContentPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public AddFoodPage()
         {
             InitializeComponent();
             this.Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new AddFoodViewModel();

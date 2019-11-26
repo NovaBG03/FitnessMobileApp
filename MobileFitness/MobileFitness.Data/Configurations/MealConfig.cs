@@ -6,8 +6,15 @@
 
     using MobileFitness.Models;
 
+    /// <summary>
+    /// Клас за настройка на таблицата за хранения
+    /// </summary>
     public class MealConfig : IEntityTypeConfiguration<Meal>
     {
+        /// <summary>
+        /// Настройва таблицата
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<Meal> builder)
         {
             builder

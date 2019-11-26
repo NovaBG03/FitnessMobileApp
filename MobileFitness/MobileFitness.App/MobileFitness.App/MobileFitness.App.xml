@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileFitness.App</name>
+    </assembly>
+    <members>
+        <member name="T:MobileFitness.App.App">
+            <summary>
+            Стартова точка за приложението
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.App.#ctor">
+            <summary>
+            Създава приложението
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Constants">
+            <summary>
+            Константи
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.IsDev">
+            <summary>
+            В разработка ли е приложението
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.BackgroundColor">
+            <summary>
+            Цвят на фона
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.MainTextColor">
+            <summary>
+            Главен цвят за текста
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.BarBackgroundColor">
+            <summary>
+            Цвят на фона на бара
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.UnselectedTabColor">
+            <summary>
+            Цвят на неизбран елемент
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.SelectedTabColor">
+            <summary>
+            Цвят на избран елемент
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.EntryBackgroundColor">
+            <summary>
+            Цвят на фона на поле за текст
+            </summary>
+        </member>
+        <member name="F:MobileFitness.App.Constants.LoginIconHeight">
+            <summary>
+            Височина на икона при вход
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Utils.Common">
+            <summary>
+            Съдържа специфични команди
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Utils.Common.GetRandomSalt(System.Int32)">
+            <summary>
+            Създава произволен salt за парола
+            </summary>
+            <param name="length">Дължина на паролата</param>
+            <returns>salt</returns>
+        </member>
+        <member name="M:MobileFitness.App.Utils.Common.SaltHashPassword(System.Byte[],System.Byte[])">
+            <summary>
+            Създава парола със salt
+            </summary>
+            <param name="password">Парола</param>
+            <param name="salt">Salt</param>
+            <returns>cripted password</returns>
+        </member>
+        <member name="M:MobileFitness.App.Utils.Common.GetAgeDiff(System.DateTime,System.DateTime)">
+            <summary>
+            Изчислява разликата в години между две дати
+            </summary>
+            <param name="firstDate">Първа дата</param>
+            <param name="secondDate">Втора дата</param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileFitness.App.Utils.MacronutrientManager">
+            <summary>
+            Съдържа помощни методи за изчисляване на макронутриентите на потребител, спрямо целите му
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Utils.MacronutrientManager.SetNewMacronutrientGoal(MobileFitness.Models.User)">
+            <summary>
+            Задава нови макронутриенти цели на даден потребител
+            </summary>
+            <param name="user">Потребител</param>
+        </member>
+        <member name="M:MobileFitness.App.Utils.MacronutrientManager.CalculateCaloriesByGoal(MobileFitness.Models.User,System.Double)">
+            <summary>
+            Изчислява калориите на потребител, спрямо целта му
+            </summary>
+            <param name="user">Потребител</param>
+            <param name="calories">Калории за поддържане</param>
+            <returns>Изчислени калории, спрямо целта на потребителя</returns>
+        </member>
+        <member name="M:MobileFitness.App.Utils.MacronutrientManager.CalculateBmr(MobileFitness.Models.User)">
+            <summary>
+            Изчислява BMR на даден потребител
+            </summary>
+            <param name="user">Потребител</param>
+            <returns>BMR на даден потребител</returns>
+        </member>
+        <member name="M:MobileFitness.App.Utils.MacronutrientManager.GetCurrentWeight(MobileFitness.Models.User)">
+            <summary>
+            Намира най-актуалното тегло на даден потребител
+            </summary>
+            <param name="user">Потребител</param>
+            <returns>Тегло</returns>
+        </member>
+        <member name="T:MobileFitness.App.Utils.MealGroup">
+            <summary>
+            Хранене и храните в него
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.Utils.MealGroup.Meal">
+            <summary>
+            Хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.Utils.MealGroup.Foods">
+            <summary>
+            Колекция от храни
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.AccountViewModel">
+            <summary>
+            ViewModel за профила на потребителя
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AccountViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.WeightInKilograms">
+            <summary>
+            Теглото в килограми на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.Username">
+            <summary>
+            Потребителско име на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.Email">
+            <summary>
+            Електронна поща на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.GoalIndex">
+            <summary>
+            Индех на целта на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.CarbohydrateGoal">
+            <summary>
+            Цел за въглехидрати на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.FatGoal">
+            <summary>
+            Цел за мазнини на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.ProteinGoal">
+            <summary>
+            Цел за белтъци на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.CaloriesGoal">
+            <summary>
+            Калориини цели на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.Goals">
+            <summary>
+            Възможни цели
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AccountViewModel.UpdateMacronutrients">
+            <summary>
+            Команда за актуализация на макронутриентите
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AccountViewModel.UpdateUserGoal">
+            <summary>
+            Актуализация на целите на потребителя
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AccountViewModel.SetNewUser(MobileFitness.Models.User)">
+            <summary>
+            Задава нов потребител на ViewModel-а
+            </summary>
+            <param name="user">Потребител</param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AccountViewModel.UpdateUserWeight">
+            <summary>
+            Актуализация на теглото на потребителя
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AccountViewModel.OnUpdateMacronutrients">
+            <summary>
+            Актуализация на макронутриентите
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.AddFoodViewModel">
+            <summary>
+            ViewModel за добавяне на храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.CarbohydrateGoal">
+            <summary>
+            Въглехидрати на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.FatGoal">
+            <summary>
+            Мазнини на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.ProteinGoal">
+            <summary>
+            Белтъци на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.CaloriesGoal">
+            <summary>
+            Калории на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.SearchingInput">
+            <summary>
+            Ключови думи за търсене на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.FoodQuantity">
+            <summary>
+            Тегло на храната в грамове
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.SelectedFood">
+            <summary>
+            Избрана храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.UpdateSelectedFoodInfo">
+            <summary>
+            Актуализация на информацията за избраната храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.FoundedFoods">
+            <summary>
+            Намерени храни
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.UpdateFoundedFoods">
+            <summary>
+            Команда за актуализация на намерените храни
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.AddFoodViewModel.SaveFood">
+            <summary>
+            Команда за записване на избраната храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.OnUpdateFoundedFoods">
+            <summary>
+            Актуализация на намерените храни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.SetFoundedFoods(MobileFitness.Models.Food[])">
+            <summary>
+            Задаване на намерените храни
+            </summary>
+            <param name="foundedFoods">Намерени храни</param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.OnSaveFood">
+            <summary>
+            Записва избраната храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.AddFoodViewModel.ReserFoodQuantity">
+            <summary>
+            Нулира количеството избрана храна
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.BaseViewModel">
+            <summary>
+            Абстрактен клас за ViewModel
+            </summary>
+        </member>
+        <member name="E:MobileFitness.App.ViewModels.BaseViewModel.PropertyChanged">
+            <summary>
+            Евент за промяна на свойство
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.BaseViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Известява, че стойността на свойството се е променила
+            </summary>
+            <param name="propertyName">име на свойството</param>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.BaseViewModel.DisplayInvalidPrompt">
+            <summary>
+            Изписва грешка на потребителя
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.FoodViewModel">
+            <summary>
+            ViewModel за храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.FoodViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.FoodName">
+            <summary>
+            Име на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.Carbohydrate">
+            <summary>
+            Въглехидрати на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.Fat">
+            <summary>
+            Мазнини на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.Protein">
+            <summary>
+            Белтъци на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.Calories">
+            <summary>
+            Калории на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.FoodViewModel.FoodQuantity">
+            <summary>
+            Тегло на храната в грамове
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.FoodViewModel.UpdateFoodInfo">
+            <summary>
+            Актуализация на информацията за храната
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.FoodViewModel.ShowFoodInfo(System.Object[])">
+            <summary>
+            Показва информацията за храната
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.LoginViewModel">
+            <summary>
+            ViewModel за вход в профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.LoginViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.LoginViewModel.Email">
+            <summary>
+            Електронна поща на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.LoginViewModel.Password">
+            <summary>
+            Парола на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.LoginViewModel.SingInCommand">
+            <summary>
+            Команда за влизане в профил
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.LoginViewModel.CreateAccountCommand">
+            <summary>
+            Команда за отваряне на страница за създаване на нов профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.LoginViewModel.OnSingIn">
+            <summary>
+            Влиза в профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.LoginViewModel.OnCreateAccount">
+            <summary>
+            Отваря страница за създаване на нов профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.LoginViewModel.DisplayInvalidLoginPrompt">
+            <summary>
+            Показва греашка при опит за вход в профил
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.MealViewModel">
+            <summary>
+            ViewModel за хранения
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.DisplayDate">
+            <summary>
+            Показана дата
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CarbohydrateGoal">
+            <summary>
+            Цел за въглехидрати на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.FatGoal">
+            <summary>
+            Цел за мазнини на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.ProteinGoal">
+            <summary>
+            Цел за белтъци на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CaloriesGoal">
+            <summary>
+            Калориини цели на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CarbohydrateUsed">
+            <summary>
+            Изядени въглехидрати
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.FatUsed">
+            <summary>
+            Изядени мазнини
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CaloriesUsed">
+            <summary>
+            Изядени калории
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.ProteinUsed">
+            <summary>
+            Изядени белтъчини
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CarbohydrateLeft">
+            <summary>
+            Останали въглехидрати
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.FatLeft">
+            <summary>
+            Останали мазнини
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.ProteinLeft">
+            <summary>
+            Останали белтъци
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.CaloriesLeft">
+            <summary>
+            Останали калории
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.MaxDate">
+            <summary>
+            Най-голям позволен ден за записване на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.MinDate">
+            <summary>
+            Най-малък позволен ден за записване на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.DisplayNextDate">
+            <summary>
+            Команда за показване на следващия ден
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.DisplayPrevDate">
+            <summary>
+            Команда за показване на предишния ден
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.AddMeal">
+            <summary>
+            Команда за добавяне на хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.RemoveMeal">
+            <summary>
+            Команда за премахване на хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.AddFood">
+            <summary>
+            Команда за добавяне на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.ShowFoodInfo">
+            <summary>
+            Команда за показване на информация за храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.MealViewModel.MealGroups">
+            <summary>
+            Хранения с техните храни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.SetNewUser(MobileFitness.Models.User)">
+            <summary>
+            Задава нов потребител за ViewModel
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.SaveFood(System.Object[])">
+            <summary>
+            Запазва храна
+            </summary>
+            <param name="args">Храна и нейното количество</param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.UpdateMacronutrientGoals">
+            <summary>
+            Актуализация на макронутриентните цели
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.UpdateDisplayedMeals">
+            <summary>
+            Актуализация на показаните хранения
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.UpdateUsedMacronutrients">
+            <summary>
+            Актуализация на изядените макронутриенти
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnDisplayPrevDate">
+            <summary>
+            Показва предишната дата
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnDisplayNextDate">
+            <summary>
+            Показва следващата дата
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnAddMeal">
+            <summary>
+            Добавя ново хранене
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnRemoveMeal(System.String)">
+            <summary>
+            Премахва хранене
+            </summary>
+            <param name="mealName">Име на хранене</param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnAddFood(System.String)">
+            <summary>
+            Добавя храна
+            </summary>
+            <param name="mealName">Име на хранене</param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.MealViewModel.OnShowFoodInfo(MobileFitness.Models.Food)">
+            <summary>
+            Показва информация за храна
+            </summary>
+            <param name="food">Храна</param>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.RegisterViewModel">
+            <summary>
+            ViewModel за регистрация на потребител
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.RegisterViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Username">
+            <summary>
+            Потребителско име
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Email">
+            <summary>
+            Електронна поща
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Password">
+            <summary>
+            Парола
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.ConfirmPassword">
+            <summary>
+            Потвърждение на парола
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Birthdate">
+            <summary>
+            Рождена дата
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.GenderIndex">
+            <summary>
+            Индекс на пола
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.GoalIndex">
+            <summary>
+            Индекс на целта
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.WeightInKilograms">
+            <summary>
+            Тегло в килограми
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.HeightInMeters">
+            <summary>
+            Височина в метри
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Genders">
+            <summary>
+            Всияки възможни полове
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.Goals">
+            <summary>
+            Всияки възможни цели
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.RegisterViewModel.RegisterCommand">
+            <summary>
+            Команда за регистриране
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.RegisterViewModel.OnRegister">
+            <summary>
+            Създаване на нов профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.RegisterViewModel.IsValidMailAddress(System.String)">
+            <summary>
+            Проверява дали дадена електронна поща е валидна
+            </summary>
+            <param name="emailaddress">Електронна поща</param>
+            <returns></returns>
+        </member>
+        <member name="T:MobileFitness.App.ViewModels.WeightViewModel">
+            <summary>
+            ViewModel за тегло на потребителя
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.WeightViewModel.#ctor">
+            <summary>
+            Създава нов ViewModel
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.WeightViewModel.Date">
+            <summary>
+            Избрана дата
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.WeightViewModel.WeightInKilograms">
+            <summary>
+            Тегло в килограми
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.WeightViewModel.Weights">
+            <summary>
+            Колекция от всияки записи на теглото
+            </summary>
+        </member>
+        <member name="P:MobileFitness.App.ViewModels.WeightViewModel.AddWeight">
+            <summary>
+            Команда за записване на тегло
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.WeightViewModel.SetNewUser(MobileFitness.Models.User)">
+            <summary>
+            Задава нов потребител на ViewModel
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.WeightViewModel.UpdateShownWeights">
+            <summary>
+            Актуализация на показаните записи
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.ViewModels.WeightViewModel.OnAddWeight">
+            <summary>
+            Записва ново тегло
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.AccountPage">
+            <summary>
+            Страница за профила на потребител
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.AccountPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.AccountPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.AddFoodPage">
+            <summary>
+            Страница за добавяне на храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.AddFoodPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.AddFoodPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.FoodPage">
+            <summary>
+            Създава страница за храни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.FoodPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.FoodPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.LoginPage">
+            <summary>
+            Страница за влизане в профил
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.LoginPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.LoginPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.MainPage">
+            <summary>
+            Главна страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MainPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MainPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MainPage.SetDefaultPage">
+            <summary>
+            Задава страницата по подразбиране
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.MealPage">
+            <summary>
+            Страница за хранения
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MealPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MealPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.MealPage.AddFoodCommandClicked(System.Object,System.EventArgs)">
+            <summary>
+            Изпълнява командата за добавяне на храна
+            </summary>
+            <param name="sender">Подател</param>
+            <param name="e">Аргументи</param>
+        </member>
+        <member name="M:MobileFitness.App.Views.MealPage.RemoveMealCommandClicked(System.Object,System.EventArgs)">
+            <summary>
+            Изпълнява командата за премахване на храна
+            </summary>
+            <param name="sender">Подател</param>
+            <param name="e">Аргументи</param>
+        </member>
+        <member name="M:MobileFitness.App.Views.MealPage.MealGroupsListViewItemSelected(System.Object,Xamarin.Forms.SelectedItemChangedEventArgs)">
+            <summary>
+            Изпълнява командата за показване на информацията на дадена храна
+            </summary>
+            <param name="sender">Подател</param>
+            <param name="e">Аргументи</param>
+        </member>
+        <member name="T:MobileFitness.App.Views.RegisterPage">
+            <summary>
+            Страница за регистация на потребител
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.RegisterPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.RegisterPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+        <member name="T:MobileFitness.App.Views.WeightPage">
+            <summary>
+            Страница за тегло
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.WeightPage.#ctor">
+            <summary>
+            Създава нова страница
+            </summary>
+        </member>
+        <member name="M:MobileFitness.App.Views.WeightPage.Init">
+            <summary>
+            Инициализира ViewModel за страницата
+            </summary>
+        </member>
+    </members>
+</doc>

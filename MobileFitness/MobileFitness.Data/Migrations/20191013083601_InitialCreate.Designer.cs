@@ -15,6 +15,10 @@ namespace MobileFitness.Data.Migrations
     [Migration("20191013083601_InitialCreate")]
     partial class InitialCreate
     {
+        /// <summary>
+        /// Модел
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

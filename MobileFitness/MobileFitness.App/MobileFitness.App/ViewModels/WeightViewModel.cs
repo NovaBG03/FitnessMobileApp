@@ -10,6 +10,9 @@ using Xamarin.Forms;
 
 namespace MobileFitness.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel за тегло на потребителя
+    /// </summary>
     public class WeightViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -18,6 +21,9 @@ namespace MobileFitness.App.ViewModels
         private DateTime date;
         private float weightInKilograms;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public WeightViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -29,6 +35,9 @@ namespace MobileFitness.App.ViewModels
             this.Date = DateTime.Today;
         }
 
+        /// <summary>
+        /// Избрана дата
+        /// </summary>
         public DateTime Date
         {
             get => date;
@@ -39,6 +48,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Тегло в килограми
+        /// </summary>
         public float WeightInKilograms
         {
             get => weightInKilograms;
@@ -49,16 +61,29 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Колекция от всияки записи на теглото
+        /// </summary>
         public ObservableCollection<Weight> Weights { get; }
 
+        /// <summary>
+        /// Команда за записване на тегло
+        /// </summary>
         public ICommand AddWeight { get; set; }
 
+        /// <summary>
+        /// Задава нов потребител на ViewModel
+        /// </summary>
+        /// <param name="user"></param>
         public void SetNewUser(User user)
         {
             this.user = user;
             this.UpdateShownWeights();
         }
 
+        /// <summary>
+        /// Актуализация на показаните записи
+        /// </summary>
         private void UpdateShownWeights()
         {
             this.Weights.Clear();
@@ -76,6 +101,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Записва ново тегло
+        /// </summary>
         private void OnAddWeight()
         {
             if (this.WeightInKilograms > 300 || this.WeightInKilograms < 20)

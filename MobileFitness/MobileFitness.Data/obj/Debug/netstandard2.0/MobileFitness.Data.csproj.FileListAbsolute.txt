@@ -10,3 +10,8 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netsta
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.csproj.CopyComplete
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\obj\Debug\netstandard2.0\MobileFitness.Data.pdb
+C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\bin\Debug\netstandard2.0\MobileFitness.Models.xml
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Data.deps.json
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Data.dll
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Data.pdb
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Data.xml

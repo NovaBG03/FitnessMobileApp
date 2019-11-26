@@ -8,15 +8,24 @@
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
+    /// <summary>
+    /// Страница за регистация на потребител
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public RegisterPage()
         {
             InitializeComponent();
             Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new RegisterViewModel();

@@ -9,15 +9,24 @@
     using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
     using Xamarin.Forms.Xaml;
 
+    /// <summary>
+    /// Главна страница
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : Xamarin.Forms.TabbedPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
             Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             On<Android>()
@@ -32,6 +41,9 @@
             this.BarTextColor = Constants.BackgroundColor;
         }
 
+        /// <summary>
+        /// Задава страницата по подразбиране
+        /// </summary>
         private void SetDefaultPage()
         {
             var pages = this.Children.GetEnumerator();

@@ -6,8 +6,16 @@
 
     using MobileFitness.Models;
 
+
+    /// <summary>
+    /// Клас за настройка на таблицата за тегло
+    /// </summary>
     public class WeightConfg : IEntityTypeConfiguration<Weight>
     {
+        /// <summary>
+        /// Настройва таблицата
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<Weight> builder)
         {
             builder

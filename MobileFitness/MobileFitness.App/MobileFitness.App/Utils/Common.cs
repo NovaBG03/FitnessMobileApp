@@ -1,15 +1,21 @@
-﻿namespace MobileFitness.App.Utils
+﻿/// <summary>
+/// Помощни инструменти
+/// </summary>
+namespace MobileFitness.App.Utils
 {
     using System;
     using System.Security.Cryptography;
     using System.Threading.Tasks;
 
-    internal class Common
+    /// <summary>
+    /// Съдържа специфични команди
+    /// </summary>
+    internal static class Common
     {
         /// <summary>
-        /// Creates random salt string
+        /// Създава произволен salt за парола
         /// </summary>
-        /// <param name="length"></param>
+        /// <param name="length">Дължина на паролата</param>
         /// <returns>salt</returns>
         public static byte[] GetRandomSalt(int length)
         {
@@ -23,10 +29,10 @@
         }
 
         /// <summary>
-        /// Creates password with salt
+        /// Създава парола със salt
         /// </summary>
-        /// <param name="password"></param>
-        /// <param name="salt"></param>
+        /// <param name="password">Парола</param>
+        /// <param name="salt">Salt</param>
         /// <returns>cripted password</returns>
         public static byte[] SaltHashPassword(byte[] password, byte[] salt)
         {
@@ -48,8 +54,13 @@
             }
         }
 
+        /// <summary>
+        /// Изчислява разликата в години между две дати
+        /// </summary>
+        /// <param name="firstDate">Първа дата</param>
+        /// <param name="secondDate">Втора дата</param>
+        /// <returns></returns>
         public static int GetAgeDiff(DateTime firstDate, DateTime secondDate)
             => Math.Abs((int)((firstDate - secondDate).Days / 365.2425));
-        
     }
 }

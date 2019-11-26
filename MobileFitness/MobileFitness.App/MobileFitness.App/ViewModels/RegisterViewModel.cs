@@ -15,6 +15,9 @@
     using MobileFitness.Models.Enums;
     using Xamarin.Forms;
 
+    /// <summary>
+    /// ViewModel за регистрация на потребител
+    /// </summary>
     public class RegisterViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -29,6 +32,9 @@
         private float weightInKilograms;
         private float heightInMeters;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public RegisterViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -45,6 +51,9 @@
             this.Birthdate = DateTime.Today;
         }
 
+        /// <summary>
+        /// Потребителско име
+        /// </summary>
         public string Username
         {
             get => username;
@@ -55,6 +64,9 @@
             }
         }
 
+        /// <summary>
+        /// Електронна поща
+        /// </summary>
         public string Email
         {
             get => email;
@@ -65,6 +77,9 @@
             }
         }
 
+        /// <summary>
+        /// Парола
+        /// </summary>
         public string Password
         {
             get => password;
@@ -75,6 +90,9 @@
             }
         }
 
+        /// <summary>
+        /// Потвърждение на парола
+        /// </summary>
         public string ConfirmPassword
         {
             get => confirmPassword;
@@ -85,6 +103,9 @@
             }
         }
 
+        /// <summary>
+        /// Рождена дата
+        /// </summary>
         public DateTime Birthdate
         {
             get => birthdate;
@@ -95,6 +116,9 @@
             }
         }
 
+        /// <summary>
+        /// Индекс на пола
+        /// </summary>
         public int GenderIndex
         {
             get => genderIndex;
@@ -105,6 +129,9 @@
             }
         }
 
+        /// <summary>
+        /// Индекс на целта
+        /// </summary>
         public int GoalIndex
         {
             get => goalIndex;
@@ -115,6 +142,9 @@
             }
         }
 
+        /// <summary>
+        /// Тегло в килограми
+        /// </summary>
         public float WeightInKilograms
         {
             get => weightInKilograms;
@@ -125,6 +155,10 @@
             }
         }
 
+
+        /// <summary>
+        /// Височина в метри
+        /// </summary>
         public float HeightInMeters
         {
             get => heightInMeters;
@@ -135,12 +169,24 @@
             }
         }
 
+        /// <summary>
+        /// Всияки възможни полове
+        /// </summary>
         public ObservableCollection<Gender> Genders { get; private set; }
 
+        /// <summary>
+        /// Всияки възможни цели
+        /// </summary>
         public ObservableCollection<Goal> Goals { get; private set; }
 
+        /// <summary>
+        /// Команда за регистриране
+        /// </summary>
         public ICommand RegisterCommand { get; private set; }
 
+        /// <summary>
+        /// Създаване на нов профил
+        /// </summary>
         private void OnRegister()
         {
             if (string.IsNullOrEmpty(this.Username)
@@ -244,6 +290,11 @@
             }
         }
 
+        /// <summary>
+        /// Проверява дали дадена електронна поща е валидна
+        /// </summary>
+        /// <param name="emailaddress">Електронна поща</param>
+        /// <returns></returns>
         private static bool IsValidMailAddress(string emailaddress)
         {
             try

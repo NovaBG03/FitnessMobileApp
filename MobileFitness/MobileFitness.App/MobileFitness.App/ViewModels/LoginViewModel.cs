@@ -11,6 +11,9 @@
     using MobileFitness.Data;
     using Xamarin.Forms;
 
+    /// <summary>
+    /// ViewModel за вход в профил
+    /// </summary>
     public class LoginViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -18,6 +21,9 @@
         private string email;
         private string password;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public LoginViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -26,6 +32,9 @@
             this.CreateAccountCommand = new Command(this.OnCreateAccount);
         }
 
+        /// <summary>
+        /// Електронна поща на потребителя
+        /// </summary>
         public string Email
         {
             get => email;
@@ -36,6 +45,9 @@
             }
         }
 
+        /// <summary>
+        /// Парола на потребителя
+        /// </summary>
         public string Password
         {
             get => password;
@@ -46,10 +58,19 @@
             }
         }
 
+        /// <summary>
+        /// Команда за влизане в профил
+        /// </summary>
         public ICommand SingInCommand { get; private set; }
 
+        /// <summary>
+        /// Команда за отваряне на страница за създаване на нов профил
+        /// </summary>
         public ICommand CreateAccountCommand { get; private set; }
 
+        /// <summary>
+        /// Влиза в профил
+        /// </summary>
         private void OnSingIn()
         {
             var user = this.context.Users
@@ -79,11 +100,17 @@
             MessagingCenter.Send(this, "ReloadUserInfo", user);
         }
 
+        /// <summary>
+        /// Отваря страница за създаване на нов профил
+        /// </summary>
         private void OnCreateAccount()
         {
             App.Current.MainPage.Navigation.PushAsync(new RegisterPage());
         }
 
+        /// <summary>
+        /// Показва греашка при опит за вход в профил
+        /// </summary>
         private void DisplayInvalidLoginPrompt()
         {
             this.DisplayInvalidPrompt("Wrong Email or Password!");

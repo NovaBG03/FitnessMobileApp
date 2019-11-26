@@ -15,6 +15,9 @@
     using MobileFitness.Models.Enums;
     using Xamarin.Forms;
 
+    /// <summary>
+    /// ViewModel за хранения
+    /// </summary>
     public class MealViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -30,6 +33,9 @@
 
         private MealGroup selectedMealGroup;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public MealViewModel()
         {
             this.context = DependencyService.Get<MobileFitnessContext>();
@@ -46,6 +52,9 @@
             this.ShowFoodInfo = new Command<Food>(this.OnShowFoodInfo);
         }
 
+        /// <summary>
+        /// Показана дата
+        /// </summary>
         public DateTime DisplayDate
         {
             get => displayDate;
@@ -60,6 +69,9 @@
             }
         }
 
+        /// <summary>
+        /// Цел за въглехидрати на потребителя
+        /// </summary>
         public float CarbohydrateGoal
         {
             get => carbohydrateGoal;
@@ -73,6 +85,9 @@
             }
         }
 
+        /// <summary>
+        /// Цел за мазнини на потребителя
+        /// </summary>
         public float FatGoal
         {
             get => fatGoal;
@@ -86,6 +101,9 @@
             }
         }
 
+        /// <summary>
+        /// Цел за белтъци на потребителя
+        /// </summary>
         public float ProteinGoal
         {
             get => proteinGoal;
@@ -99,9 +117,15 @@
             }
         }
 
+        /// <summary>
+        /// Калориини цели на потребителя
+        /// </summary>
         public float CaloriesGoal
             => (this.ProteinGoal * 4) + (this.CarbohydrateGoal * 4) + (this.FatGoal * 9);
 
+        /// <summary>
+        /// Изядени въглехидрати
+        /// </summary>
         public float CarbohydrateUsed
         {
             get => carbohydrateUsed;
@@ -115,6 +139,9 @@
             }
         }
 
+        /// <summary>
+        /// Изядени мазнини
+        /// </summary>
         public float FatUsed
         {
             get => fatUsed;
@@ -128,9 +155,15 @@
             }
         }
 
+        /// <summary>
+        /// Изядени калории
+        /// </summary>
         public float CaloriesUsed
             => (this.ProteinUsed * 4) + (this.CarbohydrateUsed * 4) + (this.FatUsed * 9);
 
+        /// <summary>
+        /// Изядени белтъчини
+        /// </summary>
         public float ProteinUsed
         {
             get => proteinUsed;
@@ -144,38 +177,81 @@
             }
         }
 
+        /// <summary>
+        /// Останали въглехидрати
+        /// </summary>
         public int CarbohydrateLeft
             => (int)(this.CarbohydrateGoal - this.CarbohydrateUsed);
 
+        /// <summary>
+        /// Останали мазнини
+        /// </summary>
         public int FatLeft
             => (int)(this.FatGoal - this.FatUsed);
 
+        /// <summary>
+        /// Останали белтъци
+        /// </summary>
         public int ProteinLeft
             => (int)(this.ProteinGoal - this.ProteinUsed);
 
+        /// <summary>
+        /// Останали калории
+        /// </summary>
         public int CaloriesLeft
             => (int)(this.CaloriesGoal - this.CaloriesUsed);
 
+        /// <summary>
+        /// Най-голям позволен ден за записване на храна
+        /// </summary>
         public DateTime MaxDate
             => DateTime.Today.AddYears(1);
 
+        /// <summary>
+        /// Най-малък позволен ден за записване на храна
+        /// </summary>
         public DateTime MinDate
             => new DateTime(2010, 1, 1);
 
+        /// <summary>
+        /// Команда за показване на следващия ден
+        /// </summary>
         public ICommand DisplayNextDate { get; private set; }
 
+        /// <summary>
+        /// Команда за показване на предишния ден
+        /// </summary>
         public ICommand DisplayPrevDate { get; private set; }
 
+        /// <summary>
+        /// Команда за добавяне на хранене
+        /// </summary>
         public ICommand AddMeal { get; private set; }
 
+        /// <summary>
+        /// Команда за премахване на хранене
+        /// </summary>
         public ICommand RemoveMeal { get; private set; }
 
+        /// <summary>
+        /// Команда за добавяне на храна
+        /// </summary>
         public ICommand AddFood { get; private set; }
 
+        /// <summary>
+        /// Команда за показване на информация за храна
+        /// </summary>
         public ICommand ShowFoodInfo { get; private set; }
 
+        /// <summary>
+        /// Хранения с техните храни
+        /// </summary>
         public ObservableCollection<MealGroup> MealGroups { get; set; }
 
+        /// <summary>
+        /// Задава нов потребител за ViewModel
+        /// </summary>
+        /// <param name="user"></param>
         public void SetNewUser(User user)
         {
             this.user = user;
@@ -184,6 +260,10 @@
             this.UpdateUsedMacronutrients();
         }
 
+        /// <summary>
+        /// Запазва храна
+        /// </summary>
+        /// <param name="args">Храна и нейното количество</param>
         public void SaveFood(object[] args)
         {
             var food = (Food)args[0];
@@ -224,6 +304,9 @@
             this.UpdateUsedMacronutrients();
         }
 
+        /// <summary>
+        /// Актуализация на макронутриентните цели
+        /// </summary>
         public void UpdateMacronutrientGoals()
         {
             if (this.user == null)
@@ -266,6 +349,9 @@
             this.ProteinGoal = currentGoal.Protein;
         }
 
+        /// <summary>
+        /// Актуализация на показаните хранения
+        /// </summary>
         private void UpdateDisplayedMeals()
         {
             if (this.user == null)
@@ -309,6 +395,9 @@
             }
         }
 
+        /// <summary>
+        /// Актуализация на изядените макронутриенти
+        /// </summary>
         private void UpdateUsedMacronutrients()
         {
             this.CarbohydrateUsed = this.MealGroups
@@ -324,16 +413,25 @@
                     .Sum(f => f.Macronutrient.Protein * f.MealsFoods.First(mf => mf.Food == f).FoodQuantity) / 100);
         }
 
+        /// <summary>
+        /// Показва предишната дата
+        /// </summary>
         private void OnDisplayPrevDate()
         {
             this.DisplayDate = this.DisplayDate.AddDays(-1);
         }
 
+        /// <summary>
+        /// Показва следващата дата
+        /// </summary>
         private void OnDisplayNextDate()
         {
             this.DisplayDate = this.DisplayDate.AddDays(1);
         }
 
+        /// <summary>
+        /// Добавя ново хранене
+        /// </summary>
         private void OnAddMeal()
         {
             var meal = new Meal()
@@ -360,6 +458,10 @@
             });
         }
 
+        /// <summary>
+        /// Премахва хранене
+        /// </summary>
+        /// <param name="mealName">Име на хранене</param>
         private void OnRemoveMeal(string mealName)
         {
             var meal = this.context.Meals
@@ -375,6 +477,10 @@
             this.UpdateDisplayedMeals();
         }
 
+        /// <summary>
+        /// Добавя храна
+        /// </summary>
+        /// <param name="mealName">Име на хранене</param>
         private void OnAddFood(string mealName)
         {
             var mealGroup = this.MealGroups
@@ -386,6 +492,10 @@
             App.Current.MainPage.Navigation.PushAsync(new AddFoodPage());
         }
 
+        /// <summary>
+        /// Показва информация за храна
+        /// </summary>
+        /// <param name="food">Храна</param>
         private void OnShowFoodInfo(Food food)
         {
             App.Current.MainPage.Navigation.PushAsync(new FoodPage());

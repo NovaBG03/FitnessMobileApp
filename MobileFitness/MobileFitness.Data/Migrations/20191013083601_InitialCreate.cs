@@ -5,8 +5,15 @@ using System.Collections.Generic;
 
 namespace MobileFitness.Data.Migrations
 {
+    /// <summary>
+    /// Начална миграция
+    /// </summary>
     public partial class InitialCreate : Migration
     {
+        /// <summary>
+        /// Прилагане на миграцията
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -181,6 +188,10 @@ namespace MobileFitness.Data.Migrations
                 column: "UserId");
         }
 
+        /// <summary>
+        /// Премахване на миграцията
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

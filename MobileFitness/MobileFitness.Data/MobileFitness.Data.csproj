@@ -4,6 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Data\MobileFitness.Data.xml</DocumentationFile>
+    <OutputPath>C:\Users\nikita\Desktop\Documentation\</OutputPath>
+    <WarningsAsErrors></WarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Migrations\20191010061757_InitialCreate.cs" />
     <Compile Remove="Migrations\20191010061757_InitialCreate.Designer.cs" />

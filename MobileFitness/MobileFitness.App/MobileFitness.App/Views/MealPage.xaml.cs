@@ -11,16 +11,24 @@ namespace MobileFitness.App.Views
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
-
+    /// <summary>
+    /// Страница за хранения
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MealPage : ContentPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public MealPage()
         {
             InitializeComponent();
             this.Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new MealViewModel();
@@ -31,6 +39,11 @@ namespace MobileFitness.App.Views
             MessagingCenter.Subscribe<AccountViewModel>(vm, "NewMacronutrients", (s) => vm.UpdateMacronutrientGoals());
         }
 
+        /// <summary>
+        /// Изпълнява командата за добавяне на храна
+        /// </summary>
+        /// <param name="sender">Подател</param>
+        /// <param name="e">Аргументи</param>
         private void AddFoodCommandClicked(object sender, EventArgs e)
         {
             var mealName = ((Button)sender).Text.Replace("Add Food to ", "");
@@ -39,6 +52,11 @@ namespace MobileFitness.App.Views
             vm.AddFood.Execute(mealName);
         }
 
+        /// <summary>
+        /// Изпълнява командата за премахване на храна
+        /// </summary>
+        /// <param name="sender">Подател</param>
+        /// <param name="e">Аргументи</param>
         private void RemoveMealCommandClicked(object sender, EventArgs e)
         {
             var mealName = ((Button)sender).Text.Replace("Remove ", "");
@@ -47,6 +65,11 @@ namespace MobileFitness.App.Views
             vm.RemoveMeal.Execute(mealName);
         }
 
+        /// <summary>
+        /// Изпълнява командата за показване на информацията на дадена храна
+        /// </summary>
+        /// <param name="sender">Подател</param>
+        /// <param name="e">Аргументи</param>
         private void MealGroupsListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var listView = (ListView)sender;

@@ -8,6 +8,9 @@ using Xamarin.Forms;
 
 namespace MobileFitness.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel за храна
+    /// </summary>
     public class FoodViewModel : BaseViewModel
     {
         private Food food;
@@ -17,11 +20,17 @@ namespace MobileFitness.App.ViewModels
         private float protein;
         private float foodQuantity;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public FoodViewModel()
         {
             //this.SaveFood = new Command(this.OnSaveFood);
         }
 
+        /// <summary>
+        /// Име на храна
+        /// </summary>
         public string FoodName
         {
             get => foodName;
@@ -32,6 +41,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Въглехидрати на храната
+        /// </summary>
         public float Carbohydrate
         {
             get => carbohydrate;
@@ -43,6 +55,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Мазнини на храната
+        /// </summary>
         public float Fat
         {
             get => fat;
@@ -54,6 +69,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Белтъци на храната
+        /// </summary>
         public float Protein
         {
             get => protein;
@@ -65,10 +83,15 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Калории на храната
+        /// </summary>
         public float Calories
             => (this.Protein * 4) + (this.Carbohydrate * 4) + (this.Fat * 9);
 
-
+        /// <summary>
+        /// Тегло на храната в грамове
+        /// </summary>
         public float FoodQuantity
         {
             get => foodQuantity;
@@ -82,6 +105,9 @@ namespace MobileFitness.App.ViewModels
 
         //public ICommand SaveFood { get; set; }
 
+        /// <summary>
+        /// Актуализация на информацията за храната
+        /// </summary>
         private void UpdateFoodInfo()
         {
             if (this.food == null)
@@ -94,6 +120,9 @@ namespace MobileFitness.App.ViewModels
             this.Protein = this.food.Macronutrient.Protein * this.FoodQuantity / 100;
         }
 
+        /// <summary>
+        /// Показва информацията за храната
+        /// </summary>
         public void ShowFoodInfo(object[] args)
         {
             this.food = (Food)args[0];

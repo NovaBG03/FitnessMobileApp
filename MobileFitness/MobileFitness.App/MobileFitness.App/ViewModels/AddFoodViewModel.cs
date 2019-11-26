@@ -10,6 +10,9 @@ using Xamarin.Forms;
 
 namespace MobileFitness.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel за добавяне на храна
+    /// </summary>
     public class AddFoodViewModel : BaseViewModel
     {
         private readonly MobileFitnessContext context;
@@ -21,6 +24,9 @@ namespace MobileFitness.App.ViewModels
         private float foodQuantity;
         private Food selectedFood;
 
+        /// <summary>
+        /// Създава нов ViewModel
+        /// </summary>
         public AddFoodViewModel()
         {
             this.UpdateFoundedFoods = new Command(this.OnUpdateFoundedFoods);
@@ -46,6 +52,9 @@ namespace MobileFitness.App.ViewModels
             this.SetFoundedFoods(foundedFoods);
         }
 
+        /// <summary>
+        /// Въглехидрати на храната
+        /// </summary>
         public float CarbohydrateGoal
         {
             get => carbohydrate;
@@ -57,6 +66,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Мазнини на храната
+        /// </summary>
         public float FatGoal
         {
             get => fat;
@@ -68,6 +80,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Белтъци на храната
+        /// </summary>
         public float ProteinGoal
         {
             get => protein;
@@ -79,9 +94,15 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Калории на храната
+        /// </summary>
         public float CaloriesGoal
             => (this.ProteinGoal * 4) + (this.CarbohydrateGoal * 4) + (this.FatGoal * 9);
 
+        /// <summary>
+        /// Ключови думи за търсене на храна
+        /// </summary>
         public string SearchingInput
         {
             get => searchingInput;
@@ -92,6 +113,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Тегло на храната в грамове
+        /// </summary>
         public float FoodQuantity
         {
             get => foodQuantity;
@@ -103,6 +127,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Избрана храна
+        /// </summary>
         public Food SelectedFood
         {
             get => selectedFood;
@@ -115,6 +142,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Актуализация на информацията за избраната храна
+        /// </summary>
         private void UpdateSelectedFoodInfo()
         {
             if (this.SelectedFood == null)
@@ -127,12 +157,24 @@ namespace MobileFitness.App.ViewModels
             this.ProteinGoal = this.SelectedFood.Macronutrient.Protein * this.FoodQuantity / 100;
         }
 
+        /// <summary>
+        /// Намерени храни
+        /// </summary>
         public ObservableCollection<Food> FoundedFoods { get; set; }
 
+        /// <summary>
+        /// Команда за актуализация на намерените храни
+        /// </summary>
         public ICommand UpdateFoundedFoods { get; set; }
 
+        /// <summary>
+        /// Команда за записване на избраната храна
+        /// </summary>
         public ICommand SaveFood { get; set; }
 
+        /// <summary>
+        /// Актуализация на намерените храни
+        /// </summary>
         private void OnUpdateFoundedFoods()
         {
             this.FoundedFoods.Clear();
@@ -156,6 +198,10 @@ namespace MobileFitness.App.ViewModels
             this.SetFoundedFoods(foundedFoods);
         }
 
+        /// <summary>
+        /// Задаване на намерените храни
+        /// </summary>
+        /// <param name="foundedFoods">Намерени храни</param>
         private void SetFoundedFoods(Food[] foundedFoods)
         {
             foreach (var food in foundedFoods)
@@ -164,6 +210,9 @@ namespace MobileFitness.App.ViewModels
             }
         }
 
+        /// <summary>
+        /// Записва избраната храна
+        /// </summary>
         private void OnSaveFood()
         {
             if(this.SelectedFood == null)
@@ -181,6 +230,9 @@ namespace MobileFitness.App.ViewModels
             App.Current.MainPage.Navigation.PopAsync();
         }
 
+        /// <summary>
+        /// Нулира количеството избрана храна
+        /// </summary>
         private void ReserFoodQuantity()
         {
             this.FoodQuantity = 100;

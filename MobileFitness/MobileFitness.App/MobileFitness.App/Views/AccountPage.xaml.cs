@@ -8,17 +8,29 @@ using MobileFitness.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+/// <summary>
+/// Страниците на приложениято
+/// </summary>
 namespace MobileFitness.App.Views
 {
+    /// <summary>
+    /// Страница за профила на потребител
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AccountPage : ContentPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public AccountPage()
         {
             InitializeComponent();
             this.Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new AccountViewModel();

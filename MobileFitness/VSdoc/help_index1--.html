@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Index</title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<style>
+		html,body {
+			margin: 0; padding: 0px;
+			height:100%; 
+			min-height:100%;
+			background-color: rgb(233,232,220);
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			color: black;
+		}
+
+		body {font-size:75%;position:relative; margin-top:-1px; border-style: solid solid solid solid;	border-color: rgb(172,168,153);	border-width: 0px 0px 1px 0px;}
+		a { text-decoration:none; color:#06c }
+		form {padding:5px; margin:0px;}
+	</style>
+
+ <link rel="stylesheet" type="text/css" href="vsdocman_overrides.css"></link> 
+</head>
+<body style="direction: ltr;">
+	<form>
+	Look for:<br /><input style="width:100%" onKeyDown="check_input(this.value,get_match)" onKeyUp="check_input(this.value,get_match)"/>
+	</form>
+
+	<script>
+		var words = new Array(
+"AccountPage Class","AccountPage Constructor","AccountViewModel Class","AccountViewModel Constructor","AddFood Property","AddFoodPage Class","AddFoodPage Constructor","AddFoodViewModel Class","AddFoodViewModel Constructor","AddMeal Property","AddWeight Property","App Class","App Constructor","AppDelegate Class","Application Class","BackgroundColor Field","BarBackgroundColor Field","BaseViewModel Class","BaseViewModel Constructor","Birthdate Property {MobileFitness.App.ViewModels.RegisterViewModel}","Birthdate Property {MobileFitness.Models.User}","BuildTargetModel Method {MobileFitness.Data.Migrations.FoodQuantityAdded}","BuildTargetModel Method {MobileFitness.Data.Migrations.InitialCreate}","Calories Property","CaloriesGoal Property {MobileFitness.App.ViewModels.AccountViewModel}","CaloriesGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}","CaloriesGoal Property {MobileFitness.App.ViewModels.MealViewModel}","CaloriesLeft Property","CaloriesUsed Property","Carbohydrate Property {MobileFitness.App.ViewModels.FoodViewModel}","Carbohydrate Property {MobileFitness.Models.Macronutrient}","CarbohydrateGoal Property {MobileFitness.App.ViewModels.AccountViewModel}","CarbohydrateGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}","CarbohydrateGoal Property {MobileFitness.App.ViewModels.MealViewModel}","CarbohydrateLeft Property","CarbohydrateUsed Property","Configure Method {MobileFitness.Data.Configurations.FoodConfig}","Configure Method {MobileFitness.Data.Configurations.MacronutrientConfig}","Configure Method {MobileFitness.Data.Configurations.MealConfig}","Configure Method {MobileFitness.Data.Configurations.MealFoodConfig}","Configure Method {MobileFitness.Data.Configurations.UserMacronutrientConfig}","Configure Method {MobileFitness.Data.Configurations.WeightConfg}","ConfirmPassword Property","Constants Class","CreateAccountCommand Property","Date Property {MobileFitness.App.ViewModels.WeightViewModel}","Date Property {MobileFitness.Models.Meal}","Date Property {MobileFitness.Models.UserMacronutrient}","Date Property {MobileFitness.Models.Weight}","DisplayDate Property","DisplayInvalidPrompt Property","DisplayNextDate Property","DisplayPrevDate Property","Down Method {MobileFitness.Data.Migrations.FoodQuantityAdded}","Down Method {MobileFitness.Data.Migrations.InitialCreate}","Email Property {MobileFitness.App.ViewModels.AccountViewModel}","Email Property {MobileFitness.App.ViewModels.LoginViewModel}","Email Property {MobileFitness.App.ViewModels.RegisterViewModel}","Email Property {MobileFitness.Models.User}","EntryBackgroundColor Field","Fat Property {MobileFitness.App.ViewModels.FoodViewModel}","Fat Property {MobileFitness.Models.Macronutrient}","FatGoal Property {MobileFitness.App.ViewModels.AccountViewModel}","FatGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}","FatGoal Property {MobileFitness.App.ViewModels.MealViewModel}","FatLeft Property","FatUsed Property","FinishedLaunching Method","Food Class","Food Constructor","Food Property","FoodConfig Class","FoodId Property","FoodName Property","FoodPage Class","FoodPage Constructor","FoodQuantity Property {MobileFitness.App.ViewModels.AddFoodViewModel}","FoodQuantity Property {MobileFitness.App.ViewModels.FoodViewModel}","FoodQuantity Property {MobileFitness.Models.MealFood}","FoodQuantityAdded Class","FoodViewModel Class","FoodViewModel Constructor","Foods Property {MobileFitness.App.Utils.MealGroup}","Foods Property {MobileFitness.Data.MobileFitnessContext}","Foods Property {MobileFitness.Models.Macronutrient}","FoundedFoods Property","Gender Enumeration","Gender Property","GenderIndex Property","Genders Property","Goal Enumeration","Goal Property","GoalIndex Property {MobileFitness.App.ViewModels.AccountViewModel}","GoalIndex Property {MobileFitness.App.ViewModels.RegisterViewModel}","Goals Property {MobileFitness.App.ViewModels.AccountViewModel}","Goals Property {MobileFitness.App.ViewModels.RegisterViewModel}","HeightInMeters Property {MobileFitness.App.ViewModels.RegisterViewModel}","HeightInMeters Property {MobileFitness.Models.User}","Id Property {MobileFitness.Models.Food}","Id Property {MobileFitness.Models.Macronutrient}","Id Property {MobileFitness.Models.Meal}","Id Property {MobileFitness.Models.User}","Id Property {MobileFitness.Models.Weight}","InitialCreate Class","IsDev Field","Kilograms Property","LoginIconHeight Field","LoginPage Class","LoginPage Constructor","LoginViewModel Class","LoginViewModel Constructor","Macronutrient Class","Macronutrient Constructor","Macronutrient Property {MobileFitness.Models.Food}","Macronutrient Property {MobileFitness.Models.UserMacronutrient}","MacronutrientConfig Class","MacronutrientId Property {MobileFitness.Models.Food}","MacronutrientId Property {MobileFitness.Models.UserMacronutrient}","MacronutrientManager Class","Macronutrients Property","Main Method","MainActivity Class","MainPage Class","MainPage Constructor","MainTextColor Field","MaxDate Property","Meal Class","Meal Constructor","Meal Property {MobileFitness.App.Utils.MealGroup}","Meal Property {MobileFitness.Models.MealFood}","MealConfig Class","MealFood Class","MealFoodConfig Class","MealFoods Property","MealGroup Class","MealGroups Property","MealId Property","MealPage Class","MealPage Constructor","MealViewModel Class","MealViewModel Constructor","Meals Property {MobileFitness.Data.MobileFitnessContext}","Meals Property {MobileFitness.Models.User}","MealsFoods Property {MobileFitness.Models.Food}","MealsFoods Property {MobileFitness.Models.Meal}","MinDate Property","MobileFitness.App Namespace","MobileFitness.App.Droid Namespace","MobileFitness.App.Utils Namespace","MobileFitness.App.ViewModels Namespace","MobileFitness.App.Views Namespace","MobileFitness.App.iOS Namespace","MobileFitness.App.iOS Reference","MobileFitness.Data Namespace","MobileFitness.Data.Configurations Namespace","MobileFitness.Data.Migrations Namespace","MobileFitness.Migrations Namespace","MobileFitness.Models Namespace","MobileFitness.Models.Enums Namespace","MobileFitnessContext  Constructor","MobileFitnessContext (DbContextOptions) Constructor","MobileFitnessContext Class","Name Property {MobileFitness.Models.Food}","Name Property {MobileFitness.Models.Meal}","OnConfiguring Method","OnCreate Method","OnModelCreating Method","OnPropertyChanged Method","OnRequestPermissionsResult Method","Password Property {MobileFitness.App.ViewModels.LoginViewModel}","Password Property {MobileFitness.App.ViewModels.RegisterViewModel}","Password Property {MobileFitness.Models.User}","PropertyChanged Event","Protein Property {MobileFitness.App.ViewModels.FoodViewModel}","Protein Property {MobileFitness.Models.Macronutrient}","ProteinGoal Property {MobileFitness.App.ViewModels.AccountViewModel}","ProteinGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}","ProteinGoal Property {MobileFitness.App.ViewModels.MealViewModel}","ProteinLeft Property","ProteinUsed Property","RegisterCommand Property","RegisterPage Class","RegisterPage Constructor","RegisterViewModel Class","RegisterViewModel Constructor","RemoveMeal Property","Salt Property","SaveFood Method","SaveFood Property","SearchingInput Property","SelectedFood Property","SelectedTabColor Field","SetNewMacronutrientGoal Method","SetNewUser Method {MobileFitness.App.ViewModels.AccountViewModel}","SetNewUser Method {MobileFitness.App.ViewModels.MealViewModel}","SetNewUser Method {MobileFitness.App.ViewModels.WeightViewModel}","ShowFoodInfo Method","ShowFoodInfo Property","SingInCommand Property","StartUp Class","UnselectedTabColor Field","Up Method {MobileFitness.Data.Migrations.FoodQuantityAdded}","Up Method {MobileFitness.Data.Migrations.InitialCreate}","UpdateFoundedFoods Property","UpdateMacronutrientGoals Method","UpdateMacronutrients Property","UpdateUserWeight Method","User Class","User Constructor","User Property {MobileFitness.Models.Meal}","User Property {MobileFitness.Models.UserMacronutrient}","User Property {MobileFitness.Models.Weight}","UserId Property {MobileFitness.Models.Meal}","UserId Property {MobileFitness.Models.UserMacronutrient}","UserId Property {MobileFitness.Models.Weight}","UserMacronutrient Class","UserMacronutrientConfig Class","Username Property {MobileFitness.App.ViewModels.AccountViewModel}","Username Property {MobileFitness.App.ViewModels.RegisterViewModel}","Username Property {MobileFitness.Models.User}","Users Property","UsersMacronutrients Property {MobileFitness.Data.MobileFitnessContext}","UsersMacronutrients Property {MobileFitness.Models.Macronutrient}","UsersMacronutrients Property {MobileFitness.Models.User}","Weight Class","WeightConfg Class","WeightInKilograms Property {MobileFitness.App.ViewModels.AccountViewModel}","WeightInKilograms Property {MobileFitness.App.ViewModels.RegisterViewModel}","WeightInKilograms Property {MobileFitness.App.ViewModels.WeightViewModel}","WeightPage Class","WeightPage Constructor","WeightViewModel Class","WeightViewModel Constructor","Weights Property {MobileFitness.App.ViewModels.WeightViewModel}","Weights Property {MobileFitness.Data.MobileFitnessContext}","Weights Property {MobileFitness.Models.User}"
+		);
+		
+		
+		var oldHighlight = 0;
+		var oldKey = "";
+		
+		function get_match(text) {
+		    var ltext = text.toLowerCase();
+		    for(i in words) {
+		        if(words[i].toLowerCase().indexOf(ltext) == "0") {
+		            return words[i];
+		        }
+		    }
+		    return "";
+		}
+		
+		function highlight(keyword) {
+		    if(oldHighlight) oldHighlight.className = "";
+		    var el = parent.frames['zindex'].document.getElementById("w_"+keyword);
+		    el.className="highlighted";
+		    oldHighlight = el;
+		}
+		
+		function check_input(text, matchfun) {
+		    if(text!=oldKey) {
+		        var keyword = matchfun(text);
+		        if(keyword) {       
+		            highlight(keyword);
+		            parent.frames['zindex'].document.getElementById('w_'+keyword).scrollIntoView();
+		        }
+		        oldKey = text;
+		    }
+		}
+	</script>
+</body>
+</html>
+

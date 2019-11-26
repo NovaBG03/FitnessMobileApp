@@ -98,11 +98,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -174,11 +169,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {

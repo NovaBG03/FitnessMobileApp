@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileFitness.Models</name>
+    </assembly>
+    <members>
+        <member name="T:MobileFitness.Models.Enums.Gender">
+            <summary>
+            Енумерация за пол
+            </summary>
+        </member>
+        <member name="F:MobileFitness.Models.Enums.Gender.Male">
+            <summary>
+            Мъж
+            </summary>
+        </member>
+        <member name="F:MobileFitness.Models.Enums.Gender.Female">
+            <summary>
+            Жена
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.Enums.Goal">
+            <summary>
+            Енумерация за цел
+            </summary>
+        </member>
+        <member name="F:MobileFitness.Models.Enums.Goal.Maintain">
+            <summary>
+            Поддържане
+            </summary>
+        </member>
+        <member name="F:MobileFitness.Models.Enums.Goal.LoseFat">
+            <summary>
+            Сваляне на килограми
+            </summary>
+        </member>
+        <member name="F:MobileFitness.Models.Enums.Goal.GainMuscle">
+            <summary>
+            Покачване на мускулна маса
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.Food">
+            <summary>
+            Клас, който описва храна
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Models.Food.#ctor">
+            <summary>
+            Създава нова храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Food.Id">
+            <summary>
+            Уникален индентификатор
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Food.Name">
+            <summary>
+            Има на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Food.MacronutrientId">
+            <summary>
+            Уникален индентификатор на макронутриенти
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Food.Macronutrient">
+            <summary>
+            Макронутриенти на храната
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Food.MealsFoods">
+            <summary>
+            Храненя, в които участва храната
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.Macronutrient">
+            <summary>
+            Клас, който описва макронутриенти
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Models.Macronutrient.#ctor">
+            <summary>
+            Създава нови макронутриенти
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.Id">
+            <summary>
+            Уникален индентификатор
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.Protein">
+            <summary>
+            Количесто белтъци в грамове
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.Fat">
+            <summary>
+            Количесто мазнини в грамове
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.Carbohydrate">
+            <summary>
+            Количесто въглехидрати в грамове
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.Foods">
+            <summary>
+            Колекция от храни с такива макронутриенти
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Macronutrient.UsersMacronutrients">
+            <summary>
+            Колекция от потребители с цел тези макронутриенти
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.Meal">
+            <summary>
+            Клас, който описва хранене
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Models.Meal.#ctor">
+            <summary>
+            Създава ново хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.Id">
+            <summary>
+            Уникален индентификатор
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.Name">
+            <summary>
+            Име на храненето
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.Date">
+            <summary>
+            Дата на храненето
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.UserId">
+            <summary>
+            Уникален индентификатор на протребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.User">
+            <summary>
+            Потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Meal.MealsFoods">
+            <summary>
+            Колекция от всички храни за това хранене
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.MealFood">
+            <summary>
+            Клас, който описва много към много връзка на хранения и храни
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.MealFood.MealId">
+            <summary>
+            Уникален индентификатор на хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.MealFood.Meal">
+            <summary>
+            Хранене
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.MealFood.FoodId">
+            <summary>
+            Уникален индентификатор на храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.MealFood.Food">
+            <summary>
+            Храна
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.MealFood.FoodQuantity">
+            <summary>
+            Количество храна в грамове
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.User">
+            <summary>
+            Клас, който описва потребител
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Models.User.#ctor">
+            <summary>
+            Създава нов потребител
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Id">
+            <summary>
+            Уникален индентификатор
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Username">
+            <summary>
+            Потребителско име
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Email">
+            <summary>
+            Електронна поща
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Password">
+            <summary>
+            Парола
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Salt">
+            <summary>
+            Салт, използван за хеширане на паролата
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Birthdate">
+            <summary>
+            Дата на раждане
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Gender">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Goal">
+            <summary>
+            Цел
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.HeightInMeters">
+            <summary>
+            Височина в метри
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Meals">
+            <summary>
+            Колекция от всички хранения на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.Weights">
+            <summary>
+            Колекция от всички записи на тегло на потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.User.UsersMacronutrients">
+            <summary>
+            Колекция от всички записи на макронутриенти на потребителя
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.UserMacronutrient">
+            <summary>
+            Клас, който описва много към много връзка на потребители и макронутриенти
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.UserMacronutrient.UserId">
+            <summary>
+            Уникален индентификатор на протребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.UserMacronutrient.User">
+            <summary>
+            Потребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.UserMacronutrient.MacronutrientId">
+            <summary>
+            Уникален индентификатор на макронутриент
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.UserMacronutrient.Macronutrient">
+            <summary>
+            Макронутриент
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.UserMacronutrient.Date">
+            <summary>
+            Датата, когато са зададени макронутриенти на потребител
+            </summary>
+        </member>
+        <member name="T:MobileFitness.Models.Weight">
+            <summary>
+            Клас, който описва теглото на потребител
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Weight.Id">
+            <summary>
+            Уникален индентификатор
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Weight.Kilograms">
+            <summary>
+            Теглото на потребителя в килограми
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Weight.Date">
+            <summary>
+            Датата, когато е измерено това тегло
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Weight.UserId">
+            <summary>
+            Уникален индентификатор на протребителя
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Models.Weight.User">
+            <summary>
+            Потребителя
+            </summary>
+        </member>
+    </members>
+</doc>

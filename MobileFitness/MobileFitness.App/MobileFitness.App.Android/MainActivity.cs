@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+/// <summary>
+/// За Android
+/// </summary>
 namespace MobileFitness.App.Droid
 {
     [Activity(Label = "MobileFitness.App", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

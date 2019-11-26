@@ -5,6 +5,9 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+/// <summary>
+/// За IOS
+/// </summary>
 namespace MobileFitness.App.iOS
 {
     public class Application

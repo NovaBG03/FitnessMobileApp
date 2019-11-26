@@ -1,12 +1,22 @@
-﻿namespace MobileFitness.Migrations
+﻿/// <summary>
+/// Асембли, нужно за създаване на миграции
+/// </summary>
+namespace MobileFitness.Migrations
 {
     using System;
     using System.Collections.Generic;
     using MobileFitness.Data;
     using MobileFitness.Models;
 
+    /// <summary>
+    /// Класът, който съдържа Main()
+    /// </summary>
     public class StartUp
     {
+        /// <summary>
+        /// Начална точка на приложението, когато се създава нова миграция
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             //assembly for migrations
@@ -17,6 +27,10 @@
             }
         }
 
+        /// <summary>
+        /// Метод за seed-ване на базата данни
+        /// </summary>
+        /// <param name="context"></param>
         private static void SeedData(MobileFitnessContext context)
         {
             List<CustomFood> foods = new List<CustomFood>()
@@ -121,8 +135,18 @@
             context.SaveChanges();
         }
 
+        /// <summary>
+        /// Помощен клас за seed-ване на базата данни
+        /// </summary>
         private class CustomFood
         {
+            /// <summary>
+            /// Създава нова храна
+            /// </summary>
+            /// <param name="foodName">Име на храната</param>
+            /// <param name="carbs">Въглехидрати</param>
+            /// <param name="fat">Мазнини</param>
+            /// <param name="protein">Белтъци</param>
             public CustomFood(string foodName, float carbs, float fat, float protein)
             {
                 FoodName = foodName;
@@ -131,12 +155,24 @@
                 Protein = protein;
             }
 
+            /// <summary>
+            /// Име на храната
+            /// </summary>
             public string FoodName { get; set; }
 
+            /// <summary>
+            /// Въглехидрати
+            /// </summary>
             public float Carbs { get; set; }
 
+            /// <summary>
+            /// Мазнини
+            /// </summary>
             public float Fat { get; set; }
 
+            /// <summary>
+            /// Белтъци
+            /// </summary>
             public float Protein { get; set; }
         }
     }

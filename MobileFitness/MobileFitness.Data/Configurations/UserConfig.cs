@@ -6,8 +6,15 @@
 
     using MobileFitness.Models;
 
+    /// <summary>
+    /// Клас за настройка на таблицата за потребители
+    /// </summary>
     class UserConfig : IEntityTypeConfiguration<User>
     {
+        /// <summary>
+        /// Настройва таблицата
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder

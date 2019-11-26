@@ -1,4 +1,7 @@
-﻿namespace MobileFitness.Data.Configurations
+﻿/// <summary>
+/// Настройки на таблиците
+/// </summary>
+namespace MobileFitness.Data.Configurations
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -6,8 +9,15 @@
 
     using MobileFitness.Models;
 
+    /// <summary>
+    /// Клас за настройка на таблицата за храни
+    /// </summary>
     public class FoodConfig : IEntityTypeConfiguration<Food>
     {
+        /// <summary>
+        /// Настройва таблицата
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<Food> builder)
         {
             builder

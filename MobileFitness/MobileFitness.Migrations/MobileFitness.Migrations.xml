@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileFitness.Migrations</name>
+    </assembly>
+    <members>
+        <member name="T:MobileFitness.Migrations.StartUp">
+            <summary>
+            Класът, който съдържа Main()
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Migrations.StartUp.Main(System.String[])">
+            <summary>
+            Начална точка на приложението, когато се създава нова миграция
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

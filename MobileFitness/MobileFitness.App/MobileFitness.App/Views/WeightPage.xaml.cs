@@ -10,15 +10,24 @@ using Xamarin.Forms.Xaml;
 
 namespace MobileFitness.App.Views
 {
+    /// <summary>
+    /// Страница за тегло
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WeightPage : ContentPage
     {
+        /// <summary>
+        /// Създава нова страница
+        /// </summary>
         public WeightPage()
         {
             InitializeComponent();
             this.Init();
         }
 
+        /// <summary>
+        /// Инициализира ViewModel за страницата
+        /// </summary>
         private void Init()
         {
             var vm = new WeightViewModel();

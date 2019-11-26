@@ -5,6 +5,13 @@
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\MobileFitness.App.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors></WarningsAsErrors>
+    <OutputPath>C:\Users\nikita\Desktop\Documentation\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.848062" />

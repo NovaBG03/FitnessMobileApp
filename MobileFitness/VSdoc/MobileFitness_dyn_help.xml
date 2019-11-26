@@ -1,0 +1,2367 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="MobileFitness" Title="MobileFitness.App.iOS Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.AccountPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D4.html" LinkGroup="MobileFitness">AccountPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.AccountPage.AccountPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D5.html" LinkGroup="MobileFitness">AccountPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000075.html" LinkGroup="MobileFitness">AccountViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.AccountViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000076.html" LinkGroup="MobileFitness">AccountViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.AddFood" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B8.html" LinkGroup="MobileFitness">AddFood Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.AddFoodPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D6.html" LinkGroup="MobileFitness">AddFoodPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.AddFoodPage.AddFoodPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D7.html" LinkGroup="MobileFitness">AddFoodPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000083.html" LinkGroup="MobileFitness">AddFoodViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.AddFoodViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000084.html" LinkGroup="MobileFitness">AddFoodViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.AddMeal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B6.html" LinkGroup="MobileFitness">AddMeal Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.AddWeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D1.html" LinkGroup="MobileFitness">AddWeight Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.App" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E5.html" LinkGroup="MobileFitness">App Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.App.App" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E6.html" LinkGroup="MobileFitness">App Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.iOS.AppDelegate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006B.html" LinkGroup="MobileFitness">AppDelegate Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.iOS.Application" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006D.html" LinkGroup="MobileFitness">Application Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.BackgroundColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E9.html" LinkGroup="MobileFitness">BackgroundColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.BarBackgroundColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000EB.html" LinkGroup="MobileFitness">BarBackgroundColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.BaseViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008F.html" LinkGroup="MobileFitness">BaseViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.BaseViewModel.BaseViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000091.html" LinkGroup="MobileFitness">BaseViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Birthdate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C4.html" LinkGroup="MobileFitness">Birthdate Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Birthdate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000050.html" LinkGroup="MobileFitness">Birthdate Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.FoodQuantityAdded.BuildTargetModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000015.html" LinkGroup="MobileFitness">BuildTargetModel Method {MobileFitness.Data.Migrations.FoodQuantityAdded}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.InitialCreate.BuildTargetModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000011.html" LinkGroup="MobileFitness">BuildTargetModel Method {MobileFitness.Data.Migrations.InitialCreate}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.Calories" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009A.html" LinkGroup="MobileFitness">Calories Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.CaloriesGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007E.html" LinkGroup="MobileFitness">CaloriesGoal Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.CaloriesGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000088.html" LinkGroup="MobileFitness">CaloriesGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CaloriesGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A9.html" LinkGroup="MobileFitness">CaloriesGoal Property {MobileFitness.App.ViewModels.MealViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CaloriesLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B1.html" LinkGroup="MobileFitness">CaloriesLeft Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CaloriesUsed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AC.html" LinkGroup="MobileFitness">CaloriesUsed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.Carbohydrate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000097.html" LinkGroup="MobileFitness">Carbohydrate Property {MobileFitness.App.ViewModels.FoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Carbohydrate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000038.html" LinkGroup="MobileFitness">Carbohydrate Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.CarbohydrateGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007B.html" LinkGroup="MobileFitness">CarbohydrateGoal Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.CarbohydrateGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000085.html" LinkGroup="MobileFitness">CarbohydrateGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CarbohydrateGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A6.html" LinkGroup="MobileFitness">CarbohydrateGoal Property {MobileFitness.App.ViewModels.MealViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CarbohydrateLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AE.html" LinkGroup="MobileFitness">CarbohydrateLeft Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.CarbohydrateUsed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AA.html" LinkGroup="MobileFitness">CarbohydrateUsed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.FoodConfig.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000002.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.FoodConfig}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MacronutrientConfig.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000004.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.MacronutrientConfig}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MealConfig.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000006.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.MealConfig}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MealFoodConfig.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000008.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.MealFoodConfig}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.UserMacronutrientConfig.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000A.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.UserMacronutrientConfig}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.WeightConfg.Configure" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000C.html" LinkGroup="MobileFitness">Configure Method {MobileFitness.Data.Configurations.WeightConfg}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.ConfirmPassword" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C3.html" LinkGroup="MobileFitness">ConfirmPassword Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E7.html" LinkGroup="MobileFitness">Constants Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel.CreateAccountCommand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A2.html" LinkGroup="MobileFitness">CreateAccountCommand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.Date" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CE.html" LinkGroup="MobileFitness">Date Property {MobileFitness.App.ViewModels.WeightViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.Date" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003F.html" LinkGroup="MobileFitness">Date Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient.Date" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005C.html" LinkGroup="MobileFitness">Date Property {MobileFitness.Models.UserMacronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight.Date" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000060.html" LinkGroup="MobileFitness">Date Property {MobileFitness.Models.Weight}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.DisplayDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A5.html" LinkGroup="MobileFitness">DisplayDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.BaseViewModel.DisplayInvalidPrompt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000093.html" LinkGroup="MobileFitness">DisplayInvalidPrompt Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.DisplayNextDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B4.html" LinkGroup="MobileFitness">DisplayNextDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.DisplayPrevDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B5.html" LinkGroup="MobileFitness">DisplayPrevDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.FoodQuantityAdded.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000014.html" LinkGroup="MobileFitness">Down Method {MobileFitness.Data.Migrations.FoodQuantityAdded}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.InitialCreate.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000010.html" LinkGroup="MobileFitness">Down Method {MobileFitness.Data.Migrations.InitialCreate}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000079.html" LinkGroup="MobileFitness">Email Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009F.html" LinkGroup="MobileFitness">Email Property {MobileFitness.App.ViewModels.LoginViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C1.html" LinkGroup="MobileFitness">Email Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Email" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004D.html" LinkGroup="MobileFitness">Email Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.EntryBackgroundColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000EE.html" LinkGroup="MobileFitness">EntryBackgroundColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.Fat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000098.html" LinkGroup="MobileFitness">Fat Property {MobileFitness.App.ViewModels.FoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Fat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000037.html" LinkGroup="MobileFitness">Fat Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.FatGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007C.html" LinkGroup="MobileFitness">FatGoal Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.FatGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000086.html" LinkGroup="MobileFitness">FatGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.FatGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A7.html" LinkGroup="MobileFitness">FatGoal Property {MobileFitness.App.ViewModels.MealViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.FatLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AF.html" LinkGroup="MobileFitness">FatLeft Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.FatUsed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AB.html" LinkGroup="MobileFitness">FatUsed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.iOS.AppDelegate.FinishedLaunching" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006C.html" LinkGroup="MobileFitness">FinishedLaunching Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000002C.html" LinkGroup="MobileFitness">Food Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.Food" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000002D.html" LinkGroup="MobileFitness">Food Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood.Food" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000047.html" LinkGroup="MobileFitness">Food Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.FoodConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000001.html" LinkGroup="MobileFitness">FoodConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood.FoodId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000046.html" LinkGroup="MobileFitness">FoodId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.FoodName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000096.html" LinkGroup="MobileFitness">FoodName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.FoodPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D8.html" LinkGroup="MobileFitness">FoodPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.FoodPage.FoodPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D9.html" LinkGroup="MobileFitness">FoodPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.FoodQuantity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008A.html" LinkGroup="MobileFitness">FoodQuantity Property {MobileFitness.App.ViewModels.AddFoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.FoodQuantity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009B.html" LinkGroup="MobileFitness">FoodQuantity Property {MobileFitness.App.ViewModels.FoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood.FoodQuantity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000048.html" LinkGroup="MobileFitness">FoodQuantity Property {MobileFitness.Models.MealFood}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.FoodQuantityAdded" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000012.html" LinkGroup="MobileFitness">FoodQuantityAdded Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000094.html" LinkGroup="MobileFitness">FoodViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.FoodViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000095.html" LinkGroup="MobileFitness">FoodViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils.MealGroup.Foods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000073.html" LinkGroup="MobileFitness">Foods Property {MobileFitness.App.Utils.MealGroup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.Foods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001B.html" LinkGroup="MobileFitness">Foods Property {MobileFitness.Data.MobileFitnessContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Foods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000039.html" LinkGroup="MobileFitness">Foods Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.FoundedFoods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008C.html" LinkGroup="MobileFitness">FoundedFoods Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Enums.Gender" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000024.html" LinkGroup="MobileFitness">Gender Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Gender" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000051.html" LinkGroup="MobileFitness">Gender Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.GenderIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C5.html" LinkGroup="MobileFitness">GenderIndex Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Genders" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C9.html" LinkGroup="MobileFitness">Genders Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Enums.Goal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000027.html" LinkGroup="MobileFitness">Goal Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Goal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000052.html" LinkGroup="MobileFitness">Goal Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.GoalIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007A.html" LinkGroup="MobileFitness">GoalIndex Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.GoalIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C6.html" LinkGroup="MobileFitness">GoalIndex Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.Goals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007F.html" LinkGroup="MobileFitness">Goals Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Goals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CA.html" LinkGroup="MobileFitness">Goals Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.HeightInMeters" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C8.html" LinkGroup="MobileFitness">HeightInMeters Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.HeightInMeters" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000053.html" LinkGroup="MobileFitness">HeightInMeters Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000002E.html" LinkGroup="MobileFitness">Id Property {MobileFitness.Models.Food}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000035.html" LinkGroup="MobileFitness">Id Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003D.html" LinkGroup="MobileFitness">Id Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004B.html" LinkGroup="MobileFitness">Id Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005E.html" LinkGroup="MobileFitness">Id Property {MobileFitness.Models.Weight}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.InitialCreate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000E.html" LinkGroup="MobileFitness">InitialCreate Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.IsDev" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E8.html" LinkGroup="MobileFitness">IsDev Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight.Kilograms" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005F.html" LinkGroup="MobileFitness">Kilograms Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.LoginIconHeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000EF.html" LinkGroup="MobileFitness">LoginIconHeight Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.LoginPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DA.html" LinkGroup="MobileFitness">LoginPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.LoginPage.LoginPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DB.html" LinkGroup="MobileFitness">LoginPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009D.html" LinkGroup="MobileFitness">LoginViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel.LoginViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009E.html" LinkGroup="MobileFitness">LoginViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000033.html" LinkGroup="MobileFitness">Macronutrient Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Macronutrient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000034.html" LinkGroup="MobileFitness">Macronutrient Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.Macronutrient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000031.html" LinkGroup="MobileFitness">Macronutrient Property {MobileFitness.Models.Food}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient.Macronutrient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005B.html" LinkGroup="MobileFitness">Macronutrient Property {MobileFitness.Models.UserMacronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MacronutrientConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000003.html" LinkGroup="MobileFitness">MacronutrientConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.MacronutrientId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000030.html" LinkGroup="MobileFitness">MacronutrientId Property {MobileFitness.Models.Food}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient.MacronutrientId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005A.html" LinkGroup="MobileFitness">MacronutrientId Property {MobileFitness.Models.UserMacronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils.MacronutrientManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006F.html" LinkGroup="MobileFitness">MacronutrientManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.Macronutrients" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001C.html" LinkGroup="MobileFitness">Macronutrients Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Migrations.StartUp.Main" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000065.html" LinkGroup="MobileFitness">Main Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Droid.MainActivity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000067.html" LinkGroup="MobileFitness">MainActivity Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.MainPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DC.html" LinkGroup="MobileFitness">MainPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.MainPage.MainPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DD.html" LinkGroup="MobileFitness">MainPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.MainTextColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000EA.html" LinkGroup="MobileFitness">MainTextColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.MaxDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B2.html" LinkGroup="MobileFitness">MaxDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003B.html" LinkGroup="MobileFitness">Meal Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.Meal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003C.html" LinkGroup="MobileFitness">Meal Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils.MealGroup.Meal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000072.html" LinkGroup="MobileFitness">Meal Property {MobileFitness.App.Utils.MealGroup}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood.Meal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000045.html" LinkGroup="MobileFitness">Meal Property {MobileFitness.Models.MealFood}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MealConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000005.html" LinkGroup="MobileFitness">MealConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000043.html" LinkGroup="MobileFitness">MealFood Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.MealFoodConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000007.html" LinkGroup="MobileFitness">MealFoodConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.MealFoods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001E.html" LinkGroup="MobileFitness">MealFoods Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils.MealGroup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000071.html" LinkGroup="MobileFitness">MealGroup Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.MealGroups" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BA.html" LinkGroup="MobileFitness">MealGroups Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.MealFood.MealId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000044.html" LinkGroup="MobileFitness">MealId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.MealPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DE.html" LinkGroup="MobileFitness">MealPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.MealPage.MealPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000DF.html" LinkGroup="MobileFitness">MealPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A3.html" LinkGroup="MobileFitness">MealViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.MealViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A4.html" LinkGroup="MobileFitness">MealViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.Meals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001D.html" LinkGroup="MobileFitness">Meals Property {MobileFitness.Data.MobileFitnessContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Meals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000054.html" LinkGroup="MobileFitness">Meals Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.MealsFoods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000032.html" LinkGroup="MobileFitness">MealsFoods Property {MobileFitness.Models.Food}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.MealsFoods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000042.html" LinkGroup="MobileFitness">MealsFoods Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.MinDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B3.html" LinkGroup="MobileFitness">MinDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E4.html" LinkGroup="MobileFitness">MobileFitness.App Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Droid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000066.html" LinkGroup="MobileFitness">MobileFitness.App.Droid Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006E.html" LinkGroup="MobileFitness">MobileFitness.App.Utils Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000074.html" LinkGroup="MobileFitness">MobileFitness.App.ViewModels Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D3.html" LinkGroup="MobileFitness">MobileFitness.App.Views Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.iOS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000006A.html" LinkGroup="MobileFitness">MobileFitness.App.iOS Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.iOS Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000F0.html" LinkGroup="MobileFitness">MobileFitness.App.iOS Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000016.html" LinkGroup="MobileFitness">MobileFitness.Data Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000000.html" LinkGroup="MobileFitness">MobileFitness.Data.Configurations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000D.html" LinkGroup="MobileFitness">MobileFitness.Data.Migrations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Migrations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000063.html" LinkGroup="MobileFitness">MobileFitness.Migrations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000002B.html" LinkGroup="MobileFitness">MobileFitness.Models Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Enums" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000023.html" LinkGroup="MobileFitness">MobileFitness.Models.Enums Namespace</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.MobileFitnessContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000018_overloads--.html" LinkGroup="MobileFitness">MobileFitnessContext Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.MobileFitnessContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000019_overloads--.html" LinkGroup="MobileFitness">MobileFitnessContext Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000017.html" LinkGroup="MobileFitness">MobileFitnessContext Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Food.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000002F.html" LinkGroup="MobileFitness">Name Property {MobileFitness.Models.Food}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003E.html" LinkGroup="MobileFitness">Name Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.OnConfiguring" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000021.html" LinkGroup="MobileFitness">OnConfiguring Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Droid.MainActivity.OnCreate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000068.html" LinkGroup="MobileFitness">OnCreate Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.OnModelCreating" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000022.html" LinkGroup="MobileFitness">OnModelCreating Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.BaseViewModel.OnPropertyChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000092.html" LinkGroup="MobileFitness">OnPropertyChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Droid.MainActivity.OnRequestPermissionsResult" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000069.html" LinkGroup="MobileFitness">OnRequestPermissionsResult Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A0.html" LinkGroup="MobileFitness">Password Property {MobileFitness.App.ViewModels.LoginViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C2.html" LinkGroup="MobileFitness">Password Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Password" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004E.html" LinkGroup="MobileFitness">Password Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.BaseViewModel.PropertyChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000090.html" LinkGroup="MobileFitness">PropertyChanged Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.Protein" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000099.html" LinkGroup="MobileFitness">Protein Property {MobileFitness.App.ViewModels.FoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.Protein" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000036.html" LinkGroup="MobileFitness">Protein Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.ProteinGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000007D.html" LinkGroup="MobileFitness">ProteinGoal Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.ProteinGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000087.html" LinkGroup="MobileFitness">ProteinGoal Property {MobileFitness.App.ViewModels.AddFoodViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.ProteinGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A8.html" LinkGroup="MobileFitness">ProteinGoal Property {MobileFitness.App.ViewModels.MealViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.ProteinLeft" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B0.html" LinkGroup="MobileFitness">ProteinLeft Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.ProteinUsed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000AD.html" LinkGroup="MobileFitness">ProteinUsed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.RegisterCommand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CB.html" LinkGroup="MobileFitness">RegisterCommand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.RegisterPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E0.html" LinkGroup="MobileFitness">RegisterPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.RegisterPage.RegisterPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E1.html" LinkGroup="MobileFitness">RegisterPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BE.html" LinkGroup="MobileFitness">RegisterViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.RegisterViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BF.html" LinkGroup="MobileFitness">RegisterViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.RemoveMeal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B7.html" LinkGroup="MobileFitness">RemoveMeal Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Salt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004F.html" LinkGroup="MobileFitness">Salt Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.SaveFood" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BC.html" LinkGroup="MobileFitness">SaveFood Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.SaveFood" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008E.html" LinkGroup="MobileFitness">SaveFood Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.SearchingInput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000089.html" LinkGroup="MobileFitness">SearchingInput Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.SelectedFood" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008B.html" LinkGroup="MobileFitness">SelectedFood Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.SelectedTabColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000ED.html" LinkGroup="MobileFitness">SelectedTabColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Utils.MacronutrientManager.SetNewMacronutrientGoal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000070.html" LinkGroup="MobileFitness">SetNewMacronutrientGoal Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.SetNewUser" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000081.html" LinkGroup="MobileFitness">SetNewUser Method {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.SetNewUser" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BB.html" LinkGroup="MobileFitness">SetNewUser Method {MobileFitness.App.ViewModels.MealViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.SetNewUser" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D2.html" LinkGroup="MobileFitness">SetNewUser Method {MobileFitness.App.ViewModels.WeightViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.FoodViewModel.ShowFoodInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000009C.html" LinkGroup="MobileFitness">ShowFoodInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.ShowFoodInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000B9.html" LinkGroup="MobileFitness">ShowFoodInfo Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.LoginViewModel.SingInCommand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000A1.html" LinkGroup="MobileFitness">SingInCommand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Migrations.StartUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000064.html" LinkGroup="MobileFitness">StartUp Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Constants.UnselectedTabColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000EC.html" LinkGroup="MobileFitness">UnselectedTabColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.FoodQuantityAdded.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000013.html" LinkGroup="MobileFitness">Up Method {MobileFitness.Data.Migrations.FoodQuantityAdded}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Migrations.InitialCreate.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000F.html" LinkGroup="MobileFitness">Up Method {MobileFitness.Data.Migrations.InitialCreate}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AddFoodViewModel.UpdateFoundedFoods" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000008D.html" LinkGroup="MobileFitness">UpdateFoundedFoods Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.MealViewModel.UpdateMacronutrientGoals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000BD.html" LinkGroup="MobileFitness">UpdateMacronutrientGoals Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.UpdateMacronutrients" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000080.html" LinkGroup="MobileFitness">UpdateMacronutrients Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.UpdateUserWeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000082.html" LinkGroup="MobileFitness">UpdateUserWeight Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000049.html" LinkGroup="MobileFitness">User Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.User" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004A.html" LinkGroup="MobileFitness">User Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.User" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000041.html" LinkGroup="MobileFitness">User Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient.User" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000059.html" LinkGroup="MobileFitness">User Property {MobileFitness.Models.UserMacronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight.User" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000062.html" LinkGroup="MobileFitness">User Property {MobileFitness.Models.Weight}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Meal.UserId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000040.html" LinkGroup="MobileFitness">UserId Property {MobileFitness.Models.Meal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient.UserId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000058.html" LinkGroup="MobileFitness">UserId Property {MobileFitness.Models.UserMacronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight.UserId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000061.html" LinkGroup="MobileFitness">UserId Property {MobileFitness.Models.Weight}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.UserMacronutrient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000057.html" LinkGroup="MobileFitness">UserMacronutrient Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.UserMacronutrientConfig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000009.html" LinkGroup="MobileFitness">UserMacronutrientConfig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.Username" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000078.html" LinkGroup="MobileFitness">Username Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.Username" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C0.html" LinkGroup="MobileFitness">Username Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Username" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000004C.html" LinkGroup="MobileFitness">Username Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.Users" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001A.html" LinkGroup="MobileFitness">Users Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.UsersMacronutrients" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000020.html" LinkGroup="MobileFitness">UsersMacronutrients Property {MobileFitness.Data.MobileFitnessContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Macronutrient.UsersMacronutrients" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000003A.html" LinkGroup="MobileFitness">UsersMacronutrients Property {MobileFitness.Models.Macronutrient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.UsersMacronutrients" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000056.html" LinkGroup="MobileFitness">UsersMacronutrients Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.Weight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000005D.html" LinkGroup="MobileFitness">Weight Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.Configurations.WeightConfg" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000000B.html" LinkGroup="MobileFitness">WeightConfg Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.AccountViewModel.WeightInKilograms" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000077.html" LinkGroup="MobileFitness">WeightInKilograms Property {MobileFitness.App.ViewModels.AccountViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.RegisterViewModel.WeightInKilograms" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000C7.html" LinkGroup="MobileFitness">WeightInKilograms Property {MobileFitness.App.ViewModels.RegisterViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.WeightInKilograms" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CF.html" LinkGroup="MobileFitness">WeightInKilograms Property {MobileFitness.App.ViewModels.WeightViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.WeightPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E2.html" LinkGroup="MobileFitness">WeightPage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.Views.WeightPage.WeightPage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000E3.html" LinkGroup="MobileFitness">WeightPage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CC.html" LinkGroup="MobileFitness">WeightViewModel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.WeightViewModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000CD.html" LinkGroup="MobileFitness">WeightViewModel Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.App.ViewModels.WeightViewModel.Weights" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_00000000000000D0.html" LinkGroup="MobileFitness">Weights Property {MobileFitness.App.ViewModels.WeightViewModel}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Data.MobileFitnessContext.Weights" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_000000000000001F.html" LinkGroup="MobileFitness">Weights Property {MobileFitness.Data.MobileFitnessContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MobileFitness.Models.User.Weights" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MobileFitness.chm::/topic_0000000000000055.html" LinkGroup="MobileFitness">Weights Property {MobileFitness.Models.User}</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

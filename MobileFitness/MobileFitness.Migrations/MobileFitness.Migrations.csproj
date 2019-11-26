@@ -6,6 +6,13 @@
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Migrations\MobileFitness.Migrations.xml</DocumentationFile>
+    <OutputPath>C:\Users\nikita\Desktop\Documentation\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
   </ItemGroup>

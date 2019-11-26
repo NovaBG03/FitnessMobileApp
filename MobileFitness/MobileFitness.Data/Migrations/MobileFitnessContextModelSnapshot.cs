@@ -9,6 +9,9 @@ using MobileFitness.Data;
 using MobileFitness.Models.Enums;
 using System;
 
+/// <summary>
+/// Миграции
+/// </summary>
 namespace MobileFitness.Data.Migrations
 {
     [DbContext(typeof(MobileFitnessContext))]

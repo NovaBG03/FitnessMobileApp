@@ -15,6 +15,10 @@ namespace MobileFitness.Data.Migrations
     [Migration("20191015045352_FoodQuantityAdded")]
     partial class FoodQuantityAdded
     {
+        /// <summary>
+        /// Модел
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

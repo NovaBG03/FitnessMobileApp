@@ -7,8 +7,15 @@
     using MobileFitness.Models;
     using MobileFitness.Models.Enums;
 
+    /// <summary>
+    /// Съдържа помощни методи за изчисляване на макронутриентите на потребител, спрямо целите му
+    /// </summary>
     public static class MacronutrientManager
     {
+        /// <summary>
+        /// Задава нови макронутриенти цели на даден потребител
+        /// </summary>
+        /// <param name="user">Потребител</param>
         public static void SetNewMacronutrientGoal(User user)
         {
             var bmr = CalculateBmr(user);
@@ -45,6 +52,12 @@
             });
         }
 
+        /// <summary>
+        /// Изчислява калориите на потребител, спрямо целта му
+        /// </summary>
+        /// <param name="user">Потребител</param>
+        /// <param name="calories">Калории за поддържане</param>
+        /// <returns>Изчислени калории, спрямо целта на потребителя</returns>
         private static double CalculateCaloriesByGoal(User user, double calories)
         {
             if (user.Goal == Goal.Maintain)
@@ -68,6 +81,11 @@
             return calories + caloricDiff;
         }
 
+        /// <summary>
+        /// Изчислява BMR на даден потребител
+        /// </summary>
+        /// <param name="user">Потребител</param>
+        /// <returns>BMR на даден потребител</returns>
         private static double CalculateBmr(User user)
         {
             double weightInKilograms = GetCurrentWeight(user);
@@ -85,6 +103,11 @@
             return 655.1 + (9.563 * weightInKilograms) + (1.85 * heightInCentimetre) - (4.676 * ageInYears);
         }
 
+        /// <summary>
+        /// Намира най-актуалното тегло на даден потребител
+        /// </summary>
+        /// <param name="user">Потребител</param>
+        /// <returns>Тегло</returns>
         private static double GetCurrentWeight(User user)
         {
             return user.Weights

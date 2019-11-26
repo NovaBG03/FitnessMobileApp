@@ -41,3 +41,10 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Migrations\obj\Debug\
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Migrations\obj\Debug\netcoreapp3.0\MobileFitness.Migrations.csproj.CopyComplete
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Migrations\obj\Debug\netcoreapp3.0\MobileFitness.Migrations.dll
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.Migrations\obj\Debug\netcoreapp3.0\MobileFitness.Migrations.pdb
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.exe
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.deps.json
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.runtimeconfig.json
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.runtimeconfig.dev.json
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.dll
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.pdb
+C:\Users\nikita\Desktop\Documentation\netcoreapp3.0\MobileFitness.Migrations.xml

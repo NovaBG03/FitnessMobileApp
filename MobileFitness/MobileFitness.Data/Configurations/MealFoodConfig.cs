@@ -6,8 +6,15 @@
 
     using MobileFitness.Models;
 
+    /// <summary>
+    /// Клас за настройка на двойно-свързана таблица за хранения и храни
+    /// </summary>
     public class MealFoodConfig : IEntityTypeConfiguration<MealFood>
     {
+        /// <summary>
+        /// Настройва таблицата
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<MealFood> builder)
         {
             builder

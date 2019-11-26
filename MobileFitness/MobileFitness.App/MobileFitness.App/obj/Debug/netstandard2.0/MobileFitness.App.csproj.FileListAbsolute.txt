@@ -23,3 +23,8 @@ C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\AddFoodPage.xaml.g.cs
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\MealPage.xaml.g.cs
 C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\obj\Debug\netstandard2.0\Views\FoodPage.xaml.g.cs
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.App.deps.json
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.App.dll
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\ref\MobileFitness.App.dll
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.App.pdb
+C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.App.xml
