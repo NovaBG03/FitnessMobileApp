@@ -3825,24 +3825,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikita\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\nikic\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\MobileFitness.App.Android.csproj",
+      "projectUniqueName": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\MobileFitness.App.Android.csproj",
       "projectName": "MobileFitness.App.Android",
-      "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\MobileFitness.App.Android.csproj",
-      "packagesPath": "C:\\Users\\nikita\\.nuget\\packages\\",
-      "outputPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\obj\\",
+      "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\MobileFitness.App.Android.csproj",
+      "packagesPath": "C:\\Users\\nikic\\.nuget\\packages\\",
+      "outputPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3856,8 +3859,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App\\MobileFitness.App.csproj": {
-              "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App\\MobileFitness.App.csproj"
+            "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App\\MobileFitness.App.csproj": {
+              "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.App\\MobileFitness.App\\MobileFitness.App.csproj"
             }
           }
         }

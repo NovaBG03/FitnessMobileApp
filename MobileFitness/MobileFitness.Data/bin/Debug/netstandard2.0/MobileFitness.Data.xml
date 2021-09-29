@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobileFitness.Data</name>
+    </assembly>
+    <members>
+        <member name="T:MobileFitness.Data.Configurations.FoodConfig">
+            <summary>
+            Клас за настройка на таблицата за храни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.FoodConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.Food})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.MacronutrientConfig">
+            <summary>
+            Клас за настройка на таблицата за макронутриенти
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.MacronutrientConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.Macronutrient})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.MealConfig">
+            <summary>
+            Клас за настройка на таблицата за хранения
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.MealConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.Meal})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.MealFoodConfig">
+            <summary>
+            Клас за настройка на двойно-свързана таблица за хранения и храни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.MealFoodConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.MealFood})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.UserConfig">
+            <summary>
+            Клас за настройка на таблицата за потребители
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.UserConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.User})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.UserMacronutrientConfig">
+            <summary>
+            Клас за настройка на двойно-свързана таблица за потребители и макронутриенти
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.UserMacronutrientConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.UserMacronutrient})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Configurations.WeightConfg">
+            <summary>
+            Клас за настройка на таблицата за тегло
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Configurations.WeightConfg.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{MobileFitness.Models.Weight})">
+            <summary>
+            Настройва таблицата
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Migrations.InitialCreate">
+            <summary>
+            Начална миграция
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Прилагане на миграцията
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Премахване на миграцията
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Модел
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.Migrations.FoodQuantityAdded">
+            <summary>
+            Миграция добавяща количество на храната
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.FoodQuantityAdded.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Прилагане на миграцията
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.FoodQuantityAdded.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Премахване на миграцията
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:MobileFitness.Data.Migrations.FoodQuantityAdded.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Модел
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:MobileFitness.Data.MobileFitnessContext">
+            <summary>
+            Клас за връзка с MobileFitness база данни
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.MobileFitnessContext.#ctor">
+            <summary>
+            Създава нова връзка с базата данни, използвайки настройки по подразбиране
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.MobileFitnessContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)">
+            <summary>
+            Създава нова връзка с базата данни, използвайки конкретни настройки
+            </summary>
+            <param name="options">Настройки</param>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.Users">
+            <summary>
+            Таблица с потребители
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.Foods">
+            <summary>
+            Таблица с храни
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.Macronutrients">
+            <summary>
+            Таблица с макронутриенти
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.Meals">
+            <summary>
+            Таблица с хранения
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.MealFoods">
+            <summary>
+            Двойно-свързана таблица на хранения и храни 
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.Weights">
+            <summary>
+            Таблица с тегло
+            </summary>
+        </member>
+        <member name="P:MobileFitness.Data.MobileFitnessContext.UsersMacronutrients">
+            <summary>
+            Двойно-свързана таблица на потребители и макронутриенти  
+            </summary>
+        </member>
+        <member name="M:MobileFitness.Data.MobileFitnessContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Задава настойките на връзката
+            </summary>
+            <param name="optionsBuilder">Настройки за връзка</param>
+        </member>
+        <member name="M:MobileFitness.Data.MobileFitnessContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Задава как да бъдат създадени таблиците в базата
+            </summary>
+            <param name="modelBuilder">Настройки за таблиците</param>
+        </member>
+    </members>
+</doc>

@@ -11,3 +11,14 @@ C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Models.deps.j
 C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Models.dll
 C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Models.pdb
 C:\Users\nikita\Desktop\Documentation\netstandard2.0\MobileFitness.Models.xml
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.csproj.AssemblyReference.cache
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.AssemblyInfoInputs.cache
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.AssemblyInfo.cs
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.csproj.CoreCompileInputs.cache
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.dll
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\obj\Debug\netstandard2.0\MobileFitness.Models.pdb
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.deps.json
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.dll
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.pdb
+C:\Programing\FitnessMobileApp\MobileFitness\MobileFitness.Models\bin\Debug\netstandard2.0\MobileFitness.Models.xml

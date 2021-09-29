@@ -3417,25 +3417,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikita\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nikic\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj",
+      "projectUniqueName": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj",
       "projectName": "MobileFitness.Models",
-      "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj",
-      "packagesPath": "C:\\Users\\nikita\\.nuget\\packages\\",
-      "outputPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\obj\\",
+      "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj",
+      "packagesPath": "C:\\Users\\nikic\\.nuget\\packages\\",
+      "outputPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3448,6 +3449,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -3459,6 +3461,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -3489,7 +3492,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "MobileFitness.App.Android.dll" comes first in this list. */
 		"MobileFitness.App.Android.dll",
+		"MobileFitness.Data.dll",
+		"MobileFitness.Models.dll",
 		"FormsViewGroup.dll",
 		"Microsoft.EntityFrameworkCore.dll",
 		"Microsoft.EntityFrameworkCore.Relational.Design.dll",
@@ -66,10 +68,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"MobileFitness.Data.dll",
-		"MobileFitness.Models.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};
-	public static String ApiPackageName = "Mono.Android.Platform.ApiLevel_28";
 }

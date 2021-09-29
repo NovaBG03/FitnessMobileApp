@@ -9,7 +9,6 @@
     <DocumentationFile>C:\Playground\FitnessMobileApp\MobileFitness\MobileFitness.App\MobileFitness.App\MobileFitness.App.xml</DocumentationFile>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors></WarningsAsErrors>
-    <OutputPath>C:\Users\nikita\Desktop\Documentation\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

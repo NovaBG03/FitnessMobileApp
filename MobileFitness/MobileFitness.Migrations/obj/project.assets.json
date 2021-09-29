@@ -5780,25 +5780,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikita\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nikic\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\MobileFitness.Migrations.csproj",
+      "projectUniqueName": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\MobileFitness.Migrations.csproj",
       "projectName": "MobileFitness.Migrations",
-      "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\MobileFitness.Migrations.csproj",
-      "packagesPath": "C:\\Users\\nikita\\.nuget\\packages\\",
-      "outputPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\obj\\",
+      "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\MobileFitness.Migrations.csproj",
+      "packagesPath": "C:\\Users\\nikic\\.nuget\\packages\\",
+      "outputPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -5811,12 +5812,13 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj": {
-              "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj"
+            "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj": {
+              "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Data\\MobileFitness.Data.csproj"
             },
-            "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj": {
-              "projectPath": "C:\\Playground\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj"
+            "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj": {
+              "projectPath": "C:\\Programing\\FitnessMobileApp\\MobileFitness\\MobileFitness.Models\\MobileFitness.Models.csproj"
             }
           }
         }
@@ -5829,6 +5831,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
@@ -5845,12 +5848,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
